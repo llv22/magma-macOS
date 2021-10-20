@@ -11,6 +11,29 @@ MAGMA README FILE
     libraries and operating systems. The examples rely on paths such as $CUDADIR, $HIPDIR,
     and $MKLROOT being set in your environment. There are some examples in `make.inc-examples`
 
+    ```bash
+    cp ./make.inc-examples/make.inc.macos-mkl make.inc
+    ```
+
+    add into the end of line add Line 80 to Line 86
+
+    ```file
+    LIBDIR    = -L$(CUDADIR)/lib \
+            -L$(MKLROOT)/lib \
+            -L/usr/local/Cellar/libomp/10.0.0/lib/ \
+            -L/usr/local/Cellar/gcc/11.1.0_1/lib/gcc/11
+
+    INC       = -I$(CUDADIR)/include \
+                -I$(MKLROOT)/include
+    ```
+
+    then run with command, code reference in https://arnon.dk/matching-sm-architectures-arch-and-gencode-for-various-nvidia-cards/
+    ```bash
+    CUDADIR=$CUDA_HOME MKLROOT=/Users/llv23/opt/intel/oneapi/mkl/latest prefix=/usr/local/lib/magma2.6.1-cu101 GPU_TARGET=sm_61 make -j12 # building
+    CUDADIR=$CUDA_HOME MKLROOT=/Users/llv23/opt/intel/oneapi/mkl/latest prefix=/usr/local/lib/magma2.6.1-cu101 GPU_TARGET=sm_61 make clean # clean up
+    CUDADIR=$CUDA_HOME MKLROOT=/Users/llv23/opt/intel/oneapi/mkl/latest prefix=/usr/local/lib/magma2.6.1-cu101 GPU_TARGET=sm_61 make -j12 install # install
+    ```
+
     To compile shared and static libraries in lib, and testers in testing and
     sparse/testing:
         make
