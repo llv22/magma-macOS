@@ -78,7 +78,9 @@ LIB      += -lcublas -lcusparse -lcudart -lcudadevrt
 -include make.check-cuda
 
 LIBDIR    = -L$(CUDADIR)/lib \
-            -L$(MKLROOT)/lib
+            -L$(MKLROOT)/lib \
+            -L/usr/local/Cellar/libomp/10.0.0/lib/ \
+            -L/usr/local/Cellar/gcc/11.1.0_1/lib/gcc/11
 
 INC       = -I$(CUDADIR)/include \
             -I$(MKLROOT)/include
