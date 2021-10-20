@@ -1,2537 +1,2555 @@
-	control/cpanel_to_q.cpp
-	control/cprint.cpp
-	control/dpanel_to_q.cpp
-	control/dprint.cpp
-	control/magma_cauxiliary.cpp
-	control/magma_cbulge.cpp
-	control/magma_cnan_inf.cpp
-	control/magma_dauxiliary.cpp
-	control/magma_dbulge.cpp
-	control/magma_dnan_inf.cpp
-	control/magma_sauxiliary.cpp
-	control/magma_sbulge.cpp
-	control/magma_snan_inf.cpp
-	control/sizeptr
-	control/spanel_to_q.cpp
-	control/sprint.cpp
-	include/magma.mod
-	include/magma_c.h
-	include/magma_cbatched.h
-	include/magma_cbulge.h
-	include/magma_cbulgeinc.h
-	include/magma_cfortran.mod
-	include/magma_cgehrd_m.h
-	include/magma_clapack.h
-	include/magma_config.h
-	include/magma_config.h-e
-	include/magma_cvbatched.h
-	include/magma_d.h
-	include/magma_dbatched.h
-	include/magma_dbulge.h
-	include/magma_dbulgeinc.h
-	include/magma_dfortran.mod
-	include/magma_dgehrd_m.h
-	include/magma_dlapack.h
-	include/magma_ds.h
-	include/magma_dvbatched.h
-	include/magma_param.mod
-	include/magma_s.h
-	include/magma_sbatched.h
-	include/magma_sbulge.h
-	include/magma_sbulgeinc.h
-	include/magma_sfortran.mod
-	include/magma_sgehrd_m.h
-	include/magma_slapack.h
-	include/magma_svbatched.h
-	include/magma_zfortran.mod
-	include/magmablas_c.h
-	include/magmablas_c_v1.h
-	include/magmablas_c_v1_map.h
-	include/magmablas_cfortran.mod
-	include/magmablas_d.h
-	include/magmablas_d_v1.h
-	include/magmablas_d_v1_map.h
-	include/magmablas_dfortran.mod
-	include/magmablas_ds.h
-	include/magmablas_ds_v1.h
-	include/magmablas_ds_v1_map.h
-	include/magmablas_s.h
-	include/magmablas_s_v1.h
-	include/magmablas_s_v1_map.h
-	include/magmablas_sfortran.mod
-	include/magmablas_zfortran.mod
-	interface_cuda/blas_c_v1.cpp
-	interface_cuda/blas_c_v2.cpp
-	interface_cuda/blas_d_v1.cpp
-	interface_cuda/blas_d_v2.cpp
-	interface_cuda/blas_s_v1.cpp
-	interface_cuda/blas_s_v2.cpp
-	magmablas/blas_cbatched.cpp
-	magmablas/blas_dbatched.cpp
-	magmablas/blas_sbatched.cpp
-	magmablas/caxpycp.cu
-	magmablas/cbcyclic.cpp
-	magmablas/cdiinertia.cu
-	magmablas/cgeadd.cu
-	magmablas/cgeadd2.cu
-	magmablas/cgeadd_batched.cu
-	magmablas/cgeam.cu
-	magmablas/cgemm_batched.cpp
-	magmablas/cgemm_batched_smallsq.cu
-	magmablas/cgemm_fermi.cu
-	magmablas/cgemm_reduce.cu
-	magmablas/cgemm_vbatched.cpp
-	magmablas/cgemv_conj.cu
-	magmablas/cgemv_fermi.cu
-	magmablas/cgemv_vbatched.cpp
-	magmablas/cgeqr2.cpp
-	magmablas/cgeqr2_batched.cu
-	magmablas/cgeqr2x_gpu-v4.cu
-	magmablas/cgeqrf_batched_smallsq.cu
-	magmablas/cgerbt.cu
-	magmablas/cgerbt.h
-	magmablas/cgerbt_func_batched.cu
-	magmablas/cgerbt_kernels.cu
-	magmablas/cgesv_batched_small.cu
-	magmablas/cgetf2.cu
-	magmablas/cgetf2_kernels.cu
-	magmablas/cgetf2_native_kernel.cu
-	magmablas/cgetf2_nopiv_kernels.cu
-	magmablas/cgetmatrix_transpose.cpp
-	magmablas/cgetmatrix_transpose_mgpu.cpp
-	magmablas/cgetrf_batched_smallsq_noshfl.cu
-	magmablas/cgetrf_batched_smallsq_shfl.cu
-	magmablas/cheinertia.cu
-	magmablas/chemm.cu
-	magmablas/chemm_batched_core.cu
-	magmablas/chemm_mgpu.cpp
-	magmablas/chemm_vbatched.cpp
-	magmablas/chemm_vbatched_core.cu
-	magmablas/chemv.cu
-	magmablas/chemv_batched_core.cu
-	magmablas/chemv_mgpu.cu
-	magmablas/chemv_mgpu_upper.cu
-	magmablas/chemv_upper.cu
-	magmablas/chemv_vbatched.cpp
-	magmablas/chemv_vbatched_core.cu
-	magmablas/cher2k.cpp
-	magmablas/cher2k_batched.cpp
-	magmablas/cher2k_mgpu.cpp
-	magmablas/cher2k_vbatched.cpp
-	magmablas/cherk.cpp
-	magmablas/cherk_batched.cpp
-	magmablas/cherk_mgpu.cpp
-	magmablas/cherk_small_reduce.cu
-	magmablas/cherk_vbatched.cpp
-	magmablas/chetrs.cu
-	magmablas/clacpy.cu
-	magmablas/clacpy_conj.cu
-	magmablas/clacpy_sym_in.cu
-	magmablas/clacpy_sym_out.cu
-	magmablas/clange.cu
-	magmablas/clanhe.cu
-	magmablas/claqps2_gpu.cu
-	magmablas/clarf.cu
-	magmablas/clarfbx.cu
-	magmablas/clarfg-v2.cu
-	magmablas/clarfg.cu
-	magmablas/clarfg_devicesfunc.cuh
-	magmablas/clarfgx-v2.cu
-	magmablas/clarft_kernels.cu
-	magmablas/clarfx.cu
-	magmablas/clascl.cu
-	magmablas/clascl2.cu
-	magmablas/clascl_2x2.cu
-	magmablas/clascl_diag.cu
-	magmablas/claset.cu
-	magmablas/claset_band.cu
-	magmablas/claswp.cu
-	magmablas/claswp_batched.cu
-	magmablas/claswp_sym.cu
-	magmablas/commonblas_c.h
-	magmablas/commonblas_d.h
-	magmablas/commonblas_s.h
-	magmablas/cpotf2.cu
-	magmablas/cpotf2_devicesfunc.cuh
-	magmablas/cpotf2_kernels.cu
-	magmablas/cpotf2_kernels_var.cu
-	magmablas/cset_pointer.cu
-	magmablas/csetmatrix_transpose.cpp
-	magmablas/csetmatrix_transpose_mgpu.cpp
-	magmablas/cswap.cu
-	magmablas/cswapblk.cu
-	magmablas/cswapdblk.cu
-	magmablas/csymm.cu
-	magmablas/csymmetrize.cu
-	magmablas/csymmetrize_tiles.cu
-	magmablas/csymv.cu
-	magmablas/csymv_upper.cu
-	magmablas/csyr2k_batched.cpp
-	magmablas/csyr2k_vbatched.cpp
-	magmablas/csyrk_vbatched.cpp
-	magmablas/ctranspose.cu
-	magmablas/ctranspose_conj.cu
-	magmablas/ctranspose_conj_inplace.cu
-	magmablas/ctranspose_inplace.cu
-	magmablas/ctrmm.cu
-	magmablas/ctrmm_batched_core.cu
-	magmablas/ctrmm_vbatched.cpp
-	magmablas/ctrmm_vbatched_core.cu
-	magmablas/ctrmv.cu
-	magmablas/ctrsm.cu
-	magmablas/ctrsm_batched.cpp
-	magmablas/ctrsm_batched_core.cpp
-	magmablas/ctrsm_small_batched.cu
-	magmablas/ctrsm_vbatched.cpp
-	magmablas/ctrsm_vbatched_core.cu
-	magmablas/ctrsv.cu
-	magmablas/ctrsv_batched.cu
-	magmablas/ctrsv_template_device.cuh
-	magmablas/ctrtri.cuh
-	magmablas/ctrtri_diag.cu
-	magmablas/ctrtri_diag_batched.cu
-	magmablas/ctrtri_diag_vbatched.cu
-	magmablas/ctrtri_lower.cu
-	magmablas/ctrtri_lower_batched.cu
-	magmablas/ctrtri_lower_device.cuh
-	magmablas/ctrtri_upper.cu
-	magmablas/ctrtri_upper_batched.cu
-	magmablas/ctrtri_upper_device.cuh
-	magmablas/daxpycp.cu
-	magmablas/dbcyclic.cpp
-	magmablas/ddiinertia.cu
-	magmablas/dgeadd.cu
-	magmablas/dgeadd2.cu
-	magmablas/dgeadd_batched.cu
-	magmablas/dgeam.cu
-	magmablas/dgemm_batched.cpp
-	magmablas/dgemm_batched_smallsq.cu
-	magmablas/dgemm_fermi.cu
-	magmablas/dgemm_reduce.cu
-	magmablas/dgemm_vbatched.cpp
-	magmablas/dgemv_conj.cu
-	magmablas/dgemv_fermi.cu
-	magmablas/dgemv_vbatched.cpp
-	magmablas/dgeqr2.cpp
-	magmablas/dgeqr2_batched.cu
-	magmablas/dgeqr2x_gpu-v4.cu
-	magmablas/dgeqrf_batched_smallsq.cu
-	magmablas/dgerbt.cu
-	magmablas/dgerbt.h
-	magmablas/dgerbt_func_batched.cu
-	magmablas/dgerbt_kernels.cu
-	magmablas/dgesv_batched_small.cu
-	magmablas/dgetf2.cu
-	magmablas/dgetf2_kernels.cu
-	magmablas/dgetf2_native_kernel.cu
-	magmablas/dgetf2_nopiv_kernels.cu
-	magmablas/dgetmatrix_transpose.cpp
-	magmablas/dgetmatrix_transpose_mgpu.cpp
-	magmablas/dgetrf_batched_smallsq_noshfl.cu
-	magmablas/dgetrf_batched_smallsq_shfl.cu
-	magmablas/dlacpy.cu
-	magmablas/dlacpy_conj.cu
-	magmablas/dlacpy_sym_in.cu
-	magmablas/dlacpy_sym_out.cu
-	magmablas/dlag2s.cu
-	magmablas/dlange.cu
-	magmablas/dlansy.cu
-	magmablas/dlaqps2_gpu.cu
-	magmablas/dlarf.cu
-	magmablas/dlarfbx.cu
-	magmablas/dlarfg-v2.cu
-	magmablas/dlarfg.cu
-	magmablas/dlarfg_devicesfunc.cuh
-	magmablas/dlarfgx-v2.cu
-	magmablas/dlarft_kernels.cu
-	magmablas/dlarfx.cu
-	magmablas/dlascl.cu
-	magmablas/dlascl2.cu
-	magmablas/dlascl_2x2.cu
-	magmablas/dlascl_diag.cu
-	magmablas/dlaset.cu
-	magmablas/dlaset_band.cu
-	magmablas/dlaswp.cu
-	magmablas/dlaswp_batched.cu
-	magmablas/dlaswp_sym.cu
-	magmablas/dlat2s.cu
-	magmablas/dnrm2.cu
-	magmablas/dpotf2.cu
-	magmablas/dpotf2_devicesfunc.cuh
-	magmablas/dpotf2_kernels.cu
-	magmablas/dpotf2_kernels_var.cu
-	magmablas/dsaxpycp.cu
-	magmablas/dset_pointer.cu
-	magmablas/dsetmatrix_transpose.cpp
-	magmablas/dsetmatrix_transpose_mgpu.cpp
-	magmablas/dsiinertia.cu
-	magmablas/dslaswp.cu
-	magmablas/dswap.cu
-	magmablas/dswapblk.cu
-	magmablas/dswapdblk.cu
-	magmablas/dsymm.cu
-	magmablas/dsymm_batched_core.cu
-	magmablas/dsymm_mgpu.cpp
-	magmablas/dsymm_vbatched.cpp
-	magmablas/dsymm_vbatched_core.cu
-	magmablas/dsymmetrize.cu
-	magmablas/dsymmetrize_tiles.cu
-	magmablas/dsymv.cu
-	magmablas/dsymv_batched_core.cu
-	magmablas/dsymv_mgpu.cu
-	magmablas/dsymv_mgpu_upper.cu
-	magmablas/dsymv_upper.cu
-	magmablas/dsymv_vbatched.cpp
-	magmablas/dsymv_vbatched_core.cu
-	magmablas/dsyr2k.cpp
-	magmablas/dsyr2k_batched.cpp
-	magmablas/dsyr2k_mgpu.cpp
-	magmablas/dsyr2k_vbatched.cpp
-	magmablas/dsyrk.cpp
-	magmablas/dsyrk_batched.cpp
-	magmablas/dsyrk_mgpu.cpp
-	magmablas/dsyrk_small_reduce.cu
-	magmablas/dsyrk_vbatched.cpp
-	magmablas/dsytrs.cu
-	magmablas/dtranspose.cu
-	magmablas/dtranspose_inplace.cu
-	magmablas/dtrmm.cu
-	magmablas/dtrmm_batched_core.cu
-	magmablas/dtrmm_vbatched.cpp
-	magmablas/dtrmm_vbatched_core.cu
-	magmablas/dtrmv.cu
-	magmablas/dtrsm.cu
-	magmablas/dtrsm_batched.cpp
-	magmablas/dtrsm_batched_core.cpp
-	magmablas/dtrsm_small_batched.cu
-	magmablas/dtrsm_vbatched.cpp
-	magmablas/dtrsm_vbatched_core.cu
-	magmablas/dtrsv.cu
-	magmablas/dtrsv_batched.cu
-	magmablas/dtrsv_template_device.cuh
-	magmablas/dtrtri.cuh
-	magmablas/dtrtri_diag.cu
-	magmablas/dtrtri_diag_batched.cu
-	magmablas/dtrtri_diag_vbatched.cu
-	magmablas/dtrtri_lower.cu
-	magmablas/dtrtri_lower_batched.cu
-	magmablas/dtrtri_lower_device.cuh
-	magmablas/dtrtri_upper.cu
-	magmablas/dtrtri_upper_batched.cu
-	magmablas/dtrtri_upper_device.cuh
-	magmablas/magmablas_c_v1.cpp
-	magmablas/magmablas_d_v1.cpp
-	magmablas/magmablas_ds_v1.cpp
-	magmablas/magmablas_s_v1.cpp
-	magmablas/saxpycp.cu
-	magmablas/sbcyclic.cpp
-	magmablas/scnrm2.cu
-	magmablas/sdiinertia.cu
-	magmablas/sgeadd.cu
-	magmablas/sgeadd2.cu
-	magmablas/sgeadd_batched.cu
-	magmablas/sgeam.cu
-	magmablas/sgemm_batched.cpp
-	magmablas/sgemm_batched_smallsq.cu
-	magmablas/sgemm_fermi.cu
-	magmablas/sgemm_reduce.cu
-	magmablas/sgemm_vbatched.cpp
-	magmablas/sgemv_conj.cu
-	magmablas/sgemv_fermi.cu
-	magmablas/sgemv_vbatched.cpp
-	magmablas/sgeqr2.cpp
-	magmablas/sgeqr2_batched.cu
-	magmablas/sgeqr2x_gpu-v4.cu
-	magmablas/sgeqrf_batched_smallsq.cu
-	magmablas/sgerbt.cu
-	magmablas/sgerbt.h
-	magmablas/sgerbt_func_batched.cu
-	magmablas/sgerbt_kernels.cu
-	magmablas/sgesv_batched_small.cu
-	magmablas/sgetf2.cu
-	magmablas/sgetf2_kernels.cu
-	magmablas/sgetf2_native_kernel.cu
-	magmablas/sgetf2_nopiv_kernels.cu
-	magmablas/sgetmatrix_transpose.cpp
-	magmablas/sgetmatrix_transpose_mgpu.cpp
-	magmablas/sgetrf_batched_smallsq_noshfl.cu
-	magmablas/sgetrf_batched_smallsq_shfl.cu
-	magmablas/slacpy.cu
-	magmablas/slacpy_conj.cu
-	magmablas/slacpy_sym_in.cu
-	magmablas/slacpy_sym_out.cu
-	magmablas/slag2d.cu
-	magmablas/slange.cu
-	magmablas/slansy.cu
-	magmablas/slaqps2_gpu.cu
-	magmablas/slarf.cu
-	magmablas/slarfbx.cu
-	magmablas/slarfg-v2.cu
-	magmablas/slarfg.cu
-	magmablas/slarfg_devicesfunc.cuh
-	magmablas/slarfgx-v2.cu
-	magmablas/slarft_kernels.cu
-	magmablas/slarfx.cu
-	magmablas/slascl.cu
-	magmablas/slascl2.cu
-	magmablas/slascl_2x2.cu
-	magmablas/slascl_diag.cu
-	magmablas/slaset.cu
-	magmablas/slaset_band.cu
-	magmablas/slaswp.cu
-	magmablas/slaswp_batched.cu
-	magmablas/slaswp_sym.cu
-	magmablas/slat2d.cu
-	magmablas/snrm2.cu
-	magmablas/spotf2.cu
-	magmablas/spotf2_devicesfunc.cuh
-	magmablas/spotf2_kernels.cu
-	magmablas/spotf2_kernels_var.cu
-	magmablas/sset_pointer.cu
-	magmablas/ssetmatrix_transpose.cpp
-	magmablas/ssetmatrix_transpose_mgpu.cpp
-	magmablas/ssiinertia.cu
-	magmablas/sswap.cu
-	magmablas/sswapblk.cu
-	magmablas/sswapdblk.cu
-	magmablas/ssymm.cu
-	magmablas/ssymm_batched_core.cu
-	magmablas/ssymm_mgpu.cpp
-	magmablas/ssymm_vbatched.cpp
-	magmablas/ssymm_vbatched_core.cu
-	magmablas/ssymmetrize.cu
-	magmablas/ssymmetrize_tiles.cu
-	magmablas/ssymv.cu
-	magmablas/ssymv_batched_core.cu
-	magmablas/ssymv_mgpu.cu
-	magmablas/ssymv_mgpu_upper.cu
-	magmablas/ssymv_upper.cu
-	magmablas/ssymv_vbatched.cpp
-	magmablas/ssymv_vbatched_core.cu
-	magmablas/ssyr2k.cpp
-	magmablas/ssyr2k_batched.cpp
-	magmablas/ssyr2k_mgpu.cpp
-	magmablas/ssyr2k_vbatched.cpp
-	magmablas/ssyrk.cpp
-	magmablas/ssyrk_batched.cpp
-	magmablas/ssyrk_mgpu.cpp
-	magmablas/ssyrk_small_reduce.cu
-	magmablas/ssyrk_vbatched.cpp
-	magmablas/ssytrs.cu
-	magmablas/stranspose.cu
-	magmablas/stranspose_inplace.cu
-	magmablas/strmm.cu
-	magmablas/strmm_batched_core.cu
-	magmablas/strmm_vbatched.cpp
-	magmablas/strmm_vbatched_core.cu
-	magmablas/strmv.cu
-	magmablas/strsm.cu
-	magmablas/strsm_batched.cpp
-	magmablas/strsm_batched_core.cpp
-	magmablas/strsm_small_batched.cu
-	magmablas/strsm_vbatched.cpp
-	magmablas/strsm_vbatched_core.cu
-	magmablas/strsv.cu
-	magmablas/strsv_batched.cu
-	magmablas/strsv_template_device.cuh
-	magmablas/strtri.cuh
-	magmablas/strtri_diag.cu
-	magmablas/strtri_diag_batched.cu
-	magmablas/strtri_diag_vbatched.cu
-	magmablas/strtri_lower.cu
-	magmablas/strtri_lower_batched.cu
-	magmablas/strtri_lower_device.cuh
-	magmablas/strtri_upper.cu
-	magmablas/strtri_upper_batched.cu
-	magmablas/strtri_upper_device.cuh
-	make.inc
-	sparse/blas/cbajac_csr.cu
-	sparse/blas/cbajac_csr_overlap.cu
-	sparse/blas/ccompact.cu
-	sparse/blas/cge3pt.cu
-	sparse/blas/cgeaxpy.cu
-	sparse/blas/cgecscsyncfreetrsm.cu
-	sparse/blas/cgecsr5mv.cu
-	sparse/blas/cgecsrmv.cu
-	sparse/blas/cgecsrreimsplit.cu
-	sparse/blas/cgedensereimsplit.cu
-	sparse/blas/cgeellmv.cu
-	sparse/blas/cgeellrtmv.cu
-	sparse/blas/cgeelltmv.cu
-	sparse/blas/cgeisai_batched32.cu
-	sparse/blas/cgeisai_maxblock.cu
-	sparse/blas/cgeisai_trsv.cu
-	sparse/blas/cgemvmdot.cu
-	sparse/blas/cgesellcmmv.cu
-	sparse/blas/cgesellcmv.cu
-	sparse/blas/cilu.cpp
-	sparse/blas/cjaccard_weights.cu
-	sparse/blas/cjacobisetup.cu
-	sparse/blas/clobpcg_maxpy.cu
-	sparse/blas/clobpcg_residuals.cu
-	sparse/blas/clobpcg_shift.cu
-	sparse/blas/cmdot_shfl.cu
-	sparse/blas/cmdotc.cu
-	sparse/blas/cmergebicgstab.cu
-	sparse/blas/cmergebicgstab2.cu
-	sparse/blas/cmergebicgstab3.cu
-	sparse/blas/cmergeblockkrylov.cu
-	sparse/blas/cmergecg.cu
-	sparse/blas/cmergecgs.cu
-	sparse/blas/cmergeidr.cu
-	sparse/blas/cmergeqmr.cu
-	sparse/blas/cmergetfqmr.cu
-	sparse/blas/cmgecsrmv.cu
-	sparse/blas/cmgeellmv.cu
-	sparse/blas/cmgeelltmv.cu
-	sparse/blas/cmgesellcmmv.cu
-	sparse/blas/cparic_kernels.cu
-	sparse/blas/cparilu.cpp
-	sparse/blas/cparilu_kernels.cu
-	sparse/blas/cparilut_candidates.cu
-	sparse/blas/cparilut_kernels.cu
-	sparse/blas/cpipelinedgmres.cu
-	sparse/blas/dbajac_csr.cu
-	sparse/blas/dbajac_csr_overlap.cu
-	sparse/blas/dcompact.cu
-	sparse/blas/dge3pt.cu
-	sparse/blas/dgeaxpy.cu
-	sparse/blas/dgecscsyncfreetrsm.cu
-	sparse/blas/dgecsr5mv.cu
-	sparse/blas/dgecsrmv.cu
-	sparse/blas/dgecsrreimsplit.cu
-	sparse/blas/dgedensereimsplit.cu
-	sparse/blas/dgeellmv.cu
-	sparse/blas/dgeellrtmv.cu
-	sparse/blas/dgeelltmv.cu
-	sparse/blas/dgeisai_batched32.cu
-	sparse/blas/dgeisai_maxblock.cu
-	sparse/blas/dgeisai_trsv.cu
-	sparse/blas/dgemvmdot.cu
-	sparse/blas/dgesellcmmv.cu
-	sparse/blas/dgesellcmv.cu
-	sparse/blas/dilu.cpp
-	sparse/blas/djaccard_weights.cu
-	sparse/blas/djacobisetup.cu
-	sparse/blas/dlobpcg_maxpy.cu
-	sparse/blas/dlobpcg_residuals.cu
-	sparse/blas/dlobpcg_shift.cu
-	sparse/blas/dmdot_shfl.cu
-	sparse/blas/dmdotc.cu
-	sparse/blas/dmergebicgstab.cu
-	sparse/blas/dmergebicgstab2.cu
-	sparse/blas/dmergebicgstab3.cu
-	sparse/blas/dmergeblockkrylov.cu
-	sparse/blas/dmergecg.cu
-	sparse/blas/dmergecgs.cu
-	sparse/blas/dmergeidr.cu
-	sparse/blas/dmergeqmr.cu
-	sparse/blas/dmergetfqmr.cu
-	sparse/blas/dmgecsrmv.cu
-	sparse/blas/dmgeellmv.cu
-	sparse/blas/dmgeelltmv.cu
-	sparse/blas/dmgesellcmmv.cu
-	sparse/blas/dparic_kernels.cu
-	sparse/blas/dparilu.cpp
-	sparse/blas/dparilu_kernels.cu
-	sparse/blas/dparilut_candidates.cu
-	sparse/blas/dparilut_kernels.cu
-	sparse/blas/dpipelinedgmres.cu
-	sparse/blas/dsgecsrmv_mixed_prec.cu
-	sparse/blas/magma_c_blaswrapper.cpp
-	sparse/blas/magma_ccuspaxpy.cpp
-	sparse/blas/magma_ccuspmm.cpp
-	sparse/blas/magma_cdiagcheck.cu
-	sparse/blas/magma_cget_rowptr.cu
-	sparse/blas/magma_cmatrixtools_gpu.cu
-	sparse/blas/magma_cmconjugate.cu
-	sparse/blas/magma_cmcsrcompressor_gpu.cu
-	sparse/blas/magma_cpreselect.cu
-	sparse/blas/magma_csampleselect.cu
-	sparse/blas/magma_csampleselect_nodp.cu
-	sparse/blas/magma_cthrsrm.cu
-	sparse/blas/magma_d_blaswrapper.cpp
-	sparse/blas/magma_dcuspaxpy.cpp
-	sparse/blas/magma_dcuspmm.cpp
-	sparse/blas/magma_ddiagcheck.cu
-	sparse/blas/magma_dget_rowptr.cu
-	sparse/blas/magma_dmatrixtools_gpu.cu
-	sparse/blas/magma_dmconjugate.cu
-	sparse/blas/magma_dmcsrcompressor_gpu.cu
-	sparse/blas/magma_dpreselect.cu
-	sparse/blas/magma_dsampleselect.cu
-	sparse/blas/magma_dsampleselect_nodp.cu
-	sparse/blas/magma_dthrsrm.cu
-	sparse/blas/magma_s_blaswrapper.cpp
-	sparse/blas/magma_scuspaxpy.cpp
-	sparse/blas/magma_scuspmm.cpp
-	sparse/blas/magma_sdiagcheck.cu
-	sparse/blas/magma_sget_rowptr.cu
-	sparse/blas/magma_smatrixtools_gpu.cu
-	sparse/blas/magma_smconjugate.cu
-	sparse/blas/magma_smcsrcompressor_gpu.cu
-	sparse/blas/magma_spreselect.cu
-	sparse/blas/magma_ssampleselect.cu
-	sparse/blas/magma_ssampleselect_core.cu
-	sparse/blas/magma_ssampleselect_nodp.cu
-	sparse/blas/magma_sthrsrm.cu
-	sparse/blas/sbajac_csr.cu
-	sparse/blas/sbajac_csr_overlap.cu
-	sparse/blas/scompact.cu
-	sparse/blas/sge3pt.cu
-	sparse/blas/sgeaxpy.cu
-	sparse/blas/sgecscsyncfreetrsm.cu
-	sparse/blas/sgecsr5mv.cu
-	sparse/blas/sgecsrmv.cu
-	sparse/blas/sgecsrreimsplit.cu
-	sparse/blas/sgedensereimsplit.cu
-	sparse/blas/sgeellmv.cu
-	sparse/blas/sgeellrtmv.cu
-	sparse/blas/sgeelltmv.cu
-	sparse/blas/sgeisai_batched32.cu
-	sparse/blas/sgeisai_maxblock.cu
-	sparse/blas/sgeisai_trsv.cu
-	sparse/blas/sgemvmdot.cu
-	sparse/blas/sgesellcmmv.cu
-	sparse/blas/sgesellcmv.cu
-	sparse/blas/silu.cpp
-	sparse/blas/sjaccard_weights.cu
-	sparse/blas/sjacobisetup.cu
-	sparse/blas/slobpcg_maxpy.cu
-	sparse/blas/slobpcg_residuals.cu
-	sparse/blas/slobpcg_shift.cu
-	sparse/blas/smdot_shfl.cu
-	sparse/blas/smdotc.cu
-	sparse/blas/smergebicgstab.cu
-	sparse/blas/smergebicgstab2.cu
-	sparse/blas/smergebicgstab3.cu
-	sparse/blas/smergeblockkrylov.cu
-	sparse/blas/smergecg.cu
-	sparse/blas/smergecgs.cu
-	sparse/blas/smergeidr.cu
-	sparse/blas/smergeqmr.cu
-	sparse/blas/smergetfqmr.cu
-	sparse/blas/smgecsrmv.cu
-	sparse/blas/smgeellmv.cu
-	sparse/blas/smgeelltmv.cu
-	sparse/blas/smgesellcmmv.cu
-	sparse/blas/sparic_kernels.cu
-	sparse/blas/sparilu.cpp
-	sparse/blas/sparilu_kernels.cu
-	sparse/blas/sparilut_candidates.cu
-	sparse/blas/sparilut_kernels.cu
-	sparse/blas/spipelinedgmres.cu
-	sparse/control/magma_ccsrsplit.cpp
-	sparse/control/magma_cdomainoverlap.cpp
-	sparse/control/magma_cfree.cpp
-	sparse/control/magma_cgeisai_tools.cpp
-	sparse/control/magma_cmatrix_tools.cpp
-	sparse/control/magma_cmatrixchar.cpp
-	sparse/control/magma_cmconvert.cpp
-	sparse/control/magma_cmcsrcompressor.cpp
-	sparse/control/magma_cmcsrpass.cpp
-	sparse/control/magma_cmcsrpass_gpu.cpp
-	sparse/control/magma_cmdiagdom.cpp
-	sparse/control/magma_cmdiff.cpp
-	sparse/control/magma_cmfrobenius.cpp
-	sparse/control/magma_cmgenerator.cpp
-	sparse/control/magma_cmilustruct.cpp
-	sparse/control/magma_cmio.cpp
-	sparse/control/magma_cmlumerge.cpp
-	sparse/control/magma_cmscale.cpp
-	sparse/control/magma_cmshrink.cpp
-	sparse/control/magma_cmslice.cpp
-	sparse/control/magma_cmsupernodal.cpp
-	sparse/control/magma_cmtransfer.cpp
-	sparse/control/magma_cmtranspose.cpp
-	sparse/control/magma_cmtranspose_cpu.cpp
-	sparse/control/magma_cparic_kernels.cpp
-	sparse/control/magma_cparict_tools.cpp
-	sparse/control/magma_cparilu_kernels.cpp
-	sparse/control/magma_cparilut_kernels.cpp
-	sparse/control/magma_cparilut_tools.cpp
-	sparse/control/magma_cpariluutils.cpp
-	sparse/control/magma_cselect.cpp
-	sparse/control/magma_csolverinfo.cpp
-	sparse/control/magma_csort.cpp
-	sparse/control/magma_cutil_sparse.cpp
-	sparse/control/magma_cvinit.cpp
-	sparse/control/magma_cvio.cpp
-	sparse/control/magma_cvpass.cpp
-	sparse/control/magma_cvpass_gpu.cpp
-	sparse/control/magma_cvtranspose.cpp
-	sparse/control/magma_dcsrsplit.cpp
-	sparse/control/magma_ddomainoverlap.cpp
-	sparse/control/magma_dfree.cpp
-	sparse/control/magma_dgeisai_tools.cpp
-	sparse/control/magma_dmatrix_tools.cpp
-	sparse/control/magma_dmatrixchar.cpp
-	sparse/control/magma_dmconvert.cpp
-	sparse/control/magma_dmcsrcompressor.cpp
-	sparse/control/magma_dmcsrpass.cpp
-	sparse/control/magma_dmcsrpass_gpu.cpp
-	sparse/control/magma_dmdiagdom.cpp
-	sparse/control/magma_dmdiff.cpp
-	sparse/control/magma_dmfrobenius.cpp
-	sparse/control/magma_dmgenerator.cpp
-	sparse/control/magma_dmilustruct.cpp
-	sparse/control/magma_dmio.cpp
-	sparse/control/magma_dmlumerge.cpp
-	sparse/control/magma_dmscale.cpp
-	sparse/control/magma_dmshrink.cpp
-	sparse/control/magma_dmslice.cpp
-	sparse/control/magma_dmsupernodal.cpp
-	sparse/control/magma_dmtransfer.cpp
-	sparse/control/magma_dmtranspose.cpp
-	sparse/control/magma_dmtranspose_cpu.cpp
-	sparse/control/magma_dparic_kernels.cpp
-	sparse/control/magma_dparict_tools.cpp
-	sparse/control/magma_dparilu_kernels.cpp
-	sparse/control/magma_dparilut_kernels.cpp
-	sparse/control/magma_dparilut_tools.cpp
-	sparse/control/magma_dpariluutils.cpp
-	sparse/control/magma_dselect.cpp
-	sparse/control/magma_dsolverinfo.cpp
-	sparse/control/magma_dsort.cpp
-	sparse/control/magma_dutil_sparse.cpp
-	sparse/control/magma_dvinit.cpp
-	sparse/control/magma_dvio.cpp
-	sparse/control/magma_dvpass.cpp
-	sparse/control/magma_dvpass_gpu.cpp
-	sparse/control/magma_dvtranspose.cpp
-	sparse/control/magma_scsrsplit.cpp
-	sparse/control/magma_sdomainoverlap.cpp
-	sparse/control/magma_sfree.cpp
-	sparse/control/magma_sgeisai_tools.cpp
-	sparse/control/magma_smatrix_tools.cpp
-	sparse/control/magma_smatrixchar.cpp
-	sparse/control/magma_smconvert.cpp
-	sparse/control/magma_smcsrcompressor.cpp
-	sparse/control/magma_smcsrpass.cpp
-	sparse/control/magma_smcsrpass_gpu.cpp
-	sparse/control/magma_smdiagdom.cpp
-	sparse/control/magma_smdiff.cpp
-	sparse/control/magma_smfrobenius.cpp
-	sparse/control/magma_smgenerator.cpp
-	sparse/control/magma_smilustruct.cpp
-	sparse/control/magma_smio.cpp
-	sparse/control/magma_smlumerge.cpp
-	sparse/control/magma_smscale.cpp
-	sparse/control/magma_smshrink.cpp
-	sparse/control/magma_smslice.cpp
-	sparse/control/magma_smsupernodal.cpp
-	sparse/control/magma_smtransfer.cpp
-	sparse/control/magma_smtranspose.cpp
-	sparse/control/magma_smtranspose_cpu.cpp
-	sparse/control/magma_sparic_kernels.cpp
-	sparse/control/magma_sparict_tools.cpp
-	sparse/control/magma_sparilu_kernels.cpp
-	sparse/control/magma_sparilut_kernels.cpp
-	sparse/control/magma_sparilut_tools.cpp
-	sparse/control/magma_spariluutils.cpp
-	sparse/control/magma_sselect.cpp
-	sparse/control/magma_ssolverinfo.cpp
-	sparse/control/magma_ssort.cpp
-	sparse/control/magma_sutil_sparse.cpp
-	sparse/control/magma_svinit.cpp
-	sparse/control/magma_svio.cpp
-	sparse/control/magma_svpass.cpp
-	sparse/control/magma_svpass_gpu.cpp
-	sparse/control/magma_svtranspose.cpp
-	sparse/include/magmasparse_c.h
-	sparse/include/magmasparse_d.h
-	sparse/include/magmasparse_ds.h
-	sparse/include/magmasparse_s.h
-	sparse/src/cbaiter.cpp
-	sparse/src/cbaiter_overlap.cpp
-	sparse/src/cbicg.cpp
-	sparse/src/cbicgstab.cpp
-	sparse/src/cbicgstab_merge.cpp
-	sparse/src/cbicgstab_merge2.cpp
-	sparse/src/cbicgstab_merge3.cpp
-	sparse/src/cbombard.cpp
-	sparse/src/cbombard_merge.cpp
-	sparse/src/cbpcg.cpp
-	sparse/src/ccg.cpp
-	sparse/src/ccg_merge.cpp
-	sparse/src/ccg_res.cpp
-	sparse/src/ccgs.cpp
-	sparse/src/ccgs_merge.cpp
-	sparse/src/ccustomic.cpp
-	sparse/src/ccustomilu.cpp
-	sparse/src/cfgmres.cpp
-	sparse/src/cftjacobi.cpp
-	sparse/src/cgeisai_apply.cpp
-	sparse/src/cgeisai_lower.cpp
-	sparse/src/cgeisai_upper.cpp
-	sparse/src/cidr.cpp
-	sparse/src/cidr_merge.cpp
-	sparse/src/cidr_strms.cpp
-	sparse/src/citerref.cpp
-	sparse/src/cjacobi.cpp
-	sparse/src/cjacobidomainoverlap.cpp
-	sparse/src/clobpcg.cpp
-	sparse/src/clsqr.cpp
-	sparse/src/cparic_cpu.cpp
-	sparse/src/cparic_gpu.cpp
-	sparse/src/cparict.cpp
-	sparse/src/cparict_cpu.cpp
-	sparse/src/cparilu_cpu.cpp
-	sparse/src/cparilu_gpu.cpp
-	sparse/src/cparilut.cpp
-	sparse/src/cparilut_cpu.cpp
-	sparse/src/cparilut_gpu.cpp
-	sparse/src/cparilut_gpu_nodp.cpp
-	sparse/src/cpbicg.cpp
-	sparse/src/cpbicgstab.cpp
-	sparse/src/cpbicgstab_merge.cpp
-	sparse/src/cpcg.cpp
-	sparse/src/cpcg_merge.cpp
-	sparse/src/cpcgs.cpp
-	sparse/src/cpcgs_merge.cpp
-	sparse/src/cpidr.cpp
-	sparse/src/cpidr_merge.cpp
-	sparse/src/cpidr_strms.cpp
-	sparse/src/cpqmr.cpp
-	sparse/src/cpqmr_merge.cpp
-	sparse/src/cptfqmr.cpp
-	sparse/src/cptfqmr_merge.cpp
-	sparse/src/cqmr.cpp
-	sparse/src/cqmr_merge.cpp
-	sparse/src/cresidual.cpp
-	sparse/src/cresidualvec.cpp
-	sparse/src/ctfqmr.cpp
-	sparse/src/ctfqmr_merge.cpp
-	sparse/src/ctfqmr_unrolled.cpp
-	sparse/src/dbaiter.cpp
-	sparse/src/dbaiter_overlap.cpp
-	sparse/src/dbicg.cpp
-	sparse/src/dbicgstab.cpp
-	sparse/src/dbicgstab_merge.cpp
-	sparse/src/dbicgstab_merge2.cpp
-	sparse/src/dbicgstab_merge3.cpp
-	sparse/src/dbombard.cpp
-	sparse/src/dbombard_merge.cpp
-	sparse/src/dbpcg.cpp
-	sparse/src/dcg.cpp
-	sparse/src/dcg_merge.cpp
-	sparse/src/dcg_res.cpp
-	sparse/src/dcgs.cpp
-	sparse/src/dcgs_merge.cpp
-	sparse/src/dcustomic.cpp
-	sparse/src/dcustomilu.cpp
-	sparse/src/dfgmres.cpp
-	sparse/src/dftjacobi.cpp
-	sparse/src/dgeisai_apply.cpp
-	sparse/src/dgeisai_lower.cpp
-	sparse/src/dgeisai_upper.cpp
-	sparse/src/didr.cpp
-	sparse/src/didr_merge.cpp
-	sparse/src/didr_strms.cpp
-	sparse/src/diterref.cpp
-	sparse/src/djacobi.cpp
-	sparse/src/djacobidomainoverlap.cpp
-	sparse/src/dlobpcg.cpp
-	sparse/src/dlsqr.cpp
-	sparse/src/dparic_cpu.cpp
-	sparse/src/dparic_gpu.cpp
-	sparse/src/dparict.cpp
-	sparse/src/dparict_cpu.cpp
-	sparse/src/dparilu_cpu.cpp
-	sparse/src/dparilu_gpu.cpp
-	sparse/src/dparilut.cpp
-	sparse/src/dparilut_cpu.cpp
-	sparse/src/dparilut_gpu.cpp
-	sparse/src/dparilut_gpu_nodp.cpp
-	sparse/src/dpbicg.cpp
-	sparse/src/dpbicgstab.cpp
-	sparse/src/dpbicgstab_merge.cpp
-	sparse/src/dpcg.cpp
-	sparse/src/dpcg_merge.cpp
-	sparse/src/dpcgs.cpp
-	sparse/src/dpcgs_merge.cpp
-	sparse/src/dpidr.cpp
-	sparse/src/dpidr_merge.cpp
-	sparse/src/dpidr_strms.cpp
-	sparse/src/dpqmr.cpp
-	sparse/src/dpqmr_merge.cpp
-	sparse/src/dptfqmr.cpp
-	sparse/src/dptfqmr_merge.cpp
-	sparse/src/dqmr.cpp
-	sparse/src/dqmr_merge.cpp
-	sparse/src/dresidual.cpp
-	sparse/src/dresidualvec.cpp
-	sparse/src/dtfqmr.cpp
-	sparse/src/dtfqmr_merge.cpp
-	sparse/src/dtfqmr_unrolled.cpp
-	sparse/src/magma_c_precond_wrapper.cpp
-	sparse/src/magma_c_solver_wrapper.cpp
-	sparse/src/magma_ccustomprecond.cpp
-	sparse/src/magma_ccustomspmv.cpp
-	sparse/src/magma_cqr_wrapper.cpp
-	sparse/src/magma_d_precond_wrapper.cpp
-	sparse/src/magma_d_solver_wrapper.cpp
-	sparse/src/magma_dcustomprecond.cpp
-	sparse/src/magma_dcustomspmv.cpp
-	sparse/src/magma_dqr_wrapper.cpp
-	sparse/src/magma_s_precond_wrapper.cpp
-	sparse/src/magma_s_solver_wrapper.cpp
-	sparse/src/magma_scustomprecond.cpp
-	sparse/src/magma_scustomspmv.cpp
-	sparse/src/magma_sqr_wrapper.cpp
-	sparse/src/sbaiter.cpp
-	sparse/src/sbaiter_overlap.cpp
-	sparse/src/sbicg.cpp
-	sparse/src/sbicgstab.cpp
-	sparse/src/sbicgstab_merge.cpp
-	sparse/src/sbicgstab_merge2.cpp
-	sparse/src/sbicgstab_merge3.cpp
-	sparse/src/sbombard.cpp
-	sparse/src/sbombard_merge.cpp
-	sparse/src/sbpcg.cpp
-	sparse/src/scg.cpp
-	sparse/src/scg_merge.cpp
-	sparse/src/scg_res.cpp
-	sparse/src/scgs.cpp
-	sparse/src/scgs_merge.cpp
-	sparse/src/scustomic.cpp
-	sparse/src/scustomilu.cpp
-	sparse/src/sfgmres.cpp
-	sparse/src/sftjacobi.cpp
-	sparse/src/sgeisai_apply.cpp
-	sparse/src/sgeisai_lower.cpp
-	sparse/src/sgeisai_upper.cpp
-	sparse/src/sidr.cpp
-	sparse/src/sidr_merge.cpp
-	sparse/src/sidr_strms.cpp
-	sparse/src/siterref.cpp
-	sparse/src/sjacobi.cpp
-	sparse/src/sjacobidomainoverlap.cpp
-	sparse/src/slobpcg.cpp
-	sparse/src/slsqr.cpp
-	sparse/src/sparic_cpu.cpp
-	sparse/src/sparic_gpu.cpp
-	sparse/src/sparict.cpp
-	sparse/src/sparict_cpu.cpp
-	sparse/src/sparilu_cpu.cpp
-	sparse/src/sparilu_gpu.cpp
-	sparse/src/sparilut.cpp
-	sparse/src/sparilut_cpu.cpp
-	sparse/src/sparilut_gpu.cpp
-	sparse/src/sparilut_gpu_nodp.cpp
-	sparse/src/spbicg.cpp
-	sparse/src/spbicgstab.cpp
-	sparse/src/spbicgstab_merge.cpp
-	sparse/src/spcg.cpp
-	sparse/src/spcg_merge.cpp
-	sparse/src/spcgs.cpp
-	sparse/src/spcgs_merge.cpp
-	sparse/src/spidr.cpp
-	sparse/src/spidr_merge.cpp
-	sparse/src/spidr_strms.cpp
-	sparse/src/spqmr.cpp
-	sparse/src/spqmr_merge.cpp
-	sparse/src/sptfqmr.cpp
-	sparse/src/sptfqmr_merge.cpp
-	sparse/src/sqmr.cpp
-	sparse/src/sqmr_merge.cpp
-	sparse/src/sresidual.cpp
-	sparse/src/sresidualvec.cpp
-	sparse/src/stfqmr.cpp
-	sparse/src/stfqmr_merge.cpp
-	sparse/src/stfqmr_unrolled.cpp
-	sparse/testing/testing_cblas
-	sparse/testing/testing_cblas.cpp
-	sparse/testing/testing_cdot
-	sparse/testing/testing_cdot.cpp
-	sparse/testing/testing_cgetrowptr
-	sparse/testing/testing_cgetrowptr.cpp
-	sparse/testing/testing_cio
-	sparse/testing/testing_cio.cpp
-	sparse/testing/testing_cmadd
-	sparse/testing/testing_cmadd.cpp
-	sparse/testing/testing_cmatrix
-	sparse/testing/testing_cmatrix.cpp
-	sparse/testing/testing_cmatrixcapcup
-	sparse/testing/testing_cmatrixcapcup.cpp
-	sparse/testing/testing_cmatrixinfo
-	sparse/testing/testing_cmatrixinfo.cpp
-	sparse/testing/testing_cmcompressor
-	sparse/testing/testing_cmcompressor.cpp
-	sparse/testing/testing_cmconverter
-	sparse/testing/testing_cmconverter.cpp
-	sparse/testing/testing_cmdotc
-	sparse/testing/testing_cmdotc.cpp
-	sparse/testing/testing_cpreconditioner
-	sparse/testing/testing_cpreconditioner.cpp
-	sparse/testing/testing_cselect
-	sparse/testing/testing_cselect.cpp
-	sparse/testing/testing_csolver
-	sparse/testing/testing_csolver.cpp
-	sparse/testing/testing_csolver_rhs
-	sparse/testing/testing_csolver_rhs.cpp
-	sparse/testing/testing_csolver_rhs_scaling
-	sparse/testing/testing_csolver_rhs_scaling.cpp
-	sparse/testing/testing_csort
-	sparse/testing/testing_csort.cpp
-	sparse/testing/testing_cspmm
-	sparse/testing/testing_cspmm.cpp
-	sparse/testing/testing_cspmv
-	sparse/testing/testing_cspmv.cpp
-	sparse/testing/testing_cspmv_check
-	sparse/testing/testing_cspmv_check.cpp
-	sparse/testing/testing_csptrsv
-	sparse/testing/testing_csptrsv.cpp
-	sparse/testing/testing_dblas
-	sparse/testing/testing_dblas.cpp
-	sparse/testing/testing_ddot
-	sparse/testing/testing_ddot.cpp
-	sparse/testing/testing_dgetrowptr
-	sparse/testing/testing_dgetrowptr.cpp
-	sparse/testing/testing_dio
-	sparse/testing/testing_dio.cpp
-	sparse/testing/testing_dmadd
-	sparse/testing/testing_dmadd.cpp
-	sparse/testing/testing_dmatrix
-	sparse/testing/testing_dmatrix.cpp
-	sparse/testing/testing_dmatrixcapcup
-	sparse/testing/testing_dmatrixcapcup.cpp
-	sparse/testing/testing_dmatrixinfo
-	sparse/testing/testing_dmatrixinfo.cpp
-	sparse/testing/testing_dmcompressor
-	sparse/testing/testing_dmcompressor.cpp
-	sparse/testing/testing_dmconverter
-	sparse/testing/testing_dmconverter.cpp
-	sparse/testing/testing_dmdotc
-	sparse/testing/testing_dmdotc.cpp
-	sparse/testing/testing_dpreconditioner
-	sparse/testing/testing_dpreconditioner.cpp
-	sparse/testing/testing_dselect
-	sparse/testing/testing_dselect.cpp
-	sparse/testing/testing_dsolver
-	sparse/testing/testing_dsolver.cpp
-	sparse/testing/testing_dsolver_rhs
-	sparse/testing/testing_dsolver_rhs.cpp
-	sparse/testing/testing_dsolver_rhs_scaling
-	sparse/testing/testing_dsolver_rhs_scaling.cpp
-	sparse/testing/testing_dsort
-	sparse/testing/testing_dsort.cpp
-	sparse/testing/testing_dspmm
-	sparse/testing/testing_dspmm.cpp
-	sparse/testing/testing_dspmv
-	sparse/testing/testing_dspmv.cpp
-	sparse/testing/testing_dspmv_check
-	sparse/testing/testing_dspmv_check.cpp
-	sparse/testing/testing_dsptrsv
-	sparse/testing/testing_dsptrsv.cpp
-	sparse/testing/testing_dsspmv_mixed
-	sparse/testing/testing_dsspmv_mixed.cpp
-	sparse/testing/testing_sblas
-	sparse/testing/testing_sblas.cpp
-	sparse/testing/testing_sdot
-	sparse/testing/testing_sdot.cpp
-	sparse/testing/testing_sgetrowptr
-	sparse/testing/testing_sgetrowptr.cpp
-	sparse/testing/testing_sio
-	sparse/testing/testing_sio.cpp
-	sparse/testing/testing_smadd
-	sparse/testing/testing_smadd.cpp
-	sparse/testing/testing_smatrix
-	sparse/testing/testing_smatrix.cpp
-	sparse/testing/testing_smatrixcapcup
-	sparse/testing/testing_smatrixcapcup.cpp
-	sparse/testing/testing_smatrixinfo
-	sparse/testing/testing_smatrixinfo.cpp
-	sparse/testing/testing_smcompressor
-	sparse/testing/testing_smcompressor.cpp
-	sparse/testing/testing_smconverter
-	sparse/testing/testing_smconverter.cpp
-	sparse/testing/testing_smdotc
-	sparse/testing/testing_smdotc.cpp
-	sparse/testing/testing_spreconditioner
-	sparse/testing/testing_spreconditioner.cpp
-	sparse/testing/testing_sselect
-	sparse/testing/testing_sselect.cpp
-	sparse/testing/testing_ssolver
-	sparse/testing/testing_ssolver.cpp
-	sparse/testing/testing_ssolver_rhs
-	sparse/testing/testing_ssolver_rhs.cpp
-	sparse/testing/testing_ssolver_rhs_scaling
-	sparse/testing/testing_ssolver_rhs_scaling.cpp
-	sparse/testing/testing_ssort
-	sparse/testing/testing_ssort.cpp
-	sparse/testing/testing_sspmm
-	sparse/testing/testing_sspmm.cpp
-	sparse/testing/testing_sspmv
-	sparse/testing/testing_sspmv.cpp
-	sparse/testing/testing_sspmv_check
-	sparse/testing/testing_sspmv_check.cpp
-	sparse/testing/testing_ssptrsv
-	sparse/testing/testing_ssptrsv.cpp
-	sparse/testing/testing_zblas
-	sparse/testing/testing_zcspmv_mixed
-	sparse/testing/testing_zdot
-	sparse/testing/testing_zgetrowptr
-	sparse/testing/testing_zio
-	sparse/testing/testing_zmadd
-	sparse/testing/testing_zmatrix
-	sparse/testing/testing_zmatrixcapcup
-	sparse/testing/testing_zmatrixinfo
-	sparse/testing/testing_zmcompressor
-	sparse/testing/testing_zmconverter
-	sparse/testing/testing_zmdotc
-	sparse/testing/testing_zpreconditioner
-	sparse/testing/testing_zselect
-	sparse/testing/testing_zsolver
-	sparse/testing/testing_zsolver_rhs
-	sparse/testing/testing_zsolver_rhs_scaling
-	sparse/testing/testing_zsort
-	sparse/testing/testing_zspmm
-	sparse/testing/testing_zspmv
-	sparse/testing/testing_zspmv_check
-	sparse/testing/testing_zsptrsv
-	src/cblas_c.cpp
-	src/cblas_d.cpp
-	src/cblas_s.cpp
-	src/cbulge_applyQ_v2.cpp
-	src/cbulge_applyQ_v2_m.cpp
-	src/cbulge_back.cpp
-	src/cbulge_back_m.cpp
-	src/cgebrd.cpp
-	src/cgeev.cpp
-	src/cgeev_m.cpp
-	src/cgegqr_gpu.cpp
-	src/cgehrd.cpp
-	src/cgehrd2.cpp
-	src/cgehrd_m.cpp
-	src/cgelqf.cpp
-	src/cgelqf_gpu.cpp
-	src/cgels.cpp
-	src/cgels3_gpu.cpp
-	src/cgels_gpu.cpp
-	src/cgeqlf.cpp
-	src/cgeqp3.cpp
-	src/cgeqp3_gpu.cpp
-	src/cgeqr2x_gpu-v2.cpp
-	src/cgeqr2x_gpu-v3.cpp
-	src/cgeqr2x_gpu.cpp
-	src/cgeqrf.cpp
-	src/cgeqrf2_gpu.cpp
-	src/cgeqrf3_gpu.cpp
-	src/cgeqrf_batched.cpp
-	src/cgeqrf_expert_batched.cpp
-	src/cgeqrf_gpu.cpp
-	src/cgeqrf_m.cpp
-	src/cgeqrf_mgpu.cpp
-	src/cgeqrf_ooc.cpp
-	src/cgeqrf_panel_batched.cpp
-	src/cgeqrs3_gpu.cpp
-	src/cgeqrs_gpu.cpp
-	src/cgerbt_batched.cpp
-	src/cgerbt_gpu.cpp
-	src/cgerfs_nopiv_gpu.cpp
-	src/cgesdd.cpp
-	src/cgesv.cpp
-	src/cgesv_batched.cpp
-	src/cgesv_gpu.cpp
-	src/cgesv_nopiv_batched.cpp
-	src/cgesv_nopiv_gpu.cpp
-	src/cgesv_rbt.cpp
-	src/cgesv_rbt_batched.cpp
-	src/cgesvd.cpp
-	src/cgetf2_batched.cpp
-	src/cgetf2_native.cpp
-	src/cgetf2_nopiv.cpp
-	src/cgetf2_nopiv_batched.cpp
-	src/cgetrf.cpp
-	src/cgetrf2_mgpu.cpp
-	src/cgetrf_batched.cpp
-	src/cgetrf_gpu.cpp
-	src/cgetrf_m.cpp
-	src/cgetrf_mgpu.cpp
-	src/cgetrf_nopiv.cpp
-	src/cgetrf_nopiv_batched.cpp
-	src/cgetrf_nopiv_gpu.cpp
-	src/cgetrf_panel_batched.cpp
-	src/cgetrf_panel_native.cpp
-	src/cgetrf_panel_nopiv_batched.cpp
-	src/cgetri_gpu.cpp
-	src/cgetri_outofplace_batched.cpp
-	src/cgetrs_batched.cpp
-	src/cgetrs_gpu.cpp
-	src/cgetrs_nopiv_batched.cpp
-	src/cgetrs_nopiv_gpu.cpp
-	src/cgglse.cpp
-	src/cggrqf.cpp
-	src/cheevd.cpp
-	src/cheevd_gpu.cpp
-	src/cheevd_m.cpp
-	src/cheevdx.cpp
-	src/cheevdx_2stage.cpp
-	src/cheevdx_2stage_m.cpp
-	src/cheevdx_gpu.cpp
-	src/cheevdx_m.cpp
-	src/cheevr.cpp
-	src/cheevr_gpu.cpp
-	src/cheevx.cpp
-	src/cheevx_gpu.cpp
-	src/chegst.cpp
-	src/chegst_gpu.cpp
-	src/chegst_m.cpp
-	src/chegvd.cpp
-	src/chegvd_m.cpp
-	src/chegvdx.cpp
-	src/chegvdx_2stage.cpp
-	src/chegvdx_2stage_m.cpp
-	src/chegvdx_m.cpp
-	src/chegvr.cpp
-	src/chegvx.cpp
-	src/chesv.cpp
-	src/chesv_nopiv_gpu.cpp
-	src/chetrd.cpp
-	src/chetrd2_gpu.cpp
-	src/chetrd_gpu.cpp
-	src/chetrd_hb2st.cpp
-	src/chetrd_he2hb.cpp
-	src/chetrd_he2hb_mgpu.cpp
-	src/chetrd_mgpu.cpp
-	src/chetrf.cpp
-	src/chetrf_aasen.cpp
-	src/chetrf_gpu.cpp
-	src/chetrf_nopiv.cpp
-	src/chetrf_nopiv_cpu.cpp
-	src/chetrf_nopiv_gpu.cpp
-	src/chetrs_nopiv_gpu.cpp
-	src/clabrd_gpu.cpp
-	src/clahef_gpu.cpp
-	src/clahr2.cpp
-	src/clahr2_m.cpp
-	src/clahru.cpp
-	src/clahru_m.cpp
-	src/claqps.cpp
-	src/claqps_gpu.cpp
-	src/clarfb_gemm_batched.cpp
-	src/clarfb_gpu.cpp
-	src/clarfb_gpu_gemm.cpp
-	src/clarft_batched.cpp
-	src/clatrd.cpp
-	src/clatrd2.cpp
-	src/clatrd_mgpu.cpp
-	src/clatrsd.cpp
-	src/clauum.cpp
-	src/clauum_gpu.cpp
-	src/core_chbtype1cb.cpp
-	src/core_chbtype2cb.cpp
-	src/core_chbtype3cb.cpp
-	src/core_clarfy.cpp
-	src/core_dlarfy.cpp
-	src/core_dsbtype1cb.cpp
-	src/core_dsbtype2cb.cpp
-	src/core_dsbtype3cb.cpp
-	src/core_slarfy.cpp
-	src/core_ssbtype1cb.cpp
-	src/core_ssbtype2cb.cpp
-	src/core_ssbtype3cb.cpp
-	src/cposv.cpp
-	src/cposv_batched.cpp
-	src/cposv_gpu.cpp
-	src/cpotf2_batched.cpp
-	src/cpotf2_vbatched.cpp
-	src/cpotrf.cpp
-	src/cpotrf3_mgpu.cpp
-	src/cpotrf_batched.cpp
-	src/cpotrf_gpu.cpp
-	src/cpotrf_m.cpp
-	src/cpotrf_mgpu.cpp
-	src/cpotrf_mgpu_right.cpp
-	src/cpotrf_panel_batched.cpp
-	src/cpotrf_panel_native.cpp
-	src/cpotrf_panel_vbatched.cpp
-	src/cpotrf_vbatched.cpp
-	src/cpotri.cpp
-	src/cpotri_gpu.cpp
-	src/cpotrs_batched.cpp
-	src/cpotrs_gpu.cpp
-	src/cstedx.cpp
-	src/cstedx_m.cpp
-	src/csysv_nopiv_gpu.cpp
-	src/csytrf_nopiv_cpu.cpp
-	src/csytrf_nopiv_gpu.cpp
-	src/csytrs_nopiv_gpu.cpp
-	src/ctrevc3.cpp
-	src/ctrevc3_mt.cpp
-	src/ctrsm_m.cpp
-	src/ctrtri.cpp
-	src/ctrtri_gpu.cpp
-	src/cungbr.cpp
-	src/cunghr.cpp
-	src/cunghr_m.cpp
-	src/cunglq.cpp
-	src/cungqr.cpp
-	src/cungqr2.cpp
-	src/cungqr_2stage_gpu.cpp
-	src/cungqr_gpu.cpp
-	src/cungqr_m.cpp
-	src/cungtr.cpp
-	src/cunmbr.cpp
-	src/cunmlq.cpp
-	src/cunmql.cpp
-	src/cunmql2_gpu.cpp
-	src/cunmqr.cpp
-	src/cunmqr2_gpu.cpp
-	src/cunmqr_2stage_gpu.cpp
-	src/cunmqr_gpu.cpp
-	src/cunmqr_m.cpp
-	src/cunmrq.cpp
-	src/cunmtr.cpp
-	src/cunmtr_gpu.cpp
-	src/cunmtr_m.cpp
-	src/dbulge_applyQ_v2.cpp
-	src/dbulge_applyQ_v2_m.cpp
-	src/dbulge_back.cpp
-	src/dbulge_back_m.cpp
-	src/dgebrd.cpp
-	src/dgegqr_gpu.cpp
-	src/dgehrd.cpp
-	src/dgehrd2.cpp
-	src/dgehrd_m.cpp
-	src/dgelqf.cpp
-	src/dgelqf_gpu.cpp
-	src/dgels.cpp
-	src/dgels3_gpu.cpp
-	src/dgels_gpu.cpp
-	src/dgeqlf.cpp
-	src/dgeqp3.cpp
-	src/dgeqp3_gpu.cpp
-	src/dgeqr2x_gpu-v2.cpp
-	src/dgeqr2x_gpu-v3.cpp
-	src/dgeqr2x_gpu.cpp
-	src/dgeqrf.cpp
-	src/dgeqrf2_gpu.cpp
-	src/dgeqrf3_gpu.cpp
-	src/dgeqrf_batched.cpp
-	src/dgeqrf_expert_batched.cpp
-	src/dgeqrf_gpu.cpp
-	src/dgeqrf_m.cpp
-	src/dgeqrf_mgpu.cpp
-	src/dgeqrf_ooc.cpp
-	src/dgeqrf_panel_batched.cpp
-	src/dgeqrs3_gpu.cpp
-	src/dgeqrs_gpu.cpp
-	src/dgerbt_batched.cpp
-	src/dgerbt_gpu.cpp
-	src/dgerfs_nopiv_gpu.cpp
-	src/dgesv.cpp
-	src/dgesv_batched.cpp
-	src/dgesv_gpu.cpp
-	src/dgesv_nopiv_batched.cpp
-	src/dgesv_nopiv_gpu.cpp
-	src/dgesv_rbt.cpp
-	src/dgesv_rbt_batched.cpp
-	src/dgetf2_batched.cpp
-	src/dgetf2_native.cpp
-	src/dgetf2_nopiv.cpp
-	src/dgetf2_nopiv_batched.cpp
-	src/dgetrf.cpp
-	src/dgetrf2_mgpu.cpp
-	src/dgetrf_batched.cpp
-	src/dgetrf_gpu.cpp
-	src/dgetrf_m.cpp
-	src/dgetrf_mgpu.cpp
-	src/dgetrf_nopiv.cpp
-	src/dgetrf_nopiv_batched.cpp
-	src/dgetrf_nopiv_gpu.cpp
-	src/dgetrf_panel_batched.cpp
-	src/dgetrf_panel_native.cpp
-	src/dgetrf_panel_nopiv_batched.cpp
-	src/dgetri_gpu.cpp
-	src/dgetri_outofplace_batched.cpp
-	src/dgetrs_batched.cpp
-	src/dgetrs_gpu.cpp
-	src/dgetrs_nopiv_batched.cpp
-	src/dgetrs_nopiv_gpu.cpp
-	src/dgglse.cpp
-	src/dggrqf.cpp
-	src/dlabrd_gpu.cpp
-	src/dlahr2.cpp
-	src/dlahr2_m.cpp
-	src/dlahru.cpp
-	src/dlahru_m.cpp
-	src/dlaqps.cpp
-	src/dlaqps_gpu.cpp
-	src/dlarfb_gemm_batched.cpp
-	src/dlarfb_gpu.cpp
-	src/dlarfb_gpu_gemm.cpp
-	src/dlarft_batched.cpp
-	src/dlasyf_gpu.cpp
-	src/dlatrd.cpp
-	src/dlatrd2.cpp
-	src/dlatrd_mgpu.cpp
-	src/dlauum.cpp
-	src/dlauum_gpu.cpp
-	src/dorgbr.cpp
-	src/dorghr.cpp
-	src/dorghr_m.cpp
-	src/dorglq.cpp
-	src/dorgqr.cpp
-	src/dorgqr2.cpp
-	src/dorgqr_2stage_gpu.cpp
-	src/dorgqr_gpu.cpp
-	src/dorgqr_m.cpp
-	src/dorgtr.cpp
-	src/dormbr.cpp
-	src/dormlq.cpp
-	src/dormql.cpp
-	src/dormql2_gpu.cpp
-	src/dormqr.cpp
-	src/dormqr2_gpu.cpp
-	src/dormqr_2stage_gpu.cpp
-	src/dormqr_gpu.cpp
-	src/dormqr_m.cpp
-	src/dormrq.cpp
-	src/dormtr.cpp
-	src/dormtr_gpu.cpp
-	src/dormtr_m.cpp
-	src/dposv.cpp
-	src/dposv_batched.cpp
-	src/dposv_gpu.cpp
-	src/dpotf2_batched.cpp
-	src/dpotf2_vbatched.cpp
-	src/dpotrf.cpp
-	src/dpotrf3_mgpu.cpp
-	src/dpotrf_batched.cpp
-	src/dpotrf_gpu.cpp
-	src/dpotrf_m.cpp
-	src/dpotrf_mgpu.cpp
-	src/dpotrf_mgpu_right.cpp
-	src/dpotrf_panel_batched.cpp
-	src/dpotrf_panel_native.cpp
-	src/dpotrf_panel_vbatched.cpp
-	src/dpotrf_vbatched.cpp
-	src/dpotri.cpp
-	src/dpotri_gpu.cpp
-	src/dpotrs_batched.cpp
-	src/dpotrs_gpu.cpp
-	src/dsgeqrsv_gpu.cpp
-	src/dsgesv_gpu.cpp
-	src/dsgetrs_gpu.cpp
-	src/dsposv_gpu.cpp
-	src/dssysv_gpu.cpp
-	src/dsyevdx_2stage.cpp
-	src/dsyevdx_2stage_m.cpp
-	src/dsygst.cpp
-	src/dsygst_gpu.cpp
-	src/dsygst_m.cpp
-	src/dsygvdx_2stage.cpp
-	src/dsygvdx_2stage_m.cpp
-	src/dsysv.cpp
-	src/dsysv_nopiv_gpu.cpp
-	src/dsytrd.cpp
-	src/dsytrd2_gpu.cpp
-	src/dsytrd_gpu.cpp
-	src/dsytrd_mgpu.cpp
-	src/dsytrd_sb2st.cpp
-	src/dsytrd_sy2sb.cpp
-	src/dsytrd_sy2sb_mgpu.cpp
-	src/dsytrf.cpp
-	src/dsytrf_aasen.cpp
-	src/dsytrf_gpu.cpp
-	src/dsytrf_nopiv.cpp
-	src/dsytrf_nopiv_cpu.cpp
-	src/dsytrf_nopiv_gpu.cpp
-	src/dsytrs_nopiv_gpu.cpp
-	src/dtrsm_m.cpp
-	src/dtrtri.cpp
-	src/dtrtri_gpu.cpp
-	src/sbulge_applyQ_v2.cpp
-	src/sbulge_applyQ_v2_m.cpp
-	src/sbulge_back.cpp
-	src/sbulge_back_m.cpp
-	src/sgebrd.cpp
-	src/sgeev.cpp
-	src/sgeev_m.cpp
-	src/sgegqr_gpu.cpp
-	src/sgehrd.cpp
-	src/sgehrd2.cpp
-	src/sgehrd_m.cpp
-	src/sgelqf.cpp
-	src/sgelqf_gpu.cpp
-	src/sgels.cpp
-	src/sgels3_gpu.cpp
-	src/sgels_gpu.cpp
-	src/sgeqlf.cpp
-	src/sgeqp3.cpp
-	src/sgeqp3_gpu.cpp
-	src/sgeqr2x_gpu-v2.cpp
-	src/sgeqr2x_gpu-v3.cpp
-	src/sgeqr2x_gpu.cpp
-	src/sgeqrf.cpp
-	src/sgeqrf2_gpu.cpp
-	src/sgeqrf3_gpu.cpp
-	src/sgeqrf_batched.cpp
-	src/sgeqrf_expert_batched.cpp
-	src/sgeqrf_gpu.cpp
-	src/sgeqrf_m.cpp
-	src/sgeqrf_mgpu.cpp
-	src/sgeqrf_ooc.cpp
-	src/sgeqrf_panel_batched.cpp
-	src/sgeqrs3_gpu.cpp
-	src/sgeqrs_gpu.cpp
-	src/sgerbt_batched.cpp
-	src/sgerbt_gpu.cpp
-	src/sgerfs_nopiv_gpu.cpp
-	src/sgesdd.cpp
-	src/sgesv.cpp
-	src/sgesv_batched.cpp
-	src/sgesv_gpu.cpp
-	src/sgesv_nopiv_batched.cpp
-	src/sgesv_nopiv_gpu.cpp
-	src/sgesv_rbt.cpp
-	src/sgesv_rbt_batched.cpp
-	src/sgesvd.cpp
-	src/sgetf2_batched.cpp
-	src/sgetf2_native.cpp
-	src/sgetf2_nopiv.cpp
-	src/sgetf2_nopiv_batched.cpp
-	src/sgetrf.cpp
-	src/sgetrf2_mgpu.cpp
-	src/sgetrf_batched.cpp
-	src/sgetrf_gpu.cpp
-	src/sgetrf_m.cpp
-	src/sgetrf_mgpu.cpp
-	src/sgetrf_nopiv.cpp
-	src/sgetrf_nopiv_batched.cpp
-	src/sgetrf_nopiv_gpu.cpp
-	src/sgetrf_panel_batched.cpp
-	src/sgetrf_panel_native.cpp
-	src/sgetrf_panel_nopiv_batched.cpp
-	src/sgetri_gpu.cpp
-	src/sgetri_outofplace_batched.cpp
-	src/sgetrs_batched.cpp
-	src/sgetrs_gpu.cpp
-	src/sgetrs_nopiv_batched.cpp
-	src/sgetrs_nopiv_gpu.cpp
-	src/sgglse.cpp
-	src/sggrqf.cpp
-	src/slabrd_gpu.cpp
-	src/slaex0.cpp
-	src/slaex0_m.cpp
-	src/slaex1.cpp
-	src/slaex1_m.cpp
-	src/slaex3.cpp
-	src/slaex3_m.cpp
-	src/slahr2.cpp
-	src/slahr2_m.cpp
-	src/slahru.cpp
-	src/slahru_m.cpp
-	src/slaln2.cpp
-	src/slaqps.cpp
-	src/slaqps_gpu.cpp
-	src/slaqtrsd.cpp
-	src/slarfb_gemm_batched.cpp
-	src/slarfb_gpu.cpp
-	src/slarfb_gpu_gemm.cpp
-	src/slarft_batched.cpp
-	src/slasyf_gpu.cpp
-	src/slatrd.cpp
-	src/slatrd2.cpp
-	src/slatrd_mgpu.cpp
-	src/slauum.cpp
-	src/slauum_gpu.cpp
-	src/smove_eig.cpp
-	src/sorgbr.cpp
-	src/sorghr.cpp
-	src/sorghr_m.cpp
-	src/sorglq.cpp
-	src/sorgqr.cpp
-	src/sorgqr2.cpp
-	src/sorgqr_2stage_gpu.cpp
-	src/sorgqr_gpu.cpp
-	src/sorgqr_m.cpp
-	src/sorgtr.cpp
-	src/sormbr.cpp
-	src/sormlq.cpp
-	src/sormql.cpp
-	src/sormql2_gpu.cpp
-	src/sormqr.cpp
-	src/sormqr2_gpu.cpp
-	src/sormqr_2stage_gpu.cpp
-	src/sormqr_gpu.cpp
-	src/sormqr_m.cpp
-	src/sormrq.cpp
-	src/sormtr.cpp
-	src/sormtr_gpu.cpp
-	src/sormtr_m.cpp
-	src/sposv.cpp
-	src/sposv_batched.cpp
-	src/sposv_gpu.cpp
-	src/spotf2_batched.cpp
-	src/spotf2_vbatched.cpp
-	src/spotrf.cpp
-	src/spotrf3_mgpu.cpp
-	src/spotrf_batched.cpp
-	src/spotrf_gpu.cpp
-	src/spotrf_m.cpp
-	src/spotrf_mgpu.cpp
-	src/spotrf_mgpu_right.cpp
-	src/spotrf_panel_batched.cpp
-	src/spotrf_panel_native.cpp
-	src/spotrf_panel_vbatched.cpp
-	src/spotrf_vbatched.cpp
-	src/spotri.cpp
-	src/spotri_gpu.cpp
-	src/spotrs_batched.cpp
-	src/spotrs_gpu.cpp
-	src/sstedx.cpp
-	src/sstedx_m.cpp
-	src/ssyevd.cpp
-	src/ssyevd_gpu.cpp
-	src/ssyevd_m.cpp
-	src/ssyevdx.cpp
-	src/ssyevdx_2stage.cpp
-	src/ssyevdx_2stage_m.cpp
-	src/ssyevdx_gpu.cpp
-	src/ssyevdx_m.cpp
-	src/ssygst.cpp
-	src/ssygst_gpu.cpp
-	src/ssygst_m.cpp
-	src/ssygvd.cpp
-	src/ssygvd_m.cpp
-	src/ssygvdx.cpp
-	src/ssygvdx_2stage.cpp
-	src/ssygvdx_2stage_m.cpp
-	src/ssygvdx_m.cpp
-	src/ssysv.cpp
-	src/ssysv_nopiv_gpu.cpp
-	src/ssytrd.cpp
-	src/ssytrd2_gpu.cpp
-	src/ssytrd_gpu.cpp
-	src/ssytrd_mgpu.cpp
-	src/ssytrd_sb2st.cpp
-	src/ssytrd_sy2sb.cpp
-	src/ssytrd_sy2sb_mgpu.cpp
-	src/ssytrf.cpp
-	src/ssytrf_aasen.cpp
-	src/ssytrf_gpu.cpp
-	src/ssytrf_nopiv.cpp
-	src/ssytrf_nopiv_cpu.cpp
-	src/ssytrf_nopiv_gpu.cpp
-	src/ssytrs_nopiv_gpu.cpp
-	src/strevc3.cpp
-	src/strevc3_mt.cpp
-	src/strsm_m.cpp
-	src/strtri.cpp
-	src/strtri_gpu.cpp
-	testing/magma_cgesvd_check.cpp
-	testing/magma_cutil.cpp
-	testing/magma_dgesvd_check.cpp
-	testing/magma_dutil.cpp
-	testing/magma_sgesvd_check.cpp
-	testing/magma_sutil.cpp
-	testing/testing_auxiliary
-	testing/testing_blas_c
-	testing/testing_blas_c.cpp
-	testing/testing_blas_d
-	testing/testing_blas_d.cpp
-	testing/testing_blas_s
-	testing/testing_blas_s.cpp
-	testing/testing_blas_z
-	testing/testing_c.h
-	testing/testing_caxpy
-	testing/testing_caxpy.cpp
-	testing/testing_cblas_c
-	testing/testing_cblas_c.cpp
-	testing/testing_cblas_d
-	testing/testing_cblas_d.cpp
-	testing/testing_cblas_s
-	testing/testing_cblas_s.cpp
-	testing/testing_cblas_z
-	testing/testing_cgeadd
-	testing/testing_cgeadd.cpp
-	testing/testing_cgeadd_batched
-	testing/testing_cgeadd_batched.cpp
-	testing/testing_cgeam
-	testing/testing_cgeam.cpp
-	testing/testing_cgebrd
-	testing/testing_cgebrd.cpp
-	testing/testing_cgeev
-	testing/testing_cgeev.cpp
-	testing/testing_cgegqr_gpu
-	testing/testing_cgegqr_gpu.cpp
-	testing/testing_cgehrd
-	testing/testing_cgehrd.cpp
-	testing/testing_cgelqf
-	testing/testing_cgelqf.cpp
-	testing/testing_cgelqf_gpu
-	testing/testing_cgelqf_gpu.cpp
-	testing/testing_cgels
-	testing/testing_cgels.cpp
-	testing/testing_cgels3_gpu
-	testing/testing_cgels3_gpu.cpp
-	testing/testing_cgels_gpu
-	testing/testing_cgels_gpu.cpp
-	testing/testing_cgemm
-	testing/testing_cgemm.cpp
-	testing/testing_cgemm_batched
-	testing/testing_cgemm_batched.cpp
-	testing/testing_cgemm_vbatched
-	testing/testing_cgemm_vbatched.cpp
-	testing/testing_cgemv
-	testing/testing_cgemv.cpp
-	testing/testing_cgemv_batched
-	testing/testing_cgemv_batched.cpp
-	testing/testing_cgemv_vbatched
-	testing/testing_cgemv_vbatched.cpp
-	testing/testing_cgenerate
-	testing/testing_cgenerate.cpp
-	testing/testing_cgeqlf
-	testing/testing_cgeqlf.cpp
-	testing/testing_cgeqp3
-	testing/testing_cgeqp3.cpp
-	testing/testing_cgeqp3_gpu
-	testing/testing_cgeqp3_gpu.cpp
-	testing/testing_cgeqr2_gpu
-	testing/testing_cgeqr2_gpu.cpp
-	testing/testing_cgeqr2x_gpu
-	testing/testing_cgeqr2x_gpu.cpp
-	testing/testing_cgeqrf
-	testing/testing_cgeqrf.cpp
-	testing/testing_cgeqrf_batched
-	testing/testing_cgeqrf_batched.cpp
-	testing/testing_cgeqrf_gpu
-	testing/testing_cgeqrf_gpu.cpp
-	testing/testing_cgeqrf_mgpu
-	testing/testing_cgeqrf_mgpu.cpp
-	testing/testing_cgesdd
-	testing/testing_cgesdd.cpp
-	testing/testing_cgesv
-	testing/testing_cgesv.cpp
-	testing/testing_cgesv_batched
-	testing/testing_cgesv_batched.cpp
-	testing/testing_cgesv_gpu
-	testing/testing_cgesv_gpu.cpp
-	testing/testing_cgesv_nopiv_batched
-	testing/testing_cgesv_nopiv_batched.cpp
-	testing/testing_cgesv_rbt
-	testing/testing_cgesv_rbt.cpp
-	testing/testing_cgesvd
-	testing/testing_cgesvd.cpp
-	testing/testing_cgetf2_gpu
-	testing/testing_cgetf2_gpu.cpp
-	testing/testing_cgetrf
-	testing/testing_cgetrf.cpp
-	testing/testing_cgetrf_batched
-	testing/testing_cgetrf_batched.cpp
-	testing/testing_cgetrf_gpu
-	testing/testing_cgetrf_gpu.cpp
-	testing/testing_cgetrf_mgpu
-	testing/testing_cgetrf_mgpu.cpp
-	testing/testing_cgetrf_nopiv_batched
-	testing/testing_cgetrf_nopiv_batched.cpp
-	testing/testing_cgetri_batched
-	testing/testing_cgetri_batched.cpp
-	testing/testing_cgetri_gpu
-	testing/testing_cgetri_gpu.cpp
-	testing/testing_cgglse
-	testing/testing_cgglse.cpp
-	testing/testing_cheevd
-	testing/testing_cheevd.cpp
-	testing/testing_cheevd_gpu
-	testing/testing_cheevd_gpu.cpp
-	testing/testing_cheevdx_2stage
-	testing/testing_cheevdx_2stage.cpp
-	testing/testing_chegst
-	testing/testing_chegst.cpp
-	testing/testing_chegst_gpu
-	testing/testing_chegst_gpu.cpp
-	testing/testing_chegvd
-	testing/testing_chegvd.cpp
-	testing/testing_chegvdx
-	testing/testing_chegvdx.cpp
-	testing/testing_chegvdx_2stage
-	testing/testing_chegvdx_2stage.cpp
-	testing/testing_chemm
-	testing/testing_chemm.cpp
-	testing/testing_chemm_batched
-	testing/testing_chemm_batched.cpp
-	testing/testing_chemm_mgpu
-	testing/testing_chemm_mgpu.cpp
-	testing/testing_chemm_vbatched
-	testing/testing_chemm_vbatched.cpp
-	testing/testing_chemv
-	testing/testing_chemv.cpp
-	testing/testing_chemv_batched
-	testing/testing_chemv_batched.cpp
-	testing/testing_chemv_mgpu
-	testing/testing_chemv_mgpu.cpp
-	testing/testing_chemv_vbatched
-	testing/testing_chemv_vbatched.cpp
-	testing/testing_cher2k
-	testing/testing_cher2k.cpp
-	testing/testing_cher2k_batched
-	testing/testing_cher2k_batched.cpp
-	testing/testing_cher2k_mgpu
-	testing/testing_cher2k_mgpu.cpp
-	testing/testing_cher2k_vbatched
-	testing/testing_cher2k_vbatched.cpp
-	testing/testing_cherk
-	testing/testing_cherk.cpp
-	testing/testing_cherk_batched
-	testing/testing_cherk_batched.cpp
-	testing/testing_cherk_vbatched
-	testing/testing_cherk_vbatched.cpp
-	testing/testing_chesv
-	testing/testing_chesv.cpp
-	testing/testing_chesv_nopiv_gpu
-	testing/testing_chesv_nopiv_gpu.cpp
-	testing/testing_chetrd
-	testing/testing_chetrd.cpp
-	testing/testing_chetrd_gpu
-	testing/testing_chetrd_gpu.cpp
-	testing/testing_chetrd_mgpu
-	testing/testing_chetrd_mgpu.cpp
-	testing/testing_chetrf
-	testing/testing_chetrf.cpp
-	testing/testing_clacpy
-	testing/testing_clacpy.cpp
-	testing/testing_clacpy_batched
-	testing/testing_clacpy_batched.cpp
-	testing/testing_clange
-	testing/testing_clange.cpp
-	testing/testing_clanhe
-	testing/testing_clanhe.cpp
-	testing/testing_clarfb_gpu
-	testing/testing_clarfb_gpu.cpp
-	testing/testing_clarfg
-	testing/testing_clarfg.cpp
-	testing/testing_clascl
-	testing/testing_clascl.cpp
-	testing/testing_claset
-	testing/testing_claset.cpp
-	testing/testing_claset_band
-	testing/testing_claset_band.cpp
-	testing/testing_cnan_inf
-	testing/testing_cnan_inf.cpp
-	testing/testing_constants
-	testing/testing_cposv
-	testing/testing_cposv.cpp
-	testing/testing_cposv_batched
-	testing/testing_cposv_batched.cpp
-	testing/testing_cposv_gpu
-	testing/testing_cposv_gpu.cpp
-	testing/testing_cpotf2_gpu
-	testing/testing_cpotf2_gpu.cpp
-	testing/testing_cpotrf
-	testing/testing_cpotrf.cpp
-	testing/testing_cpotrf_batched
-	testing/testing_cpotrf_batched.cpp
-	testing/testing_cpotrf_gpu
-	testing/testing_cpotrf_gpu.cpp
-	testing/testing_cpotrf_mgpu
-	testing/testing_cpotrf_mgpu.cpp
-	testing/testing_cpotrf_vbatched
-	testing/testing_cpotrf_vbatched.cpp
-	testing/testing_cpotri
-	testing/testing_cpotri.cpp
-	testing/testing_cpotri_gpu
-	testing/testing_cpotri_gpu.cpp
-	testing/testing_cprint
-	testing/testing_cprint.cpp
-	testing/testing_cswap
-	testing/testing_cswap.cpp
-	testing/testing_csymmetrize
-	testing/testing_csymmetrize.cpp
-	testing/testing_csymmetrize_tiles
-	testing/testing_csymmetrize_tiles.cpp
-	testing/testing_csymv
-	testing/testing_csymv.cpp
-	testing/testing_csyr2k_batched
-	testing/testing_csyr2k_batched.cpp
-	testing/testing_csyr2k_vbatched
-	testing/testing_csyr2k_vbatched.cpp
-	testing/testing_csyrk_vbatched
-	testing/testing_csyrk_vbatched.cpp
-	testing/testing_csysv_nopiv_gpu
-	testing/testing_csysv_nopiv_gpu.cpp
-	testing/testing_ctranspose
-	testing/testing_ctranspose.cpp
-	testing/testing_ctrmm
-	testing/testing_ctrmm.cpp
-	testing/testing_ctrmm_batched
-	testing/testing_ctrmm_batched.cpp
-	testing/testing_ctrmm_vbatched
-	testing/testing_ctrmm_vbatched.cpp
-	testing/testing_ctrmv
-	testing/testing_ctrmv.cpp
-	testing/testing_ctrsm
-	testing/testing_ctrsm.cpp
-	testing/testing_ctrsm_batched
-	testing/testing_ctrsm_batched.cpp
-	testing/testing_ctrsm_vbatched
-	testing/testing_ctrsm_vbatched.cpp
-	testing/testing_ctrsv
-	testing/testing_ctrsv.cpp
-	testing/testing_ctrsv_batched
-	testing/testing_ctrsv_batched.cpp
-	testing/testing_ctrtri
-	testing/testing_ctrtri.cpp
-	testing/testing_ctrtri_diag
-	testing/testing_ctrtri_diag.cpp
-	testing/testing_ctrtri_gpu
-	testing/testing_ctrtri_gpu.cpp
-	testing/testing_cungbr
-	testing/testing_cungbr.cpp
-	testing/testing_cunglq
-	testing/testing_cunglq.cpp
-	testing/testing_cungqr
-	testing/testing_cungqr.cpp
-	testing/testing_cungqr_gpu
-	testing/testing_cungqr_gpu.cpp
-	testing/testing_cunmbr
-	testing/testing_cunmbr.cpp
-	testing/testing_cunmlq
-	testing/testing_cunmlq.cpp
-	testing/testing_cunmql
-	testing/testing_cunmql.cpp
-	testing/testing_cunmql_gpu
-	testing/testing_cunmql_gpu.cpp
-	testing/testing_cunmqr
-	testing/testing_cunmqr.cpp
-	testing/testing_cunmqr_gpu
-	testing/testing_cunmqr_gpu.cpp
-	testing/testing_d.h
-	testing/testing_daxpy
-	testing/testing_daxpy.cpp
-	testing/testing_dgeadd
-	testing/testing_dgeadd.cpp
-	testing/testing_dgeadd_batched
-	testing/testing_dgeadd_batched.cpp
-	testing/testing_dgeam
-	testing/testing_dgeam.cpp
-	testing/testing_dgebrd
-	testing/testing_dgebrd.cpp
-	testing/testing_dgeev
-	testing/testing_dgegqr_gpu
-	testing/testing_dgegqr_gpu.cpp
-	testing/testing_dgehrd
-	testing/testing_dgehrd.cpp
-	testing/testing_dgelqf
-	testing/testing_dgelqf.cpp
-	testing/testing_dgelqf_gpu
-	testing/testing_dgelqf_gpu.cpp
-	testing/testing_dgels
-	testing/testing_dgels.cpp
-	testing/testing_dgels3_gpu
-	testing/testing_dgels3_gpu.cpp
-	testing/testing_dgels_gpu
-	testing/testing_dgels_gpu.cpp
-	testing/testing_dgemm
-	testing/testing_dgemm.cpp
-	testing/testing_dgemm_batched
-	testing/testing_dgemm_batched.cpp
-	testing/testing_dgemm_vbatched
-	testing/testing_dgemm_vbatched.cpp
-	testing/testing_dgemv
-	testing/testing_dgemv.cpp
-	testing/testing_dgemv_batched
-	testing/testing_dgemv_batched.cpp
-	testing/testing_dgemv_vbatched
-	testing/testing_dgemv_vbatched.cpp
-	testing/testing_dgenerate
-	testing/testing_dgenerate.cpp
-	testing/testing_dgeqlf
-	testing/testing_dgeqlf.cpp
-	testing/testing_dgeqp3
-	testing/testing_dgeqp3.cpp
-	testing/testing_dgeqp3_gpu
-	testing/testing_dgeqp3_gpu.cpp
-	testing/testing_dgeqr2_gpu
-	testing/testing_dgeqr2_gpu.cpp
-	testing/testing_dgeqr2x_gpu
-	testing/testing_dgeqr2x_gpu.cpp
-	testing/testing_dgeqrf
-	testing/testing_dgeqrf.cpp
-	testing/testing_dgeqrf_batched
-	testing/testing_dgeqrf_batched.cpp
-	testing/testing_dgeqrf_gpu
-	testing/testing_dgeqrf_gpu.cpp
-	testing/testing_dgeqrf_mgpu
-	testing/testing_dgeqrf_mgpu.cpp
-	testing/testing_dgesdd
-	testing/testing_dgesdd.cpp
-	testing/testing_dgesv
-	testing/testing_dgesv.cpp
-	testing/testing_dgesv_batched
-	testing/testing_dgesv_batched.cpp
-	testing/testing_dgesv_gpu
-	testing/testing_dgesv_gpu.cpp
-	testing/testing_dgesv_nopiv_batched
-	testing/testing_dgesv_nopiv_batched.cpp
-	testing/testing_dgesv_rbt
-	testing/testing_dgesv_rbt.cpp
-	testing/testing_dgesvd
-	testing/testing_dgesvd.cpp
-	testing/testing_dgetf2_gpu
-	testing/testing_dgetf2_gpu.cpp
-	testing/testing_dgetrf
-	testing/testing_dgetrf.cpp
-	testing/testing_dgetrf_batched
-	testing/testing_dgetrf_batched.cpp
-	testing/testing_dgetrf_gpu
-	testing/testing_dgetrf_gpu.cpp
-	testing/testing_dgetrf_mgpu
-	testing/testing_dgetrf_mgpu.cpp
-	testing/testing_dgetrf_nopiv_batched
-	testing/testing_dgetrf_nopiv_batched.cpp
-	testing/testing_dgetri_batched
-	testing/testing_dgetri_batched.cpp
-	testing/testing_dgetri_gpu
-	testing/testing_dgetri_gpu.cpp
-	testing/testing_dgglse
-	testing/testing_dgglse.cpp
-	testing/testing_dlacpy
-	testing/testing_dlacpy.cpp
-	testing/testing_dlacpy_batched
-	testing/testing_dlacpy_batched.cpp
-	testing/testing_dlag2s
-	testing/testing_dlag2s.cpp
-	testing/testing_dlange
-	testing/testing_dlange.cpp
-	testing/testing_dlansy
-	testing/testing_dlansy.cpp
-	testing/testing_dlarfb_gpu
-	testing/testing_dlarfb_gpu.cpp
-	testing/testing_dlarfg
-	testing/testing_dlarfg.cpp
-	testing/testing_dlascl
-	testing/testing_dlascl.cpp
-	testing/testing_dlaset
-	testing/testing_dlaset.cpp
-	testing/testing_dlaset_band
-	testing/testing_dlaset_band.cpp
-	testing/testing_dlat2s
-	testing/testing_dlat2s.cpp
-	testing/testing_dnan_inf
-	testing/testing_dnan_inf.cpp
-	testing/testing_dorgbr
-	testing/testing_dorgbr.cpp
-	testing/testing_dorglq
-	testing/testing_dorglq.cpp
-	testing/testing_dorgqr
-	testing/testing_dorgqr.cpp
-	testing/testing_dorgqr_gpu
-	testing/testing_dorgqr_gpu.cpp
-	testing/testing_dormbr
-	testing/testing_dormbr.cpp
-	testing/testing_dormlq
-	testing/testing_dormlq.cpp
-	testing/testing_dormql
-	testing/testing_dormql.cpp
-	testing/testing_dormql_gpu
-	testing/testing_dormql_gpu.cpp
-	testing/testing_dormqr
-	testing/testing_dormqr.cpp
-	testing/testing_dormqr_gpu
-	testing/testing_dormqr_gpu.cpp
-	testing/testing_dposv
-	testing/testing_dposv.cpp
-	testing/testing_dposv_batched
-	testing/testing_dposv_batched.cpp
-	testing/testing_dposv_gpu
-	testing/testing_dposv_gpu.cpp
-	testing/testing_dpotf2_gpu
-	testing/testing_dpotf2_gpu.cpp
-	testing/testing_dpotrf
-	testing/testing_dpotrf.cpp
-	testing/testing_dpotrf_batched
-	testing/testing_dpotrf_batched.cpp
-	testing/testing_dpotrf_gpu
-	testing/testing_dpotrf_gpu.cpp
-	testing/testing_dpotrf_mgpu
-	testing/testing_dpotrf_mgpu.cpp
-	testing/testing_dpotrf_vbatched
-	testing/testing_dpotrf_vbatched.cpp
-	testing/testing_dpotri
-	testing/testing_dpotri.cpp
-	testing/testing_dpotri_gpu
-	testing/testing_dpotri_gpu.cpp
-	testing/testing_dprint
-	testing/testing_dprint.cpp
-	testing/testing_dsgeqrsv_gpu
-	testing/testing_dsgeqrsv_gpu.cpp
-	testing/testing_dsgesv_gpu
-	testing/testing_dsgesv_gpu.cpp
-	testing/testing_dsposv_gpu
-	testing/testing_dsposv_gpu.cpp
-	testing/testing_dswap
-	testing/testing_dswap.cpp
-	testing/testing_dsyevd
-	testing/testing_dsyevd.cpp
-	testing/testing_dsyevd_gpu
-	testing/testing_dsyevd_gpu.cpp
-	testing/testing_dsyevdx_2stage
-	testing/testing_dsyevdx_2stage.cpp
-	testing/testing_dsygst
-	testing/testing_dsygst.cpp
-	testing/testing_dsygst_gpu
-	testing/testing_dsygst_gpu.cpp
-	testing/testing_dsygvd
-	testing/testing_dsygvd.cpp
-	testing/testing_dsygvdx
-	testing/testing_dsygvdx.cpp
-	testing/testing_dsygvdx_2stage
-	testing/testing_dsygvdx_2stage.cpp
-	testing/testing_dsymm
-	testing/testing_dsymm.cpp
-	testing/testing_dsymm_batched
-	testing/testing_dsymm_batched.cpp
-	testing/testing_dsymm_mgpu
-	testing/testing_dsymm_mgpu.cpp
-	testing/testing_dsymm_vbatched
-	testing/testing_dsymm_vbatched.cpp
-	testing/testing_dsymmetrize
-	testing/testing_dsymmetrize.cpp
-	testing/testing_dsymmetrize_tiles
-	testing/testing_dsymmetrize_tiles.cpp
-	testing/testing_dsymv
-	testing/testing_dsymv.cpp
-	testing/testing_dsymv_batched
-	testing/testing_dsymv_batched.cpp
-	testing/testing_dsymv_mgpu
-	testing/testing_dsymv_mgpu.cpp
-	testing/testing_dsymv_vbatched
-	testing/testing_dsymv_vbatched.cpp
-	testing/testing_dsyr2k
-	testing/testing_dsyr2k.cpp
-	testing/testing_dsyr2k_batched
-	testing/testing_dsyr2k_batched.cpp
-	testing/testing_dsyr2k_mgpu
-	testing/testing_dsyr2k_mgpu.cpp
-	testing/testing_dsyr2k_vbatched
-	testing/testing_dsyr2k_vbatched.cpp
-	testing/testing_dsyrk
-	testing/testing_dsyrk.cpp
-	testing/testing_dsyrk_batched
-	testing/testing_dsyrk_batched.cpp
-	testing/testing_dsyrk_vbatched
-	testing/testing_dsyrk_vbatched.cpp
-	testing/testing_dsysv
-	testing/testing_dsysv.cpp
-	testing/testing_dsysv_nopiv_gpu
-	testing/testing_dsysv_nopiv_gpu.cpp
-	testing/testing_dsytrd
-	testing/testing_dsytrd.cpp
-	testing/testing_dsytrd_gpu
-	testing/testing_dsytrd_gpu.cpp
-	testing/testing_dsytrd_mgpu
-	testing/testing_dsytrd_mgpu.cpp
-	testing/testing_dsytrf
-	testing/testing_dsytrf.cpp
-	testing/testing_dtranspose
-	testing/testing_dtranspose.cpp
-	testing/testing_dtrmm
-	testing/testing_dtrmm.cpp
-	testing/testing_dtrmm_batched
-	testing/testing_dtrmm_batched.cpp
-	testing/testing_dtrmm_vbatched
-	testing/testing_dtrmm_vbatched.cpp
-	testing/testing_dtrmv
-	testing/testing_dtrmv.cpp
-	testing/testing_dtrsm
-	testing/testing_dtrsm.cpp
-	testing/testing_dtrsm_batched
-	testing/testing_dtrsm_batched.cpp
-	testing/testing_dtrsm_vbatched
-	testing/testing_dtrsm_vbatched.cpp
-	testing/testing_dtrsv
-	testing/testing_dtrsv.cpp
-	testing/testing_dtrsv_batched
-	testing/testing_dtrsv_batched.cpp
-	testing/testing_dtrtri
-	testing/testing_dtrtri.cpp
-	testing/testing_dtrtri_diag
-	testing/testing_dtrtri_diag.cpp
-	testing/testing_dtrtri_gpu
-	testing/testing_dtrtri_gpu.cpp
-	testing/testing_dxgesv_gpu
-	testing/testing_hgemm
-	testing/testing_hgemm_batched
-	testing/testing_operators
-	testing/testing_parse_opts
-	testing/testing_s.h
-	testing/testing_saxpy
-	testing/testing_saxpy.cpp
-	testing/testing_sgeadd
-	testing/testing_sgeadd.cpp
-	testing/testing_sgeadd_batched
-	testing/testing_sgeadd_batched.cpp
-	testing/testing_sgeam
-	testing/testing_sgeam.cpp
-	testing/testing_sgebrd
-	testing/testing_sgebrd.cpp
-	testing/testing_sgeev
-	testing/testing_sgeev.cpp
-	testing/testing_sgegqr_gpu
-	testing/testing_sgegqr_gpu.cpp
-	testing/testing_sgehrd
-	testing/testing_sgehrd.cpp
-	testing/testing_sgelqf
-	testing/testing_sgelqf.cpp
-	testing/testing_sgelqf_gpu
-	testing/testing_sgelqf_gpu.cpp
-	testing/testing_sgels
-	testing/testing_sgels.cpp
-	testing/testing_sgels3_gpu
-	testing/testing_sgels3_gpu.cpp
-	testing/testing_sgels_gpu
-	testing/testing_sgels_gpu.cpp
-	testing/testing_sgemm
-	testing/testing_sgemm.cpp
-	testing/testing_sgemm_batched
-	testing/testing_sgemm_batched.cpp
-	testing/testing_sgemm_vbatched
-	testing/testing_sgemm_vbatched.cpp
-	testing/testing_sgemv
-	testing/testing_sgemv.cpp
-	testing/testing_sgemv_batched
-	testing/testing_sgemv_batched.cpp
-	testing/testing_sgemv_vbatched
-	testing/testing_sgemv_vbatched.cpp
-	testing/testing_sgenerate
-	testing/testing_sgenerate.cpp
-	testing/testing_sgeqlf
-	testing/testing_sgeqlf.cpp
-	testing/testing_sgeqp3
-	testing/testing_sgeqp3.cpp
-	testing/testing_sgeqp3_gpu
-	testing/testing_sgeqp3_gpu.cpp
-	testing/testing_sgeqr2_gpu
-	testing/testing_sgeqr2_gpu.cpp
-	testing/testing_sgeqr2x_gpu
-	testing/testing_sgeqr2x_gpu.cpp
-	testing/testing_sgeqrf
-	testing/testing_sgeqrf.cpp
-	testing/testing_sgeqrf_batched
-	testing/testing_sgeqrf_batched.cpp
-	testing/testing_sgeqrf_gpu
-	testing/testing_sgeqrf_gpu.cpp
-	testing/testing_sgeqrf_mgpu
-	testing/testing_sgeqrf_mgpu.cpp
-	testing/testing_sgesdd
-	testing/testing_sgesdd.cpp
-	testing/testing_sgesv
-	testing/testing_sgesv.cpp
-	testing/testing_sgesv_batched
-	testing/testing_sgesv_batched.cpp
-	testing/testing_sgesv_gpu
-	testing/testing_sgesv_gpu.cpp
-	testing/testing_sgesv_nopiv_batched
-	testing/testing_sgesv_nopiv_batched.cpp
-	testing/testing_sgesv_rbt
-	testing/testing_sgesv_rbt.cpp
-	testing/testing_sgesvd
-	testing/testing_sgesvd.cpp
-	testing/testing_sgetf2_gpu
-	testing/testing_sgetf2_gpu.cpp
-	testing/testing_sgetrf
-	testing/testing_sgetrf.cpp
-	testing/testing_sgetrf_batched
-	testing/testing_sgetrf_batched.cpp
-	testing/testing_sgetrf_gpu
-	testing/testing_sgetrf_gpu.cpp
-	testing/testing_sgetrf_mgpu
-	testing/testing_sgetrf_mgpu.cpp
-	testing/testing_sgetrf_nopiv_batched
-	testing/testing_sgetrf_nopiv_batched.cpp
-	testing/testing_sgetri_batched
-	testing/testing_sgetri_batched.cpp
-	testing/testing_sgetri_gpu
-	testing/testing_sgetri_gpu.cpp
-	testing/testing_sgglse
-	testing/testing_sgglse.cpp
-	testing/testing_slacpy
-	testing/testing_slacpy.cpp
-	testing/testing_slacpy_batched
-	testing/testing_slacpy_batched.cpp
-	testing/testing_slange
-	testing/testing_slange.cpp
-	testing/testing_slansy
-	testing/testing_slansy.cpp
-	testing/testing_slarfb_gpu
-	testing/testing_slarfb_gpu.cpp
-	testing/testing_slarfg
-	testing/testing_slarfg.cpp
-	testing/testing_slascl
-	testing/testing_slascl.cpp
-	testing/testing_slaset
-	testing/testing_slaset.cpp
-	testing/testing_slaset_band
-	testing/testing_slaset_band.cpp
-	testing/testing_snan_inf
-	testing/testing_snan_inf.cpp
-	testing/testing_sorgbr
-	testing/testing_sorgbr.cpp
-	testing/testing_sorglq
-	testing/testing_sorglq.cpp
-	testing/testing_sorgqr
-	testing/testing_sorgqr.cpp
-	testing/testing_sorgqr_gpu
-	testing/testing_sorgqr_gpu.cpp
-	testing/testing_sormbr
-	testing/testing_sormbr.cpp
-	testing/testing_sormlq
-	testing/testing_sormlq.cpp
-	testing/testing_sormql
-	testing/testing_sormql.cpp
-	testing/testing_sormql_gpu
-	testing/testing_sormql_gpu.cpp
-	testing/testing_sormqr
-	testing/testing_sormqr.cpp
-	testing/testing_sormqr_gpu
-	testing/testing_sormqr_gpu.cpp
-	testing/testing_sposv
-	testing/testing_sposv.cpp
-	testing/testing_sposv_batched
-	testing/testing_sposv_batched.cpp
-	testing/testing_sposv_gpu
-	testing/testing_sposv_gpu.cpp
-	testing/testing_spotf2_gpu
-	testing/testing_spotf2_gpu.cpp
-	testing/testing_spotrf
-	testing/testing_spotrf.cpp
-	testing/testing_spotrf_batched
-	testing/testing_spotrf_batched.cpp
-	testing/testing_spotrf_gpu
-	testing/testing_spotrf_gpu.cpp
-	testing/testing_spotrf_mgpu
-	testing/testing_spotrf_mgpu.cpp
-	testing/testing_spotrf_vbatched
-	testing/testing_spotrf_vbatched.cpp
-	testing/testing_spotri
-	testing/testing_spotri.cpp
-	testing/testing_spotri_gpu
-	testing/testing_spotri_gpu.cpp
-	testing/testing_sprint
-	testing/testing_sprint.cpp
-	testing/testing_sswap
-	testing/testing_sswap.cpp
-	testing/testing_ssyevd
-	testing/testing_ssyevd.cpp
-	testing/testing_ssyevd_gpu
-	testing/testing_ssyevd_gpu.cpp
-	testing/testing_ssyevdx_2stage
-	testing/testing_ssyevdx_2stage.cpp
-	testing/testing_ssygst
-	testing/testing_ssygst.cpp
-	testing/testing_ssygst_gpu
-	testing/testing_ssygst_gpu.cpp
-	testing/testing_ssygvd
-	testing/testing_ssygvd.cpp
-	testing/testing_ssygvdx
-	testing/testing_ssygvdx.cpp
-	testing/testing_ssygvdx_2stage
-	testing/testing_ssygvdx_2stage.cpp
-	testing/testing_ssymm
-	testing/testing_ssymm.cpp
-	testing/testing_ssymm_batched
-	testing/testing_ssymm_batched.cpp
-	testing/testing_ssymm_mgpu
-	testing/testing_ssymm_mgpu.cpp
-	testing/testing_ssymm_vbatched
-	testing/testing_ssymm_vbatched.cpp
-	testing/testing_ssymmetrize
-	testing/testing_ssymmetrize.cpp
-	testing/testing_ssymmetrize_tiles
-	testing/testing_ssymmetrize_tiles.cpp
-	testing/testing_ssymv
-	testing/testing_ssymv.cpp
-	testing/testing_ssymv_batched
-	testing/testing_ssymv_batched.cpp
-	testing/testing_ssymv_mgpu
-	testing/testing_ssymv_mgpu.cpp
-	testing/testing_ssymv_vbatched
-	testing/testing_ssymv_vbatched.cpp
-	testing/testing_ssyr2k
-	testing/testing_ssyr2k.cpp
-	testing/testing_ssyr2k_batched
-	testing/testing_ssyr2k_batched.cpp
-	testing/testing_ssyr2k_mgpu
-	testing/testing_ssyr2k_mgpu.cpp
-	testing/testing_ssyr2k_vbatched
-	testing/testing_ssyr2k_vbatched.cpp
-	testing/testing_ssyrk
-	testing/testing_ssyrk.cpp
-	testing/testing_ssyrk_batched
-	testing/testing_ssyrk_batched.cpp
-	testing/testing_ssyrk_vbatched
-	testing/testing_ssyrk_vbatched.cpp
-	testing/testing_ssysv
-	testing/testing_ssysv.cpp
-	testing/testing_ssysv_nopiv_gpu
-	testing/testing_ssysv_nopiv_gpu.cpp
-	testing/testing_ssytrd
-	testing/testing_ssytrd.cpp
-	testing/testing_ssytrd_gpu
-	testing/testing_ssytrd_gpu.cpp
-	testing/testing_ssytrd_mgpu
-	testing/testing_ssytrd_mgpu.cpp
-	testing/testing_ssytrf
-	testing/testing_ssytrf.cpp
-	testing/testing_stranspose
-	testing/testing_stranspose.cpp
-	testing/testing_strmm
-	testing/testing_strmm.cpp
-	testing/testing_strmm_batched
-	testing/testing_strmm_batched.cpp
-	testing/testing_strmm_vbatched
-	testing/testing_strmm_vbatched.cpp
-	testing/testing_strmv
-	testing/testing_strmv.cpp
-	testing/testing_strsm
-	testing/testing_strsm.cpp
-	testing/testing_strsm_batched
-	testing/testing_strsm_batched.cpp
-	testing/testing_strsm_vbatched
-	testing/testing_strsm_vbatched.cpp
-	testing/testing_strsv
-	testing/testing_strsv.cpp
-	testing/testing_strsv_batched
-	testing/testing_strsv_batched.cpp
-	testing/testing_strtri
-	testing/testing_strtri.cpp
-	testing/testing_strtri_diag
-	testing/testing_strtri_diag.cpp
-	testing/testing_strtri_gpu
-	testing/testing_strtri_gpu.cpp
-	testing/testing_zaxpy
-	testing/testing_zcgeqrsv_gpu
-	testing/testing_zcgesv_gpu
-	testing/testing_zcposv_gpu
-	testing/testing_zgeadd
-	testing/testing_zgeadd_batched
-	testing/testing_zgeam
-	testing/testing_zgebrd
-	testing/testing_zgeev
-	testing/testing_zgegqr_gpu
-	testing/testing_zgehrd
-	testing/testing_zgelqf
-	testing/testing_zgelqf_gpu
-	testing/testing_zgels
-	testing/testing_zgels3_gpu
-	testing/testing_zgels_gpu
-	testing/testing_zgemm
-	testing/testing_zgemm_batched
-	testing/testing_zgemm_vbatched
-	testing/testing_zgemv
-	testing/testing_zgemv_batched
-	testing/testing_zgemv_vbatched
-	testing/testing_zgenerate
-	testing/testing_zgeqlf
-	testing/testing_zgeqp3
-	testing/testing_zgeqp3_gpu
-	testing/testing_zgeqr2_gpu
-	testing/testing_zgeqr2x_gpu
-	testing/testing_zgeqrf
-	testing/testing_zgeqrf_batched
-	testing/testing_zgeqrf_gpu
-	testing/testing_zgeqrf_mgpu
-	testing/testing_zgesdd
-	testing/testing_zgesv
-	testing/testing_zgesv_batched
-	testing/testing_zgesv_gpu
-	testing/testing_zgesv_nopiv_batched
-	testing/testing_zgesv_rbt
-	testing/testing_zgesvd
-	testing/testing_zgetf2_gpu
-	testing/testing_zgetrf
-	testing/testing_zgetrf_batched
-	testing/testing_zgetrf_gpu
-	testing/testing_zgetrf_mgpu
-	testing/testing_zgetrf_nopiv_batched
-	testing/testing_zgetri_batched
-	testing/testing_zgetri_gpu
-	testing/testing_zgglse
-	testing/testing_zheevd
-	testing/testing_zheevd_gpu
-	testing/testing_zheevdx_2stage
-	testing/testing_zhegst
-	testing/testing_zhegst_gpu
-	testing/testing_zhegvd
-	testing/testing_zhegvdx
-	testing/testing_zhegvdx_2stage
-	testing/testing_zhemm
-	testing/testing_zhemm_batched
-	testing/testing_zhemm_mgpu
-	testing/testing_zhemm_vbatched
-	testing/testing_zhemv
-	testing/testing_zhemv_batched
-	testing/testing_zhemv_mgpu
-	testing/testing_zhemv_vbatched
-	testing/testing_zher2k
-	testing/testing_zher2k_batched
-	testing/testing_zher2k_mgpu
-	testing/testing_zher2k_vbatched
-	testing/testing_zherk
-	testing/testing_zherk_batched
-	testing/testing_zherk_vbatched
-	testing/testing_zhesv
-	testing/testing_zhesv_nopiv_gpu
-	testing/testing_zhetrd
-	testing/testing_zhetrd_gpu
-	testing/testing_zhetrd_mgpu
-	testing/testing_zhetrf
-	testing/testing_zlacpy
-	testing/testing_zlacpy_batched
-	testing/testing_zlag2c
-	testing/testing_zlange
-	testing/testing_zlanhe
-	testing/testing_zlarfb_gpu
-	testing/testing_zlarfg
-	testing/testing_zlascl
-	testing/testing_zlaset
-	testing/testing_zlaset_band
-	testing/testing_zlat2c
-	testing/testing_znan_inf
-	testing/testing_zposv
-	testing/testing_zposv_batched
-	testing/testing_zposv_gpu
-	testing/testing_zpotf2_gpu
-	testing/testing_zpotrf
-	testing/testing_zpotrf_batched
-	testing/testing_zpotrf_gpu
-	testing/testing_zpotrf_mgpu
-	testing/testing_zpotrf_vbatched
-	testing/testing_zpotri
-	testing/testing_zpotri_gpu
-	testing/testing_zprint
-	testing/testing_zswap
-	testing/testing_zsymmetrize
-	testing/testing_zsymmetrize_tiles
-	testing/testing_zsymv
-	testing/testing_zsyr2k_batched
-	testing/testing_zsyr2k_vbatched
-	testing/testing_zsyrk_vbatched
-	testing/testing_zsysv_nopiv_gpu
-	testing/testing_ztranspose
-	testing/testing_ztrmm
-	testing/testing_ztrmm_batched
-	testing/testing_ztrmm_vbatched
-	testing/testing_ztrmv
-	testing/testing_ztrsm
-	testing/testing_ztrsm_batched
-	testing/testing_ztrsm_vbatched
-	testing/testing_ztrsv
-	testing/testing_ztrsv_batched
-	testing/testing_ztrtri
-	testing/testing_ztrtri_diag
-	testing/testing_ztrtri_gpu
-	testing/testing_zungbr
-	testing/testing_zunglq
-	testing/testing_zungqr
-	testing/testing_zungqr_gpu
-	testing/testing_zunmbr
-	testing/testing_zunmlq
-	testing/testing_zunmql
-	testing/testing_zunmql_gpu
-	testing/testing_zunmqr
-	testing/testing_zunmqr_gpu
+*.o
+*.a
+*.so
+*.out
+*.dll
+
+*.pyc
+*.pyd
+*.pyo
+__pycache__
+
+magmablas_hip/
+testing_hip/
+interface_hip/
+sparse_hip/
+Makefile.gen
+
+# generated files
+control/cpanel_to_q.cpp
+control/cprint.cpp
+control/dpanel_to_q.cpp
+control/dprint.cpp
+control/magma_cauxiliary.cpp
+control/magma_cbulge.cpp
+control/magma_cnan_inf.cpp
+control/magma_dauxiliary.cpp
+control/magma_dbulge.cpp
+control/magma_dnan_inf.cpp
+control/magma_sauxiliary.cpp
+control/magma_sbulge.cpp
+control/magma_snan_inf.cpp
+control/sizeptr
+control/spanel_to_q.cpp
+control/sprint.cpp
+include/magma.mod
+include/magma_c.h
+include/magma_cbatched.h
+include/magma_cbulge.h
+include/magma_cbulgeinc.h
+include/magma_cfortran.mod
+include/magma_cgehrd_m.h
+include/magma_clapack.h
+include/magma_config.h
+include/magma_config.h-e
+include/magma_cvbatched.h
+include/magma_d.h
+include/magma_dbatched.h
+include/magma_dbulge.h
+include/magma_dbulgeinc.h
+include/magma_dfortran.mod
+include/magma_dgehrd_m.h
+include/magma_dlapack.h
+include/magma_ds.h
+include/magma_dvbatched.h
+include/magma_param.mod
+include/magma_s.h
+include/magma_sbatched.h
+include/magma_sbulge.h
+include/magma_sbulgeinc.h
+include/magma_sfortran.mod
+include/magma_sgehrd_m.h
+include/magma_slapack.h
+include/magma_svbatched.h
+include/magma_zfortran.mod
+include/magmablas_c.h
+include/magmablas_c_v1.h
+include/magmablas_c_v1_map.h
+include/magmablas_cfortran.mod
+include/magmablas_d.h
+include/magmablas_d_v1.h
+include/magmablas_d_v1_map.h
+include/magmablas_dfortran.mod
+include/magmablas_ds.h
+include/magmablas_ds_v1.h
+include/magmablas_ds_v1_map.h
+include/magmablas_s.h
+include/magmablas_s_v1.h
+include/magmablas_s_v1_map.h
+include/magmablas_sfortran.mod
+include/magmablas_zfortran.mod
+interface_cuda/blas_c_v1.cpp
+interface_cuda/blas_c_v2.cpp
+interface_cuda/blas_d_v1.cpp
+interface_cuda/blas_d_v2.cpp
+interface_cuda/blas_s_v1.cpp
+interface_cuda/blas_s_v2.cpp
+magmablas/blas_cbatched.cpp
+magmablas/blas_dbatched.cpp
+magmablas/blas_sbatched.cpp
+magmablas/caxpycp.cu
+magmablas/cbcyclic.cpp
+magmablas/cdiinertia.cu
+magmablas/cgeadd.cu
+magmablas/cgeadd2.cu
+magmablas/cgeadd_batched.cu
+magmablas/cgeam.cu
+magmablas/cgemm_batched.cpp
+magmablas/cgemm_batched_smallsq.cu
+magmablas/cgemm_fermi.cu
+magmablas/cgemm_reduce.cu
+magmablas/cgemm_vbatched.cpp
+magmablas/cgemv_conj.cu
+magmablas/cgemv_fermi.cu
+magmablas/cgemv_vbatched.cpp
+magmablas/cgeqr2.cpp
+magmablas/cgeqr2_batched.cu
+magmablas/cgeqr2x_gpu-v4.cu
+magmablas/cgeqrf_batched_smallsq.cu
+magmablas/cgerbt.cu
+magmablas/cgerbt.h
+magmablas/cgerbt_func_batched.cu
+magmablas/cgerbt_kernels.cu
+magmablas/cgesv_batched_small.cu
+magmablas/cgetf2.cu
+magmablas/cgetf2_kernels.cu
+magmablas/cgetf2_native_kernel.cu
+magmablas/cgetf2_nopiv_kernels.cu
+magmablas/cgetmatrix_transpose.cpp
+magmablas/cgetmatrix_transpose_mgpu.cpp
+magmablas/cgetrf_batched_smallsq_noshfl.cu
+magmablas/cgetrf_batched_smallsq_shfl.cu
+magmablas/cheinertia.cu
+magmablas/chemm.cu
+magmablas/chemm_batched_core.cu
+magmablas/chemm_mgpu.cpp
+magmablas/chemm_vbatched.cpp
+magmablas/chemm_vbatched_core.cu
+magmablas/chemv.cu
+magmablas/chemv_batched_core.cu
+magmablas/chemv_mgpu.cu
+magmablas/chemv_mgpu_upper.cu
+magmablas/chemv_upper.cu
+magmablas/chemv_vbatched.cpp
+magmablas/chemv_vbatched_core.cu
+magmablas/cher2k.cpp
+magmablas/cher2k_batched.cpp
+magmablas/cher2k_mgpu.cpp
+magmablas/cher2k_vbatched.cpp
+magmablas/cherk.cpp
+magmablas/cherk_batched.cpp
+magmablas/cherk_mgpu.cpp
+magmablas/cherk_small_reduce.cu
+magmablas/cherk_vbatched.cpp
+magmablas/chetrs.cu
+magmablas/clacpy.cu
+magmablas/clacpy_conj.cu
+magmablas/clacpy_sym_in.cu
+magmablas/clacpy_sym_out.cu
+magmablas/clange.cu
+magmablas/clanhe.cu
+magmablas/claqps2_gpu.cu
+magmablas/clarf.cu
+magmablas/clarfbx.cu
+magmablas/clarfg-v2.cu
+magmablas/clarfg.cu
+magmablas/clarfg_devicesfunc.cuh
+magmablas/clarfgx-v2.cu
+magmablas/clarft_kernels.cu
+magmablas/clarfx.cu
+magmablas/clascl.cu
+magmablas/clascl2.cu
+magmablas/clascl_2x2.cu
+magmablas/clascl_diag.cu
+magmablas/claset.cu
+magmablas/claset_band.cu
+magmablas/claswp.cu
+magmablas/claswp_batched.cu
+magmablas/claswp_sym.cu
+magmablas/commonblas_c.h
+magmablas/commonblas_d.h
+magmablas/commonblas_s.h
+magmablas/cpotf2.cu
+magmablas/cpotf2_devicesfunc.cuh
+magmablas/cpotf2_kernels.cu
+magmablas/cpotf2_kernels_var.cu
+magmablas/cset_pointer.cu
+magmablas/csetmatrix_transpose.cpp
+magmablas/csetmatrix_transpose_mgpu.cpp
+magmablas/cswap.cu
+magmablas/cswapblk.cu
+magmablas/cswapdblk.cu
+magmablas/csymm.cu
+magmablas/csymmetrize.cu
+magmablas/csymmetrize_tiles.cu
+magmablas/csymv.cu
+magmablas/csymv_upper.cu
+magmablas/csyr2k_batched.cpp
+magmablas/csyr2k_vbatched.cpp
+magmablas/csyrk_vbatched.cpp
+magmablas/ctranspose.cu
+magmablas/ctranspose_conj.cu
+magmablas/ctranspose_conj_inplace.cu
+magmablas/ctranspose_inplace.cu
+magmablas/ctrmm.cu
+magmablas/ctrmm_batched_core.cu
+magmablas/ctrmm_vbatched.cpp
+magmablas/ctrmm_vbatched_core.cu
+magmablas/ctrmv.cu
+magmablas/ctrsm.cu
+magmablas/ctrsm_batched.cpp
+magmablas/ctrsm_batched_core.cpp
+magmablas/ctrsm_small_batched.cu
+magmablas/ctrsm_vbatched.cpp
+magmablas/ctrsm_vbatched_core.cu
+magmablas/ctrsv.cu
+magmablas/ctrsv_batched.cu
+magmablas/ctrsv_template_device.cuh
+magmablas/ctrtri.cuh
+magmablas/ctrtri_diag.cu
+magmablas/ctrtri_diag_batched.cu
+magmablas/ctrtri_diag_vbatched.cu
+magmablas/ctrtri_lower.cu
+magmablas/ctrtri_lower_batched.cu
+magmablas/ctrtri_lower_device.cuh
+magmablas/ctrtri_upper.cu
+magmablas/ctrtri_upper_batched.cu
+magmablas/ctrtri_upper_device.cuh
+magmablas/daxpycp.cu
+magmablas/dbcyclic.cpp
+magmablas/ddiinertia.cu
+magmablas/dgeadd.cu
+magmablas/dgeadd2.cu
+magmablas/dgeadd_batched.cu
+magmablas/dgeam.cu
+magmablas/dgemm_batched.cpp
+magmablas/dgemm_batched_smallsq.cu
+magmablas/dgemm_fermi.cu
+magmablas/dgemm_reduce.cu
+magmablas/dgemm_vbatched.cpp
+magmablas/dgemv_conj.cu
+magmablas/dgemv_fermi.cu
+magmablas/dgemv_vbatched.cpp
+magmablas/dgeqr2.cpp
+magmablas/dgeqr2_batched.cu
+magmablas/dgeqr2x_gpu-v4.cu
+magmablas/dgeqrf_batched_smallsq.cu
+magmablas/dgerbt.cu
+magmablas/dgerbt.h
+magmablas/dgerbt_func_batched.cu
+magmablas/dgerbt_kernels.cu
+magmablas/dgesv_batched_small.cu
+magmablas/dgetf2.cu
+magmablas/dgetf2_kernels.cu
+magmablas/dgetf2_native_kernel.cu
+magmablas/dgetf2_nopiv_kernels.cu
+magmablas/dgetmatrix_transpose.cpp
+magmablas/dgetmatrix_transpose_mgpu.cpp
+magmablas/dgetrf_batched_smallsq_noshfl.cu
+magmablas/dgetrf_batched_smallsq_shfl.cu
+magmablas/dlacpy.cu
+magmablas/dlacpy_conj.cu
+magmablas/dlacpy_sym_in.cu
+magmablas/dlacpy_sym_out.cu
+magmablas/dlag2s.cu
+magmablas/dlange.cu
+magmablas/dlansy.cu
+magmablas/dlaqps2_gpu.cu
+magmablas/dlarf.cu
+magmablas/dlarfbx.cu
+magmablas/dlarfg-v2.cu
+magmablas/dlarfg.cu
+magmablas/dlarfg_devicesfunc.cuh
+magmablas/dlarfgx-v2.cu
+magmablas/dlarft_kernels.cu
+magmablas/dlarfx.cu
+magmablas/dlascl.cu
+magmablas/dlascl2.cu
+magmablas/dlascl_2x2.cu
+magmablas/dlascl_diag.cu
+magmablas/dlaset.cu
+magmablas/dlaset_band.cu
+magmablas/dlaswp.cu
+magmablas/dlaswp_batched.cu
+magmablas/dlaswp_sym.cu
+magmablas/dlat2s.cu
+magmablas/dnrm2.cu
+magmablas/dpotf2.cu
+magmablas/dpotf2_devicesfunc.cuh
+magmablas/dpotf2_kernels.cu
+magmablas/dpotf2_kernels_var.cu
+magmablas/dsaxpycp.cu
+magmablas/dset_pointer.cu
+magmablas/dsetmatrix_transpose.cpp
+magmablas/dsetmatrix_transpose_mgpu.cpp
+magmablas/dsiinertia.cu
+magmablas/dslaswp.cu
+magmablas/dswap.cu
+magmablas/dswapblk.cu
+magmablas/dswapdblk.cu
+magmablas/dsymm.cu
+magmablas/dsymm_batched_core.cu
+magmablas/dsymm_mgpu.cpp
+magmablas/dsymm_vbatched.cpp
+magmablas/dsymm_vbatched_core.cu
+magmablas/dsymmetrize.cu
+magmablas/dsymmetrize_tiles.cu
+magmablas/dsymv.cu
+magmablas/dsymv_batched_core.cu
+magmablas/dsymv_mgpu.cu
+magmablas/dsymv_mgpu_upper.cu
+magmablas/dsymv_upper.cu
+magmablas/dsymv_vbatched.cpp
+magmablas/dsymv_vbatched_core.cu
+magmablas/dsyr2k.cpp
+magmablas/dsyr2k_batched.cpp
+magmablas/dsyr2k_mgpu.cpp
+magmablas/dsyr2k_vbatched.cpp
+magmablas/dsyrk.cpp
+magmablas/dsyrk_batched.cpp
+magmablas/dsyrk_mgpu.cpp
+magmablas/dsyrk_small_reduce.cu
+magmablas/dsyrk_vbatched.cpp
+magmablas/dsytrs.cu
+magmablas/dtranspose.cu
+magmablas/dtranspose_inplace.cu
+magmablas/dtrmm.cu
+magmablas/dtrmm_batched_core.cu
+magmablas/dtrmm_vbatched.cpp
+magmablas/dtrmm_vbatched_core.cu
+magmablas/dtrmv.cu
+magmablas/dtrsm.cu
+magmablas/dtrsm_batched.cpp
+magmablas/dtrsm_batched_core.cpp
+magmablas/dtrsm_small_batched.cu
+magmablas/dtrsm_vbatched.cpp
+magmablas/dtrsm_vbatched_core.cu
+magmablas/dtrsv.cu
+magmablas/dtrsv_batched.cu
+magmablas/dtrsv_template_device.cuh
+magmablas/dtrtri.cuh
+magmablas/dtrtri_diag.cu
+magmablas/dtrtri_diag_batched.cu
+magmablas/dtrtri_diag_vbatched.cu
+magmablas/dtrtri_lower.cu
+magmablas/dtrtri_lower_batched.cu
+magmablas/dtrtri_lower_device.cuh
+magmablas/dtrtri_upper.cu
+magmablas/dtrtri_upper_batched.cu
+magmablas/dtrtri_upper_device.cuh
+magmablas/magmablas_c_v1.cpp
+magmablas/magmablas_d_v1.cpp
+magmablas/magmablas_ds_v1.cpp
+magmablas/magmablas_s_v1.cpp
+magmablas/saxpycp.cu
+magmablas/sbcyclic.cpp
+magmablas/scnrm2.cu
+magmablas/sdiinertia.cu
+magmablas/sgeadd.cu
+magmablas/sgeadd2.cu
+magmablas/sgeadd_batched.cu
+magmablas/sgeam.cu
+magmablas/sgemm_batched.cpp
+magmablas/sgemm_batched_smallsq.cu
+magmablas/sgemm_fermi.cu
+magmablas/sgemm_reduce.cu
+magmablas/sgemm_vbatched.cpp
+magmablas/sgemv_conj.cu
+magmablas/sgemv_fermi.cu
+magmablas/sgemv_vbatched.cpp
+magmablas/sgeqr2.cpp
+magmablas/sgeqr2_batched.cu
+magmablas/sgeqr2x_gpu-v4.cu
+magmablas/sgeqrf_batched_smallsq.cu
+magmablas/sgerbt.cu
+magmablas/sgerbt.h
+magmablas/sgerbt_func_batched.cu
+magmablas/sgerbt_kernels.cu
+magmablas/sgesv_batched_small.cu
+magmablas/sgetf2.cu
+magmablas/sgetf2_kernels.cu
+magmablas/sgetf2_native_kernel.cu
+magmablas/sgetf2_nopiv_kernels.cu
+magmablas/sgetmatrix_transpose.cpp
+magmablas/sgetmatrix_transpose_mgpu.cpp
+magmablas/sgetrf_batched_smallsq_noshfl.cu
+magmablas/sgetrf_batched_smallsq_shfl.cu
+magmablas/slacpy.cu
+magmablas/slacpy_conj.cu
+magmablas/slacpy_sym_in.cu
+magmablas/slacpy_sym_out.cu
+magmablas/slag2d.cu
+magmablas/slange.cu
+magmablas/slansy.cu
+magmablas/slaqps2_gpu.cu
+magmablas/slarf.cu
+magmablas/slarfbx.cu
+magmablas/slarfg-v2.cu
+magmablas/slarfg.cu
+magmablas/slarfg_devicesfunc.cuh
+magmablas/slarfgx-v2.cu
+magmablas/slarft_kernels.cu
+magmablas/slarfx.cu
+magmablas/slascl.cu
+magmablas/slascl2.cu
+magmablas/slascl_2x2.cu
+magmablas/slascl_diag.cu
+magmablas/slaset.cu
+magmablas/slaset_band.cu
+magmablas/slaswp.cu
+magmablas/slaswp_batched.cu
+magmablas/slaswp_sym.cu
+magmablas/slat2d.cu
+magmablas/snrm2.cu
+magmablas/spotf2.cu
+magmablas/spotf2_devicesfunc.cuh
+magmablas/spotf2_kernels.cu
+magmablas/spotf2_kernels_var.cu
+magmablas/sset_pointer.cu
+magmablas/ssetmatrix_transpose.cpp
+magmablas/ssetmatrix_transpose_mgpu.cpp
+magmablas/ssiinertia.cu
+magmablas/sswap.cu
+magmablas/sswapblk.cu
+magmablas/sswapdblk.cu
+magmablas/ssymm.cu
+magmablas/ssymm_batched_core.cu
+magmablas/ssymm_mgpu.cpp
+magmablas/ssymm_vbatched.cpp
+magmablas/ssymm_vbatched_core.cu
+magmablas/ssymmetrize.cu
+magmablas/ssymmetrize_tiles.cu
+magmablas/ssymv.cu
+magmablas/ssymv_batched_core.cu
+magmablas/ssymv_mgpu.cu
+magmablas/ssymv_mgpu_upper.cu
+magmablas/ssymv_upper.cu
+magmablas/ssymv_vbatched.cpp
+magmablas/ssymv_vbatched_core.cu
+magmablas/ssyr2k.cpp
+magmablas/ssyr2k_batched.cpp
+magmablas/ssyr2k_mgpu.cpp
+magmablas/ssyr2k_vbatched.cpp
+magmablas/ssyrk.cpp
+magmablas/ssyrk_batched.cpp
+magmablas/ssyrk_mgpu.cpp
+magmablas/ssyrk_small_reduce.cu
+magmablas/ssyrk_vbatched.cpp
+magmablas/ssytrs.cu
+magmablas/stranspose.cu
+magmablas/stranspose_inplace.cu
+magmablas/strmm.cu
+magmablas/strmm_batched_core.cu
+magmablas/strmm_vbatched.cpp
+magmablas/strmm_vbatched_core.cu
+magmablas/strmv.cu
+magmablas/strsm.cu
+magmablas/strsm_batched.cpp
+magmablas/strsm_batched_core.cpp
+magmablas/strsm_small_batched.cu
+magmablas/strsm_vbatched.cpp
+magmablas/strsm_vbatched_core.cu
+magmablas/strsv.cu
+magmablas/strsv_batched.cu
+magmablas/strsv_template_device.cuh
+magmablas/strtri.cuh
+magmablas/strtri_diag.cu
+magmablas/strtri_diag_batched.cu
+magmablas/strtri_diag_vbatched.cu
+magmablas/strtri_lower.cu
+magmablas/strtri_lower_batched.cu
+magmablas/strtri_lower_device.cuh
+magmablas/strtri_upper.cu
+magmablas/strtri_upper_batched.cu
+magmablas/strtri_upper_device.cuh
+make.inc
+sparse/blas/cbajac_csr.cu
+sparse/blas/cbajac_csr_overlap.cu
+sparse/blas/ccompact.cu
+sparse/blas/cge3pt.cu
+sparse/blas/cgeaxpy.cu
+sparse/blas/cgecscsyncfreetrsm.cu
+sparse/blas/cgecsr5mv.cu
+sparse/blas/cgecsrmv.cu
+sparse/blas/cgecsrreimsplit.cu
+sparse/blas/cgedensereimsplit.cu
+sparse/blas/cgeellmv.cu
+sparse/blas/cgeellrtmv.cu
+sparse/blas/cgeelltmv.cu
+sparse/blas/cgeisai_batched32.cu
+sparse/blas/cgeisai_maxblock.cu
+sparse/blas/cgeisai_trsv.cu
+sparse/blas/cgemvmdot.cu
+sparse/blas/cgesellcmmv.cu
+sparse/blas/cgesellcmv.cu
+sparse/blas/cilu.cpp
+sparse/blas/cjaccard_weights.cu
+sparse/blas/cjacobisetup.cu
+sparse/blas/clobpcg_maxpy.cu
+sparse/blas/clobpcg_residuals.cu
+sparse/blas/clobpcg_shift.cu
+sparse/blas/cmdot_shfl.cu
+sparse/blas/cmdotc.cu
+sparse/blas/cmergebicgstab.cu
+sparse/blas/cmergebicgstab2.cu
+sparse/blas/cmergebicgstab3.cu
+sparse/blas/cmergeblockkrylov.cu
+sparse/blas/cmergecg.cu
+sparse/blas/cmergecgs.cu
+sparse/blas/cmergeidr.cu
+sparse/blas/cmergeqmr.cu
+sparse/blas/cmergetfqmr.cu
+sparse/blas/cmgecsrmv.cu
+sparse/blas/cmgeellmv.cu
+sparse/blas/cmgeelltmv.cu
+sparse/blas/cmgesellcmmv.cu
+sparse/blas/cparic_kernels.cu
+sparse/blas/cparilu.cpp
+sparse/blas/cparilu_kernels.cu
+sparse/blas/cparilut_candidates.cu
+sparse/blas/cparilut_kernels.cu
+sparse/blas/cpipelinedgmres.cu
+sparse/blas/dbajac_csr.cu
+sparse/blas/dbajac_csr_overlap.cu
+sparse/blas/dcompact.cu
+sparse/blas/dge3pt.cu
+sparse/blas/dgeaxpy.cu
+sparse/blas/dgecscsyncfreetrsm.cu
+sparse/blas/dgecsr5mv.cu
+sparse/blas/dgecsrmv.cu
+sparse/blas/dgecsrreimsplit.cu
+sparse/blas/dgedensereimsplit.cu
+sparse/blas/dgeellmv.cu
+sparse/blas/dgeellrtmv.cu
+sparse/blas/dgeelltmv.cu
+sparse/blas/dgeisai_batched32.cu
+sparse/blas/dgeisai_maxblock.cu
+sparse/blas/dgeisai_trsv.cu
+sparse/blas/dgemvmdot.cu
+sparse/blas/dgesellcmmv.cu
+sparse/blas/dgesellcmv.cu
+sparse/blas/dilu.cpp
+sparse/blas/djaccard_weights.cu
+sparse/blas/djacobisetup.cu
+sparse/blas/dlobpcg_maxpy.cu
+sparse/blas/dlobpcg_residuals.cu
+sparse/blas/dlobpcg_shift.cu
+sparse/blas/dmdot_shfl.cu
+sparse/blas/dmdotc.cu
+sparse/blas/dmergebicgstab.cu
+sparse/blas/dmergebicgstab2.cu
+sparse/blas/dmergebicgstab3.cu
+sparse/blas/dmergeblockkrylov.cu
+sparse/blas/dmergecg.cu
+sparse/blas/dmergecgs.cu
+sparse/blas/dmergeidr.cu
+sparse/blas/dmergeqmr.cu
+sparse/blas/dmergetfqmr.cu
+sparse/blas/dmgecsrmv.cu
+sparse/blas/dmgeellmv.cu
+sparse/blas/dmgeelltmv.cu
+sparse/blas/dmgesellcmmv.cu
+sparse/blas/dparic_kernels.cu
+sparse/blas/dparilu.cpp
+sparse/blas/dparilu_kernels.cu
+sparse/blas/dparilut_candidates.cu
+sparse/blas/dparilut_kernels.cu
+sparse/blas/dpipelinedgmres.cu
+sparse/blas/dsgecsrmv_mixed_prec.cu
+sparse/blas/magma_c_blaswrapper.cpp
+sparse/blas/magma_ccuspaxpy.cpp
+sparse/blas/magma_ccuspmm.cpp
+sparse/blas/magma_cdiagcheck.cu
+sparse/blas/magma_cget_rowptr.cu
+sparse/blas/magma_cmatrixtools_gpu.cu
+sparse/blas/magma_cmconjugate.cu
+sparse/blas/magma_cmcsrcompressor_gpu.cu
+sparse/blas/magma_cpreselect.cu
+sparse/blas/magma_csampleselect.cu
+sparse/blas/magma_csampleselect_nodp.cu
+sparse/blas/magma_cthrsrm.cu
+sparse/blas/magma_d_blaswrapper.cpp
+sparse/blas/magma_dcuspaxpy.cpp
+sparse/blas/magma_dcuspmm.cpp
+sparse/blas/magma_ddiagcheck.cu
+sparse/blas/magma_dget_rowptr.cu
+sparse/blas/magma_dmatrixtools_gpu.cu
+sparse/blas/magma_dmconjugate.cu
+sparse/blas/magma_dmcsrcompressor_gpu.cu
+sparse/blas/magma_dpreselect.cu
+sparse/blas/magma_dsampleselect.cu
+sparse/blas/magma_dsampleselect_nodp.cu
+sparse/blas/magma_dthrsrm.cu
+sparse/blas/magma_s_blaswrapper.cpp
+sparse/blas/magma_scuspaxpy.cpp
+sparse/blas/magma_scuspmm.cpp
+sparse/blas/magma_sdiagcheck.cu
+sparse/blas/magma_sget_rowptr.cu
+sparse/blas/magma_smatrixtools_gpu.cu
+sparse/blas/magma_smconjugate.cu
+sparse/blas/magma_smcsrcompressor_gpu.cu
+sparse/blas/magma_spreselect.cu
+sparse/blas/magma_ssampleselect.cu
+sparse/blas/magma_ssampleselect_core.cu
+sparse/blas/magma_ssampleselect_nodp.cu
+sparse/blas/magma_sthrsrm.cu
+sparse/blas/sbajac_csr.cu
+sparse/blas/sbajac_csr_overlap.cu
+sparse/blas/scompact.cu
+sparse/blas/sge3pt.cu
+sparse/blas/sgeaxpy.cu
+sparse/blas/sgecscsyncfreetrsm.cu
+sparse/blas/sgecsr5mv.cu
+sparse/blas/sgecsrmv.cu
+sparse/blas/sgecsrreimsplit.cu
+sparse/blas/sgedensereimsplit.cu
+sparse/blas/sgeellmv.cu
+sparse/blas/sgeellrtmv.cu
+sparse/blas/sgeelltmv.cu
+sparse/blas/sgeisai_batched32.cu
+sparse/blas/sgeisai_maxblock.cu
+sparse/blas/sgeisai_trsv.cu
+sparse/blas/sgemvmdot.cu
+sparse/blas/sgesellcmmv.cu
+sparse/blas/sgesellcmv.cu
+sparse/blas/silu.cpp
+sparse/blas/sjaccard_weights.cu
+sparse/blas/sjacobisetup.cu
+sparse/blas/slobpcg_maxpy.cu
+sparse/blas/slobpcg_residuals.cu
+sparse/blas/slobpcg_shift.cu
+sparse/blas/smdot_shfl.cu
+sparse/blas/smdotc.cu
+sparse/blas/smergebicgstab.cu
+sparse/blas/smergebicgstab2.cu
+sparse/blas/smergebicgstab3.cu
+sparse/blas/smergeblockkrylov.cu
+sparse/blas/smergecg.cu
+sparse/blas/smergecgs.cu
+sparse/blas/smergeidr.cu
+sparse/blas/smergeqmr.cu
+sparse/blas/smergetfqmr.cu
+sparse/blas/smgecsrmv.cu
+sparse/blas/smgeellmv.cu
+sparse/blas/smgeelltmv.cu
+sparse/blas/smgesellcmmv.cu
+sparse/blas/sparic_kernels.cu
+sparse/blas/sparilu.cpp
+sparse/blas/sparilu_kernels.cu
+sparse/blas/sparilut_candidates.cu
+sparse/blas/sparilut_kernels.cu
+sparse/blas/spipelinedgmres.cu
+sparse/control/magma_ccsrsplit.cpp
+sparse/control/magma_cdomainoverlap.cpp
+sparse/control/magma_cfree.cpp
+sparse/control/magma_cgeisai_tools.cpp
+sparse/control/magma_cmatrix_tools.cpp
+sparse/control/magma_cmatrixchar.cpp
+sparse/control/magma_cmconvert.cpp
+sparse/control/magma_cmcsrcompressor.cpp
+sparse/control/magma_cmcsrpass.cpp
+sparse/control/magma_cmcsrpass_gpu.cpp
+sparse/control/magma_cmdiagdom.cpp
+sparse/control/magma_cmdiff.cpp
+sparse/control/magma_cmfrobenius.cpp
+sparse/control/magma_cmgenerator.cpp
+sparse/control/magma_cmilustruct.cpp
+sparse/control/magma_cmio.cpp
+sparse/control/magma_cmlumerge.cpp
+sparse/control/magma_cmscale.cpp
+sparse/control/magma_cmshrink.cpp
+sparse/control/magma_cmslice.cpp
+sparse/control/magma_cmsupernodal.cpp
+sparse/control/magma_cmtransfer.cpp
+sparse/control/magma_cmtranspose.cpp
+sparse/control/magma_cmtranspose_cpu.cpp
+sparse/control/magma_cparic_kernels.cpp
+sparse/control/magma_cparict_tools.cpp
+sparse/control/magma_cparilu_kernels.cpp
+sparse/control/magma_cparilut_kernels.cpp
+sparse/control/magma_cparilut_tools.cpp
+sparse/control/magma_cpariluutils.cpp
+sparse/control/magma_cselect.cpp
+sparse/control/magma_csolverinfo.cpp
+sparse/control/magma_csort.cpp
+sparse/control/magma_cutil_sparse.cpp
+sparse/control/magma_cvinit.cpp
+sparse/control/magma_cvio.cpp
+sparse/control/magma_cvpass.cpp
+sparse/control/magma_cvpass_gpu.cpp
+sparse/control/magma_cvtranspose.cpp
+sparse/control/magma_dcsrsplit.cpp
+sparse/control/magma_ddomainoverlap.cpp
+sparse/control/magma_dfree.cpp
+sparse/control/magma_dgeisai_tools.cpp
+sparse/control/magma_dmatrix_tools.cpp
+sparse/control/magma_dmatrixchar.cpp
+sparse/control/magma_dmconvert.cpp
+sparse/control/magma_dmcsrcompressor.cpp
+sparse/control/magma_dmcsrpass.cpp
+sparse/control/magma_dmcsrpass_gpu.cpp
+sparse/control/magma_dmdiagdom.cpp
+sparse/control/magma_dmdiff.cpp
+sparse/control/magma_dmfrobenius.cpp
+sparse/control/magma_dmgenerator.cpp
+sparse/control/magma_dmilustruct.cpp
+sparse/control/magma_dmio.cpp
+sparse/control/magma_dmlumerge.cpp
+sparse/control/magma_dmscale.cpp
+sparse/control/magma_dmshrink.cpp
+sparse/control/magma_dmslice.cpp
+sparse/control/magma_dmsupernodal.cpp
+sparse/control/magma_dmtransfer.cpp
+sparse/control/magma_dmtranspose.cpp
+sparse/control/magma_dmtranspose_cpu.cpp
+sparse/control/magma_dparic_kernels.cpp
+sparse/control/magma_dparict_tools.cpp
+sparse/control/magma_dparilu_kernels.cpp
+sparse/control/magma_dparilut_kernels.cpp
+sparse/control/magma_dparilut_tools.cpp
+sparse/control/magma_dpariluutils.cpp
+sparse/control/magma_dselect.cpp
+sparse/control/magma_dsolverinfo.cpp
+sparse/control/magma_dsort.cpp
+sparse/control/magma_dutil_sparse.cpp
+sparse/control/magma_dvinit.cpp
+sparse/control/magma_dvio.cpp
+sparse/control/magma_dvpass.cpp
+sparse/control/magma_dvpass_gpu.cpp
+sparse/control/magma_dvtranspose.cpp
+sparse/control/magma_scsrsplit.cpp
+sparse/control/magma_sdomainoverlap.cpp
+sparse/control/magma_sfree.cpp
+sparse/control/magma_sgeisai_tools.cpp
+sparse/control/magma_smatrix_tools.cpp
+sparse/control/magma_smatrixchar.cpp
+sparse/control/magma_smconvert.cpp
+sparse/control/magma_smcsrcompressor.cpp
+sparse/control/magma_smcsrpass.cpp
+sparse/control/magma_smcsrpass_gpu.cpp
+sparse/control/magma_smdiagdom.cpp
+sparse/control/magma_smdiff.cpp
+sparse/control/magma_smfrobenius.cpp
+sparse/control/magma_smgenerator.cpp
+sparse/control/magma_smilustruct.cpp
+sparse/control/magma_smio.cpp
+sparse/control/magma_smlumerge.cpp
+sparse/control/magma_smscale.cpp
+sparse/control/magma_smshrink.cpp
+sparse/control/magma_smslice.cpp
+sparse/control/magma_smsupernodal.cpp
+sparse/control/magma_smtransfer.cpp
+sparse/control/magma_smtranspose.cpp
+sparse/control/magma_smtranspose_cpu.cpp
+sparse/control/magma_sparic_kernels.cpp
+sparse/control/magma_sparict_tools.cpp
+sparse/control/magma_sparilu_kernels.cpp
+sparse/control/magma_sparilut_kernels.cpp
+sparse/control/magma_sparilut_tools.cpp
+sparse/control/magma_spariluutils.cpp
+sparse/control/magma_sselect.cpp
+sparse/control/magma_ssolverinfo.cpp
+sparse/control/magma_ssort.cpp
+sparse/control/magma_sutil_sparse.cpp
+sparse/control/magma_svinit.cpp
+sparse/control/magma_svio.cpp
+sparse/control/magma_svpass.cpp
+sparse/control/magma_svpass_gpu.cpp
+sparse/control/magma_svtranspose.cpp
+sparse/include/magmasparse_c.h
+sparse/include/magmasparse_d.h
+sparse/include/magmasparse_ds.h
+sparse/include/magmasparse_s.h
+sparse/src/cbaiter.cpp
+sparse/src/cbaiter_overlap.cpp
+sparse/src/cbicg.cpp
+sparse/src/cbicgstab.cpp
+sparse/src/cbicgstab_merge.cpp
+sparse/src/cbicgstab_merge2.cpp
+sparse/src/cbicgstab_merge3.cpp
+sparse/src/cbombard.cpp
+sparse/src/cbombard_merge.cpp
+sparse/src/cbpcg.cpp
+sparse/src/ccg.cpp
+sparse/src/ccg_merge.cpp
+sparse/src/ccg_res.cpp
+sparse/src/ccgs.cpp
+sparse/src/ccgs_merge.cpp
+sparse/src/ccustomic.cpp
+sparse/src/ccustomilu.cpp
+sparse/src/cfgmres.cpp
+sparse/src/cftjacobi.cpp
+sparse/src/cgeisai_apply.cpp
+sparse/src/cgeisai_lower.cpp
+sparse/src/cgeisai_upper.cpp
+sparse/src/cidr.cpp
+sparse/src/cidr_merge.cpp
+sparse/src/cidr_strms.cpp
+sparse/src/citerref.cpp
+sparse/src/cjacobi.cpp
+sparse/src/cjacobidomainoverlap.cpp
+sparse/src/clobpcg.cpp
+sparse/src/clsqr.cpp
+sparse/src/cparic_cpu.cpp
+sparse/src/cparic_gpu.cpp
+sparse/src/cparict.cpp
+sparse/src/cparict_cpu.cpp
+sparse/src/cparilu_cpu.cpp
+sparse/src/cparilu_gpu.cpp
+sparse/src/cparilut.cpp
+sparse/src/cparilut_cpu.cpp
+sparse/src/cparilut_gpu.cpp
+sparse/src/cparilut_gpu_nodp.cpp
+sparse/src/cpbicg.cpp
+sparse/src/cpbicgstab.cpp
+sparse/src/cpbicgstab_merge.cpp
+sparse/src/cpcg.cpp
+sparse/src/cpcg_merge.cpp
+sparse/src/cpcgs.cpp
+sparse/src/cpcgs_merge.cpp
+sparse/src/cpidr.cpp
+sparse/src/cpidr_merge.cpp
+sparse/src/cpidr_strms.cpp
+sparse/src/cpqmr.cpp
+sparse/src/cpqmr_merge.cpp
+sparse/src/cptfqmr.cpp
+sparse/src/cptfqmr_merge.cpp
+sparse/src/cqmr.cpp
+sparse/src/cqmr_merge.cpp
+sparse/src/cresidual.cpp
+sparse/src/cresidualvec.cpp
+sparse/src/ctfqmr.cpp
+sparse/src/ctfqmr_merge.cpp
+sparse/src/ctfqmr_unrolled.cpp
+sparse/src/dbaiter.cpp
+sparse/src/dbaiter_overlap.cpp
+sparse/src/dbicg.cpp
+sparse/src/dbicgstab.cpp
+sparse/src/dbicgstab_merge.cpp
+sparse/src/dbicgstab_merge2.cpp
+sparse/src/dbicgstab_merge3.cpp
+sparse/src/dbombard.cpp
+sparse/src/dbombard_merge.cpp
+sparse/src/dbpcg.cpp
+sparse/src/dcg.cpp
+sparse/src/dcg_merge.cpp
+sparse/src/dcg_res.cpp
+sparse/src/dcgs.cpp
+sparse/src/dcgs_merge.cpp
+sparse/src/dcustomic.cpp
+sparse/src/dcustomilu.cpp
+sparse/src/dfgmres.cpp
+sparse/src/dftjacobi.cpp
+sparse/src/dgeisai_apply.cpp
+sparse/src/dgeisai_lower.cpp
+sparse/src/dgeisai_upper.cpp
+sparse/src/didr.cpp
+sparse/src/didr_merge.cpp
+sparse/src/didr_strms.cpp
+sparse/src/diterref.cpp
+sparse/src/djacobi.cpp
+sparse/src/djacobidomainoverlap.cpp
+sparse/src/dlobpcg.cpp
+sparse/src/dlsqr.cpp
+sparse/src/dparic_cpu.cpp
+sparse/src/dparic_gpu.cpp
+sparse/src/dparict.cpp
+sparse/src/dparict_cpu.cpp
+sparse/src/dparilu_cpu.cpp
+sparse/src/dparilu_gpu.cpp
+sparse/src/dparilut.cpp
+sparse/src/dparilut_cpu.cpp
+sparse/src/dparilut_gpu.cpp
+sparse/src/dparilut_gpu_nodp.cpp
+sparse/src/dpbicg.cpp
+sparse/src/dpbicgstab.cpp
+sparse/src/dpbicgstab_merge.cpp
+sparse/src/dpcg.cpp
+sparse/src/dpcg_merge.cpp
+sparse/src/dpcgs.cpp
+sparse/src/dpcgs_merge.cpp
+sparse/src/dpidr.cpp
+sparse/src/dpidr_merge.cpp
+sparse/src/dpidr_strms.cpp
+sparse/src/dpqmr.cpp
+sparse/src/dpqmr_merge.cpp
+sparse/src/dptfqmr.cpp
+sparse/src/dptfqmr_merge.cpp
+sparse/src/dqmr.cpp
+sparse/src/dqmr_merge.cpp
+sparse/src/dresidual.cpp
+sparse/src/dresidualvec.cpp
+sparse/src/dtfqmr.cpp
+sparse/src/dtfqmr_merge.cpp
+sparse/src/dtfqmr_unrolled.cpp
+sparse/src/magma_c_precond_wrapper.cpp
+sparse/src/magma_c_solver_wrapper.cpp
+sparse/src/magma_ccustomprecond.cpp
+sparse/src/magma_ccustomspmv.cpp
+sparse/src/magma_cqr_wrapper.cpp
+sparse/src/magma_d_precond_wrapper.cpp
+sparse/src/magma_d_solver_wrapper.cpp
+sparse/src/magma_dcustomprecond.cpp
+sparse/src/magma_dcustomspmv.cpp
+sparse/src/magma_dqr_wrapper.cpp
+sparse/src/magma_s_precond_wrapper.cpp
+sparse/src/magma_s_solver_wrapper.cpp
+sparse/src/magma_scustomprecond.cpp
+sparse/src/magma_scustomspmv.cpp
+sparse/src/magma_sqr_wrapper.cpp
+sparse/src/sbaiter.cpp
+sparse/src/sbaiter_overlap.cpp
+sparse/src/sbicg.cpp
+sparse/src/sbicgstab.cpp
+sparse/src/sbicgstab_merge.cpp
+sparse/src/sbicgstab_merge2.cpp
+sparse/src/sbicgstab_merge3.cpp
+sparse/src/sbombard.cpp
+sparse/src/sbombard_merge.cpp
+sparse/src/sbpcg.cpp
+sparse/src/scg.cpp
+sparse/src/scg_merge.cpp
+sparse/src/scg_res.cpp
+sparse/src/scgs.cpp
+sparse/src/scgs_merge.cpp
+sparse/src/scustomic.cpp
+sparse/src/scustomilu.cpp
+sparse/src/sfgmres.cpp
+sparse/src/sftjacobi.cpp
+sparse/src/sgeisai_apply.cpp
+sparse/src/sgeisai_lower.cpp
+sparse/src/sgeisai_upper.cpp
+sparse/src/sidr.cpp
+sparse/src/sidr_merge.cpp
+sparse/src/sidr_strms.cpp
+sparse/src/siterref.cpp
+sparse/src/sjacobi.cpp
+sparse/src/sjacobidomainoverlap.cpp
+sparse/src/slobpcg.cpp
+sparse/src/slsqr.cpp
+sparse/src/sparic_cpu.cpp
+sparse/src/sparic_gpu.cpp
+sparse/src/sparict.cpp
+sparse/src/sparict_cpu.cpp
+sparse/src/sparilu_cpu.cpp
+sparse/src/sparilu_gpu.cpp
+sparse/src/sparilut.cpp
+sparse/src/sparilut_cpu.cpp
+sparse/src/sparilut_gpu.cpp
+sparse/src/sparilut_gpu_nodp.cpp
+sparse/src/spbicg.cpp
+sparse/src/spbicgstab.cpp
+sparse/src/spbicgstab_merge.cpp
+sparse/src/spcg.cpp
+sparse/src/spcg_merge.cpp
+sparse/src/spcgs.cpp
+sparse/src/spcgs_merge.cpp
+sparse/src/spidr.cpp
+sparse/src/spidr_merge.cpp
+sparse/src/spidr_strms.cpp
+sparse/src/spqmr.cpp
+sparse/src/spqmr_merge.cpp
+sparse/src/sptfqmr.cpp
+sparse/src/sptfqmr_merge.cpp
+sparse/src/sqmr.cpp
+sparse/src/sqmr_merge.cpp
+sparse/src/sresidual.cpp
+sparse/src/sresidualvec.cpp
+sparse/src/stfqmr.cpp
+sparse/src/stfqmr_merge.cpp
+sparse/src/stfqmr_unrolled.cpp
+sparse/testing/testing_cblas
+sparse/testing/testing_cblas.cpp
+sparse/testing/testing_cdot
+sparse/testing/testing_cdot.cpp
+sparse/testing/testing_cgetrowptr
+sparse/testing/testing_cgetrowptr.cpp
+sparse/testing/testing_cio
+sparse/testing/testing_cio.cpp
+sparse/testing/testing_cmadd
+sparse/testing/testing_cmadd.cpp
+sparse/testing/testing_cmatrix
+sparse/testing/testing_cmatrix.cpp
+sparse/testing/testing_cmatrixcapcup
+sparse/testing/testing_cmatrixcapcup.cpp
+sparse/testing/testing_cmatrixinfo
+sparse/testing/testing_cmatrixinfo.cpp
+sparse/testing/testing_cmcompressor
+sparse/testing/testing_cmcompressor.cpp
+sparse/testing/testing_cmconverter
+sparse/testing/testing_cmconverter.cpp
+sparse/testing/testing_cmdotc
+sparse/testing/testing_cmdotc.cpp
+sparse/testing/testing_cpreconditioner
+sparse/testing/testing_cpreconditioner.cpp
+sparse/testing/testing_cselect
+sparse/testing/testing_cselect.cpp
+sparse/testing/testing_csolver
+sparse/testing/testing_csolver.cpp
+sparse/testing/testing_csolver_rhs
+sparse/testing/testing_csolver_rhs.cpp
+sparse/testing/testing_csolver_rhs_scaling
+sparse/testing/testing_csolver_rhs_scaling.cpp
+sparse/testing/testing_csort
+sparse/testing/testing_csort.cpp
+sparse/testing/testing_cspmm
+sparse/testing/testing_cspmm.cpp
+sparse/testing/testing_cspmv
+sparse/testing/testing_cspmv.cpp
+sparse/testing/testing_cspmv_check
+sparse/testing/testing_cspmv_check.cpp
+sparse/testing/testing_csptrsv
+sparse/testing/testing_csptrsv.cpp
+sparse/testing/testing_dblas
+sparse/testing/testing_dblas.cpp
+sparse/testing/testing_ddot
+sparse/testing/testing_ddot.cpp
+sparse/testing/testing_dgetrowptr
+sparse/testing/testing_dgetrowptr.cpp
+sparse/testing/testing_dio
+sparse/testing/testing_dio.cpp
+sparse/testing/testing_dmadd
+sparse/testing/testing_dmadd.cpp
+sparse/testing/testing_dmatrix
+sparse/testing/testing_dmatrix.cpp
+sparse/testing/testing_dmatrixcapcup
+sparse/testing/testing_dmatrixcapcup.cpp
+sparse/testing/testing_dmatrixinfo
+sparse/testing/testing_dmatrixinfo.cpp
+sparse/testing/testing_dmcompressor
+sparse/testing/testing_dmcompressor.cpp
+sparse/testing/testing_dmconverter
+sparse/testing/testing_dmconverter.cpp
+sparse/testing/testing_dmdotc
+sparse/testing/testing_dmdotc.cpp
+sparse/testing/testing_dpreconditioner
+sparse/testing/testing_dpreconditioner.cpp
+sparse/testing/testing_dselect
+sparse/testing/testing_dselect.cpp
+sparse/testing/testing_dsolver
+sparse/testing/testing_dsolver.cpp
+sparse/testing/testing_dsolver_rhs
+sparse/testing/testing_dsolver_rhs.cpp
+sparse/testing/testing_dsolver_rhs_scaling
+sparse/testing/testing_dsolver_rhs_scaling.cpp
+sparse/testing/testing_dsort
+sparse/testing/testing_dsort.cpp
+sparse/testing/testing_dspmm
+sparse/testing/testing_dspmm.cpp
+sparse/testing/testing_dspmv
+sparse/testing/testing_dspmv.cpp
+sparse/testing/testing_dspmv_check
+sparse/testing/testing_dspmv_check.cpp
+sparse/testing/testing_dsptrsv
+sparse/testing/testing_dsptrsv.cpp
+sparse/testing/testing_dsspmv_mixed
+sparse/testing/testing_dsspmv_mixed.cpp
+sparse/testing/testing_sblas
+sparse/testing/testing_sblas.cpp
+sparse/testing/testing_sdot
+sparse/testing/testing_sdot.cpp
+sparse/testing/testing_sgetrowptr
+sparse/testing/testing_sgetrowptr.cpp
+sparse/testing/testing_sio
+sparse/testing/testing_sio.cpp
+sparse/testing/testing_smadd
+sparse/testing/testing_smadd.cpp
+sparse/testing/testing_smatrix
+sparse/testing/testing_smatrix.cpp
+sparse/testing/testing_smatrixcapcup
+sparse/testing/testing_smatrixcapcup.cpp
+sparse/testing/testing_smatrixinfo
+sparse/testing/testing_smatrixinfo.cpp
+sparse/testing/testing_smcompressor
+sparse/testing/testing_smcompressor.cpp
+sparse/testing/testing_smconverter
+sparse/testing/testing_smconverter.cpp
+sparse/testing/testing_smdotc
+sparse/testing/testing_smdotc.cpp
+sparse/testing/testing_spreconditioner
+sparse/testing/testing_spreconditioner.cpp
+sparse/testing/testing_sselect
+sparse/testing/testing_sselect.cpp
+sparse/testing/testing_ssolver
+sparse/testing/testing_ssolver.cpp
+sparse/testing/testing_ssolver_rhs
+sparse/testing/testing_ssolver_rhs.cpp
+sparse/testing/testing_ssolver_rhs_scaling
+sparse/testing/testing_ssolver_rhs_scaling.cpp
+sparse/testing/testing_ssort
+sparse/testing/testing_ssort.cpp
+sparse/testing/testing_sspmm
+sparse/testing/testing_sspmm.cpp
+sparse/testing/testing_sspmv
+sparse/testing/testing_sspmv.cpp
+sparse/testing/testing_sspmv_check
+sparse/testing/testing_sspmv_check.cpp
+sparse/testing/testing_ssptrsv
+sparse/testing/testing_ssptrsv.cpp
+sparse/testing/testing_zblas
+sparse/testing/testing_zcspmv_mixed
+sparse/testing/testing_zdot
+sparse/testing/testing_zgetrowptr
+sparse/testing/testing_zio
+sparse/testing/testing_zmadd
+sparse/testing/testing_zmatrix
+sparse/testing/testing_zmatrixcapcup
+sparse/testing/testing_zmatrixinfo
+sparse/testing/testing_zmcompressor
+sparse/testing/testing_zmconverter
+sparse/testing/testing_zmdotc
+sparse/testing/testing_zpreconditioner
+sparse/testing/testing_zselect
+sparse/testing/testing_zsolver
+sparse/testing/testing_zsolver_rhs
+sparse/testing/testing_zsolver_rhs_scaling
+sparse/testing/testing_zsort
+sparse/testing/testing_zspmm
+sparse/testing/testing_zspmv
+sparse/testing/testing_zspmv_check
+sparse/testing/testing_zsptrsv
+src/cblas_c.cpp
+src/cblas_d.cpp
+src/cblas_s.cpp
+src/cbulge_applyQ_v2.cpp
+src/cbulge_applyQ_v2_m.cpp
+src/cbulge_back.cpp
+src/cbulge_back_m.cpp
+src/cgebrd.cpp
+src/cgeev.cpp
+src/cgeev_m.cpp
+src/cgegqr_gpu.cpp
+src/cgehrd.cpp
+src/cgehrd2.cpp
+src/cgehrd_m.cpp
+src/cgelqf.cpp
+src/cgelqf_gpu.cpp
+src/cgels.cpp
+src/cgels3_gpu.cpp
+src/cgels_gpu.cpp
+src/cgeqlf.cpp
+src/cgeqp3.cpp
+src/cgeqp3_gpu.cpp
+src/cgeqr2x_gpu-v2.cpp
+src/cgeqr2x_gpu-v3.cpp
+src/cgeqr2x_gpu.cpp
+src/cgeqrf.cpp
+src/cgeqrf2_gpu.cpp
+src/cgeqrf3_gpu.cpp
+src/cgeqrf_batched.cpp
+src/cgeqrf_expert_batched.cpp
+src/cgeqrf_gpu.cpp
+src/cgeqrf_m.cpp
+src/cgeqrf_mgpu.cpp
+src/cgeqrf_ooc.cpp
+src/cgeqrf_panel_batched.cpp
+src/cgeqrs3_gpu.cpp
+src/cgeqrs_gpu.cpp
+src/cgerbt_batched.cpp
+src/cgerbt_gpu.cpp
+src/cgerfs_nopiv_gpu.cpp
+src/cgesdd.cpp
+src/cgesv.cpp
+src/cgesv_batched.cpp
+src/cgesv_gpu.cpp
+src/cgesv_nopiv_batched.cpp
+src/cgesv_nopiv_gpu.cpp
+src/cgesv_rbt.cpp
+src/cgesv_rbt_batched.cpp
+src/cgesvd.cpp
+src/cgetf2_batched.cpp
+src/cgetf2_native.cpp
+src/cgetf2_nopiv.cpp
+src/cgetf2_nopiv_batched.cpp
+src/cgetrf.cpp
+src/cgetrf2_mgpu.cpp
+src/cgetrf_batched.cpp
+src/cgetrf_gpu.cpp
+src/cgetrf_m.cpp
+src/cgetrf_mgpu.cpp
+src/cgetrf_nopiv.cpp
+src/cgetrf_nopiv_batched.cpp
+src/cgetrf_nopiv_gpu.cpp
+src/cgetrf_panel_batched.cpp
+src/cgetrf_panel_native.cpp
+src/cgetrf_panel_nopiv_batched.cpp
+src/cgetri_gpu.cpp
+src/cgetri_outofplace_batched.cpp
+src/cgetrs_batched.cpp
+src/cgetrs_gpu.cpp
+src/cgetrs_nopiv_batched.cpp
+src/cgetrs_nopiv_gpu.cpp
+src/cgglse.cpp
+src/cggrqf.cpp
+src/cheevd.cpp
+src/cheevd_gpu.cpp
+src/cheevd_m.cpp
+src/cheevdx.cpp
+src/cheevdx_2stage.cpp
+src/cheevdx_2stage_m.cpp
+src/cheevdx_gpu.cpp
+src/cheevdx_m.cpp
+src/cheevr.cpp
+src/cheevr_gpu.cpp
+src/cheevx.cpp
+src/cheevx_gpu.cpp
+src/chegst.cpp
+src/chegst_gpu.cpp
+src/chegst_m.cpp
+src/chegvd.cpp
+src/chegvd_m.cpp
+src/chegvdx.cpp
+src/chegvdx_2stage.cpp
+src/chegvdx_2stage_m.cpp
+src/chegvdx_m.cpp
+src/chegvr.cpp
+src/chegvx.cpp
+src/chesv.cpp
+src/chesv_nopiv_gpu.cpp
+src/chetrd.cpp
+src/chetrd2_gpu.cpp
+src/chetrd_gpu.cpp
+src/chetrd_hb2st.cpp
+src/chetrd_he2hb.cpp
+src/chetrd_he2hb_mgpu.cpp
+src/chetrd_mgpu.cpp
+src/chetrf.cpp
+src/chetrf_aasen.cpp
+src/chetrf_gpu.cpp
+src/chetrf_nopiv.cpp
+src/chetrf_nopiv_cpu.cpp
+src/chetrf_nopiv_gpu.cpp
+src/chetrs_nopiv_gpu.cpp
+src/clabrd_gpu.cpp
+src/clahef_gpu.cpp
+src/clahr2.cpp
+src/clahr2_m.cpp
+src/clahru.cpp
+src/clahru_m.cpp
+src/claqps.cpp
+src/claqps_gpu.cpp
+src/clarfb_gemm_batched.cpp
+src/clarfb_gpu.cpp
+src/clarfb_gpu_gemm.cpp
+src/clarft_batched.cpp
+src/clatrd.cpp
+src/clatrd2.cpp
+src/clatrd_mgpu.cpp
+src/clatrsd.cpp
+src/clauum.cpp
+src/clauum_gpu.cpp
+src/core_chbtype1cb.cpp
+src/core_chbtype2cb.cpp
+src/core_chbtype3cb.cpp
+src/core_clarfy.cpp
+src/core_dlarfy.cpp
+src/core_dsbtype1cb.cpp
+src/core_dsbtype2cb.cpp
+src/core_dsbtype3cb.cpp
+src/core_slarfy.cpp
+src/core_ssbtype1cb.cpp
+src/core_ssbtype2cb.cpp
+src/core_ssbtype3cb.cpp
+src/cposv.cpp
+src/cposv_batched.cpp
+src/cposv_gpu.cpp
+src/cpotf2_batched.cpp
+src/cpotf2_vbatched.cpp
+src/cpotrf.cpp
+src/cpotrf3_mgpu.cpp
+src/cpotrf_batched.cpp
+src/cpotrf_gpu.cpp
+src/cpotrf_m.cpp
+src/cpotrf_mgpu.cpp
+src/cpotrf_mgpu_right.cpp
+src/cpotrf_panel_batched.cpp
+src/cpotrf_panel_native.cpp
+src/cpotrf_panel_vbatched.cpp
+src/cpotrf_vbatched.cpp
+src/cpotri.cpp
+src/cpotri_gpu.cpp
+src/cpotrs_batched.cpp
+src/cpotrs_gpu.cpp
+src/cstedx.cpp
+src/cstedx_m.cpp
+src/csysv_nopiv_gpu.cpp
+src/csytrf_nopiv_cpu.cpp
+src/csytrf_nopiv_gpu.cpp
+src/csytrs_nopiv_gpu.cpp
+src/ctrevc3.cpp
+src/ctrevc3_mt.cpp
+src/ctrsm_m.cpp
+src/ctrtri.cpp
+src/ctrtri_gpu.cpp
+src/cungbr.cpp
+src/cunghr.cpp
+src/cunghr_m.cpp
+src/cunglq.cpp
+src/cungqr.cpp
+src/cungqr2.cpp
+src/cungqr_2stage_gpu.cpp
+src/cungqr_gpu.cpp
+src/cungqr_m.cpp
+src/cungtr.cpp
+src/cunmbr.cpp
+src/cunmlq.cpp
+src/cunmql.cpp
+src/cunmql2_gpu.cpp
+src/cunmqr.cpp
+src/cunmqr2_gpu.cpp
+src/cunmqr_2stage_gpu.cpp
+src/cunmqr_gpu.cpp
+src/cunmqr_m.cpp
+src/cunmrq.cpp
+src/cunmtr.cpp
+src/cunmtr_gpu.cpp
+src/cunmtr_m.cpp
+src/dbulge_applyQ_v2.cpp
+src/dbulge_applyQ_v2_m.cpp
+src/dbulge_back.cpp
+src/dbulge_back_m.cpp
+src/dgebrd.cpp
+src/dgegqr_gpu.cpp
+src/dgehrd.cpp
+src/dgehrd2.cpp
+src/dgehrd_m.cpp
+src/dgelqf.cpp
+src/dgelqf_gpu.cpp
+src/dgels.cpp
+src/dgels3_gpu.cpp
+src/dgels_gpu.cpp
+src/dgeqlf.cpp
+src/dgeqp3.cpp
+src/dgeqp3_gpu.cpp
+src/dgeqr2x_gpu-v2.cpp
+src/dgeqr2x_gpu-v3.cpp
+src/dgeqr2x_gpu.cpp
+src/dgeqrf.cpp
+src/dgeqrf2_gpu.cpp
+src/dgeqrf3_gpu.cpp
+src/dgeqrf_batched.cpp
+src/dgeqrf_expert_batched.cpp
+src/dgeqrf_gpu.cpp
+src/dgeqrf_m.cpp
+src/dgeqrf_mgpu.cpp
+src/dgeqrf_ooc.cpp
+src/dgeqrf_panel_batched.cpp
+src/dgeqrs3_gpu.cpp
+src/dgeqrs_gpu.cpp
+src/dgerbt_batched.cpp
+src/dgerbt_gpu.cpp
+src/dgerfs_nopiv_gpu.cpp
+src/dgesv.cpp
+src/dgesv_batched.cpp
+src/dgesv_gpu.cpp
+src/dgesv_nopiv_batched.cpp
+src/dgesv_nopiv_gpu.cpp
+src/dgesv_rbt.cpp
+src/dgesv_rbt_batched.cpp
+src/dgetf2_batched.cpp
+src/dgetf2_native.cpp
+src/dgetf2_nopiv.cpp
+src/dgetf2_nopiv_batched.cpp
+src/dgetrf.cpp
+src/dgetrf2_mgpu.cpp
+src/dgetrf_batched.cpp
+src/dgetrf_gpu.cpp
+src/dgetrf_m.cpp
+src/dgetrf_mgpu.cpp
+src/dgetrf_nopiv.cpp
+src/dgetrf_nopiv_batched.cpp
+src/dgetrf_nopiv_gpu.cpp
+src/dgetrf_panel_batched.cpp
+src/dgetrf_panel_native.cpp
+src/dgetrf_panel_nopiv_batched.cpp
+src/dgetri_gpu.cpp
+src/dgetri_outofplace_batched.cpp
+src/dgetrs_batched.cpp
+src/dgetrs_gpu.cpp
+src/dgetrs_nopiv_batched.cpp
+src/dgetrs_nopiv_gpu.cpp
+src/dgglse.cpp
+src/dggrqf.cpp
+src/dlabrd_gpu.cpp
+src/dlahr2.cpp
+src/dlahr2_m.cpp
+src/dlahru.cpp
+src/dlahru_m.cpp
+src/dlaqps.cpp
+src/dlaqps_gpu.cpp
+src/dlarfb_gemm_batched.cpp
+src/dlarfb_gpu.cpp
+src/dlarfb_gpu_gemm.cpp
+src/dlarft_batched.cpp
+src/dlasyf_gpu.cpp
+src/dlatrd.cpp
+src/dlatrd2.cpp
+src/dlatrd_mgpu.cpp
+src/dlauum.cpp
+src/dlauum_gpu.cpp
+src/dorgbr.cpp
+src/dorghr.cpp
+src/dorghr_m.cpp
+src/dorglq.cpp
+src/dorgqr.cpp
+src/dorgqr2.cpp
+src/dorgqr_2stage_gpu.cpp
+src/dorgqr_gpu.cpp
+src/dorgqr_m.cpp
+src/dorgtr.cpp
+src/dormbr.cpp
+src/dormlq.cpp
+src/dormql.cpp
+src/dormql2_gpu.cpp
+src/dormqr.cpp
+src/dormqr2_gpu.cpp
+src/dormqr_2stage_gpu.cpp
+src/dormqr_gpu.cpp
+src/dormqr_m.cpp
+src/dormrq.cpp
+src/dormtr.cpp
+src/dormtr_gpu.cpp
+src/dormtr_m.cpp
+src/dposv.cpp
+src/dposv_batched.cpp
+src/dposv_gpu.cpp
+src/dpotf2_batched.cpp
+src/dpotf2_vbatched.cpp
+src/dpotrf.cpp
+src/dpotrf3_mgpu.cpp
+src/dpotrf_batched.cpp
+src/dpotrf_gpu.cpp
+src/dpotrf_m.cpp
+src/dpotrf_mgpu.cpp
+src/dpotrf_mgpu_right.cpp
+src/dpotrf_panel_batched.cpp
+src/dpotrf_panel_native.cpp
+src/dpotrf_panel_vbatched.cpp
+src/dpotrf_vbatched.cpp
+src/dpotri.cpp
+src/dpotri_gpu.cpp
+src/dpotrs_batched.cpp
+src/dpotrs_gpu.cpp
+src/dsgeqrsv_gpu.cpp
+src/dsgesv_gpu.cpp
+src/dsgetrs_gpu.cpp
+src/dsposv_gpu.cpp
+src/dssysv_gpu.cpp
+src/dsyevdx_2stage.cpp
+src/dsyevdx_2stage_m.cpp
+src/dsygst.cpp
+src/dsygst_gpu.cpp
+src/dsygst_m.cpp
+src/dsygvdx_2stage.cpp
+src/dsygvdx_2stage_m.cpp
+src/dsysv.cpp
+src/dsysv_nopiv_gpu.cpp
+src/dsytrd.cpp
+src/dsytrd2_gpu.cpp
+src/dsytrd_gpu.cpp
+src/dsytrd_mgpu.cpp
+src/dsytrd_sb2st.cpp
+src/dsytrd_sy2sb.cpp
+src/dsytrd_sy2sb_mgpu.cpp
+src/dsytrf.cpp
+src/dsytrf_aasen.cpp
+src/dsytrf_gpu.cpp
+src/dsytrf_nopiv.cpp
+src/dsytrf_nopiv_cpu.cpp
+src/dsytrf_nopiv_gpu.cpp
+src/dsytrs_nopiv_gpu.cpp
+src/dtrsm_m.cpp
+src/dtrtri.cpp
+src/dtrtri_gpu.cpp
+src/sbulge_applyQ_v2.cpp
+src/sbulge_applyQ_v2_m.cpp
+src/sbulge_back.cpp
+src/sbulge_back_m.cpp
+src/sgebrd.cpp
+src/sgeev.cpp
+src/sgeev_m.cpp
+src/sgegqr_gpu.cpp
+src/sgehrd.cpp
+src/sgehrd2.cpp
+src/sgehrd_m.cpp
+src/sgelqf.cpp
+src/sgelqf_gpu.cpp
+src/sgels.cpp
+src/sgels3_gpu.cpp
+src/sgels_gpu.cpp
+src/sgeqlf.cpp
+src/sgeqp3.cpp
+src/sgeqp3_gpu.cpp
+src/sgeqr2x_gpu-v2.cpp
+src/sgeqr2x_gpu-v3.cpp
+src/sgeqr2x_gpu.cpp
+src/sgeqrf.cpp
+src/sgeqrf2_gpu.cpp
+src/sgeqrf3_gpu.cpp
+src/sgeqrf_batched.cpp
+src/sgeqrf_expert_batched.cpp
+src/sgeqrf_gpu.cpp
+src/sgeqrf_m.cpp
+src/sgeqrf_mgpu.cpp
+src/sgeqrf_ooc.cpp
+src/sgeqrf_panel_batched.cpp
+src/sgeqrs3_gpu.cpp
+src/sgeqrs_gpu.cpp
+src/sgerbt_batched.cpp
+src/sgerbt_gpu.cpp
+src/sgerfs_nopiv_gpu.cpp
+src/sgesdd.cpp
+src/sgesv.cpp
+src/sgesv_batched.cpp
+src/sgesv_gpu.cpp
+src/sgesv_nopiv_batched.cpp
+src/sgesv_nopiv_gpu.cpp
+src/sgesv_rbt.cpp
+src/sgesv_rbt_batched.cpp
+src/sgesvd.cpp
+src/sgetf2_batched.cpp
+src/sgetf2_native.cpp
+src/sgetf2_nopiv.cpp
+src/sgetf2_nopiv_batched.cpp
+src/sgetrf.cpp
+src/sgetrf2_mgpu.cpp
+src/sgetrf_batched.cpp
+src/sgetrf_gpu.cpp
+src/sgetrf_m.cpp
+src/sgetrf_mgpu.cpp
+src/sgetrf_nopiv.cpp
+src/sgetrf_nopiv_batched.cpp
+src/sgetrf_nopiv_gpu.cpp
+src/sgetrf_panel_batched.cpp
+src/sgetrf_panel_native.cpp
+src/sgetrf_panel_nopiv_batched.cpp
+src/sgetri_gpu.cpp
+src/sgetri_outofplace_batched.cpp
+src/sgetrs_batched.cpp
+src/sgetrs_gpu.cpp
+src/sgetrs_nopiv_batched.cpp
+src/sgetrs_nopiv_gpu.cpp
+src/sgglse.cpp
+src/sggrqf.cpp
+src/slabrd_gpu.cpp
+src/slaex0.cpp
+src/slaex0_m.cpp
+src/slaex1.cpp
+src/slaex1_m.cpp
+src/slaex3.cpp
+src/slaex3_m.cpp
+src/slahr2.cpp
+src/slahr2_m.cpp
+src/slahru.cpp
+src/slahru_m.cpp
+src/slaln2.cpp
+src/slaqps.cpp
+src/slaqps_gpu.cpp
+src/slaqtrsd.cpp
+src/slarfb_gemm_batched.cpp
+src/slarfb_gpu.cpp
+src/slarfb_gpu_gemm.cpp
+src/slarft_batched.cpp
+src/slasyf_gpu.cpp
+src/slatrd.cpp
+src/slatrd2.cpp
+src/slatrd_mgpu.cpp
+src/slauum.cpp
+src/slauum_gpu.cpp
+src/smove_eig.cpp
+src/sorgbr.cpp
+src/sorghr.cpp
+src/sorghr_m.cpp
+src/sorglq.cpp
+src/sorgqr.cpp
+src/sorgqr2.cpp
+src/sorgqr_2stage_gpu.cpp
+src/sorgqr_gpu.cpp
+src/sorgqr_m.cpp
+src/sorgtr.cpp
+src/sormbr.cpp
+src/sormlq.cpp
+src/sormql.cpp
+src/sormql2_gpu.cpp
+src/sormqr.cpp
+src/sormqr2_gpu.cpp
+src/sormqr_2stage_gpu.cpp
+src/sormqr_gpu.cpp
+src/sormqr_m.cpp
+src/sormrq.cpp
+src/sormtr.cpp
+src/sormtr_gpu.cpp
+src/sormtr_m.cpp
+src/sposv.cpp
+src/sposv_batched.cpp
+src/sposv_gpu.cpp
+src/spotf2_batched.cpp
+src/spotf2_vbatched.cpp
+src/spotrf.cpp
+src/spotrf3_mgpu.cpp
+src/spotrf_batched.cpp
+src/spotrf_gpu.cpp
+src/spotrf_m.cpp
+src/spotrf_mgpu.cpp
+src/spotrf_mgpu_right.cpp
+src/spotrf_panel_batched.cpp
+src/spotrf_panel_native.cpp
+src/spotrf_panel_vbatched.cpp
+src/spotrf_vbatched.cpp
+src/spotri.cpp
+src/spotri_gpu.cpp
+src/spotrs_batched.cpp
+src/spotrs_gpu.cpp
+src/sstedx.cpp
+src/sstedx_m.cpp
+src/ssyevd.cpp
+src/ssyevd_gpu.cpp
+src/ssyevd_m.cpp
+src/ssyevdx.cpp
+src/ssyevdx_2stage.cpp
+src/ssyevdx_2stage_m.cpp
+src/ssyevdx_gpu.cpp
+src/ssyevdx_m.cpp
+src/ssygst.cpp
+src/ssygst_gpu.cpp
+src/ssygst_m.cpp
+src/ssygvd.cpp
+src/ssygvd_m.cpp
+src/ssygvdx.cpp
+src/ssygvdx_2stage.cpp
+src/ssygvdx_2stage_m.cpp
+src/ssygvdx_m.cpp
+src/ssysv.cpp
+src/ssysv_nopiv_gpu.cpp
+src/ssytrd.cpp
+src/ssytrd2_gpu.cpp
+src/ssytrd_gpu.cpp
+src/ssytrd_mgpu.cpp
+src/ssytrd_sb2st.cpp
+src/ssytrd_sy2sb.cpp
+src/ssytrd_sy2sb_mgpu.cpp
+src/ssytrf.cpp
+src/ssytrf_aasen.cpp
+src/ssytrf_gpu.cpp
+src/ssytrf_nopiv.cpp
+src/ssytrf_nopiv_cpu.cpp
+src/ssytrf_nopiv_gpu.cpp
+src/ssytrs_nopiv_gpu.cpp
+src/strevc3.cpp
+src/strevc3_mt.cpp
+src/strsm_m.cpp
+src/strtri.cpp
+src/strtri_gpu.cpp
+testing/magma_cgesvd_check.cpp
+testing/magma_cutil.cpp
+testing/magma_dgesvd_check.cpp
+testing/magma_dutil.cpp
+testing/magma_sgesvd_check.cpp
+testing/magma_sutil.cpp
+testing/testing_auxiliary
+testing/testing_blas_c
+testing/testing_blas_c.cpp
+testing/testing_blas_d
+testing/testing_blas_d.cpp
+testing/testing_blas_s
+testing/testing_blas_s.cpp
+testing/testing_blas_z
+testing/testing_c.h
+testing/testing_caxpy
+testing/testing_caxpy.cpp
+testing/testing_cblas_c
+testing/testing_cblas_c.cpp
+testing/testing_cblas_d
+testing/testing_cblas_d.cpp
+testing/testing_cblas_s
+testing/testing_cblas_s.cpp
+testing/testing_cblas_z
+testing/testing_cgeadd
+testing/testing_cgeadd.cpp
+testing/testing_cgeadd_batched
+testing/testing_cgeadd_batched.cpp
+testing/testing_cgeam
+testing/testing_cgeam.cpp
+testing/testing_cgebrd
+testing/testing_cgebrd.cpp
+testing/testing_cgeev
+testing/testing_cgeev.cpp
+testing/testing_cgegqr_gpu
+testing/testing_cgegqr_gpu.cpp
+testing/testing_cgehrd
+testing/testing_cgehrd.cpp
+testing/testing_cgelqf
+testing/testing_cgelqf.cpp
+testing/testing_cgelqf_gpu
+testing/testing_cgelqf_gpu.cpp
+testing/testing_cgels
+testing/testing_cgels.cpp
+testing/testing_cgels3_gpu
+testing/testing_cgels3_gpu.cpp
+testing/testing_cgels_gpu
+testing/testing_cgels_gpu.cpp
+testing/testing_cgemm
+testing/testing_cgemm.cpp
+testing/testing_cgemm_batched
+testing/testing_cgemm_batched.cpp
+testing/testing_cgemm_vbatched
+testing/testing_cgemm_vbatched.cpp
+testing/testing_cgemv
+testing/testing_cgemv.cpp
+testing/testing_cgemv_batched
+testing/testing_cgemv_batched.cpp
+testing/testing_cgemv_vbatched
+testing/testing_cgemv_vbatched.cpp
+testing/testing_cgenerate
+testing/testing_cgenerate.cpp
+testing/testing_cgeqlf
+testing/testing_cgeqlf.cpp
+testing/testing_cgeqp3
+testing/testing_cgeqp3.cpp
+testing/testing_cgeqp3_gpu
+testing/testing_cgeqp3_gpu.cpp
+testing/testing_cgeqr2_gpu
+testing/testing_cgeqr2_gpu.cpp
+testing/testing_cgeqr2x_gpu
+testing/testing_cgeqr2x_gpu.cpp
+testing/testing_cgeqrf
+testing/testing_cgeqrf.cpp
+testing/testing_cgeqrf_batched
+testing/testing_cgeqrf_batched.cpp
+testing/testing_cgeqrf_gpu
+testing/testing_cgeqrf_gpu.cpp
+testing/testing_cgeqrf_mgpu
+testing/testing_cgeqrf_mgpu.cpp
+testing/testing_cgesdd
+testing/testing_cgesdd.cpp
+testing/testing_cgesv
+testing/testing_cgesv.cpp
+testing/testing_cgesv_batched
+testing/testing_cgesv_batched.cpp
+testing/testing_cgesv_gpu
+testing/testing_cgesv_gpu.cpp
+testing/testing_cgesv_nopiv_batched
+testing/testing_cgesv_nopiv_batched.cpp
+testing/testing_cgesv_rbt
+testing/testing_cgesv_rbt.cpp
+testing/testing_cgesvd
+testing/testing_cgesvd.cpp
+testing/testing_cgetf2_gpu
+testing/testing_cgetf2_gpu.cpp
+testing/testing_cgetrf
+testing/testing_cgetrf.cpp
+testing/testing_cgetrf_batched
+testing/testing_cgetrf_batched.cpp
+testing/testing_cgetrf_gpu
+testing/testing_cgetrf_gpu.cpp
+testing/testing_cgetrf_mgpu
+testing/testing_cgetrf_mgpu.cpp
+testing/testing_cgetrf_nopiv_batched
+testing/testing_cgetrf_nopiv_batched.cpp
+testing/testing_cgetri_batched
+testing/testing_cgetri_batched.cpp
+testing/testing_cgetri_gpu
+testing/testing_cgetri_gpu.cpp
+testing/testing_cgglse
+testing/testing_cgglse.cpp
+testing/testing_cheevd
+testing/testing_cheevd.cpp
+testing/testing_cheevd_gpu
+testing/testing_cheevd_gpu.cpp
+testing/testing_cheevdx_2stage
+testing/testing_cheevdx_2stage.cpp
+testing/testing_chegst
+testing/testing_chegst.cpp
+testing/testing_chegst_gpu
+testing/testing_chegst_gpu.cpp
+testing/testing_chegvd
+testing/testing_chegvd.cpp
+testing/testing_chegvdx
+testing/testing_chegvdx.cpp
+testing/testing_chegvdx_2stage
+testing/testing_chegvdx_2stage.cpp
+testing/testing_chemm
+testing/testing_chemm.cpp
+testing/testing_chemm_batched
+testing/testing_chemm_batched.cpp
+testing/testing_chemm_mgpu
+testing/testing_chemm_mgpu.cpp
+testing/testing_chemm_vbatched
+testing/testing_chemm_vbatched.cpp
+testing/testing_chemv
+testing/testing_chemv.cpp
+testing/testing_chemv_batched
+testing/testing_chemv_batched.cpp
+testing/testing_chemv_mgpu
+testing/testing_chemv_mgpu.cpp
+testing/testing_chemv_vbatched
+testing/testing_chemv_vbatched.cpp
+testing/testing_cher2k
+testing/testing_cher2k.cpp
+testing/testing_cher2k_batched
+testing/testing_cher2k_batched.cpp
+testing/testing_cher2k_mgpu
+testing/testing_cher2k_mgpu.cpp
+testing/testing_cher2k_vbatched
+testing/testing_cher2k_vbatched.cpp
+testing/testing_cherk
+testing/testing_cherk.cpp
+testing/testing_cherk_batched
+testing/testing_cherk_batched.cpp
+testing/testing_cherk_vbatched
+testing/testing_cherk_vbatched.cpp
+testing/testing_chesv
+testing/testing_chesv.cpp
+testing/testing_chesv_nopiv_gpu
+testing/testing_chesv_nopiv_gpu.cpp
+testing/testing_chetrd
+testing/testing_chetrd.cpp
+testing/testing_chetrd_gpu
+testing/testing_chetrd_gpu.cpp
+testing/testing_chetrd_mgpu
+testing/testing_chetrd_mgpu.cpp
+testing/testing_chetrf
+testing/testing_chetrf.cpp
+testing/testing_clacpy
+testing/testing_clacpy.cpp
+testing/testing_clacpy_batched
+testing/testing_clacpy_batched.cpp
+testing/testing_clange
+testing/testing_clange.cpp
+testing/testing_clanhe
+testing/testing_clanhe.cpp
+testing/testing_clarfb_gpu
+testing/testing_clarfb_gpu.cpp
+testing/testing_clarfg
+testing/testing_clarfg.cpp
+testing/testing_clascl
+testing/testing_clascl.cpp
+testing/testing_claset
+testing/testing_claset.cpp
+testing/testing_claset_band
+testing/testing_claset_band.cpp
+testing/testing_cnan_inf
+testing/testing_cnan_inf.cpp
+testing/testing_constants
+testing/testing_cposv
+testing/testing_cposv.cpp
+testing/testing_cposv_batched
+testing/testing_cposv_batched.cpp
+testing/testing_cposv_gpu
+testing/testing_cposv_gpu.cpp
+testing/testing_cpotf2_gpu
+testing/testing_cpotf2_gpu.cpp
+testing/testing_cpotrf
+testing/testing_cpotrf.cpp
+testing/testing_cpotrf_batched
+testing/testing_cpotrf_batched.cpp
+testing/testing_cpotrf_gpu
+testing/testing_cpotrf_gpu.cpp
+testing/testing_cpotrf_mgpu
+testing/testing_cpotrf_mgpu.cpp
+testing/testing_cpotrf_vbatched
+testing/testing_cpotrf_vbatched.cpp
+testing/testing_cpotri
+testing/testing_cpotri.cpp
+testing/testing_cpotri_gpu
+testing/testing_cpotri_gpu.cpp
+testing/testing_cprint
+testing/testing_cprint.cpp
+testing/testing_cswap
+testing/testing_cswap.cpp
+testing/testing_csymmetrize
+testing/testing_csymmetrize.cpp
+testing/testing_csymmetrize_tiles
+testing/testing_csymmetrize_tiles.cpp
+testing/testing_csymv
+testing/testing_csymv.cpp
+testing/testing_csyr2k_batched
+testing/testing_csyr2k_batched.cpp
+testing/testing_csyr2k_vbatched
+testing/testing_csyr2k_vbatched.cpp
+testing/testing_csyrk_vbatched
+testing/testing_csyrk_vbatched.cpp
+testing/testing_csysv_nopiv_gpu
+testing/testing_csysv_nopiv_gpu.cpp
+testing/testing_ctranspose
+testing/testing_ctranspose.cpp
+testing/testing_ctrmm
+testing/testing_ctrmm.cpp
+testing/testing_ctrmm_batched
+testing/testing_ctrmm_batched.cpp
+testing/testing_ctrmm_vbatched
+testing/testing_ctrmm_vbatched.cpp
+testing/testing_ctrmv
+testing/testing_ctrmv.cpp
+testing/testing_ctrsm
+testing/testing_ctrsm.cpp
+testing/testing_ctrsm_batched
+testing/testing_ctrsm_batched.cpp
+testing/testing_ctrsm_vbatched
+testing/testing_ctrsm_vbatched.cpp
+testing/testing_ctrsv
+testing/testing_ctrsv.cpp
+testing/testing_ctrsv_batched
+testing/testing_ctrsv_batched.cpp
+testing/testing_ctrtri
+testing/testing_ctrtri.cpp
+testing/testing_ctrtri_diag
+testing/testing_ctrtri_diag.cpp
+testing/testing_ctrtri_gpu
+testing/testing_ctrtri_gpu.cpp
+testing/testing_cungbr
+testing/testing_cungbr.cpp
+testing/testing_cunglq
+testing/testing_cunglq.cpp
+testing/testing_cungqr
+testing/testing_cungqr.cpp
+testing/testing_cungqr_gpu
+testing/testing_cungqr_gpu.cpp
+testing/testing_cunmbr
+testing/testing_cunmbr.cpp
+testing/testing_cunmlq
+testing/testing_cunmlq.cpp
+testing/testing_cunmql
+testing/testing_cunmql.cpp
+testing/testing_cunmql_gpu
+testing/testing_cunmql_gpu.cpp
+testing/testing_cunmqr
+testing/testing_cunmqr.cpp
+testing/testing_cunmqr_gpu
+testing/testing_cunmqr_gpu.cpp
+testing/testing_d.h
+testing/testing_daxpy
+testing/testing_daxpy.cpp
+testing/testing_dgeadd
+testing/testing_dgeadd.cpp
+testing/testing_dgeadd_batched
+testing/testing_dgeadd_batched.cpp
+testing/testing_dgeam
+testing/testing_dgeam.cpp
+testing/testing_dgebrd
+testing/testing_dgebrd.cpp
+testing/testing_dgeev
+testing/testing_dgegqr_gpu
+testing/testing_dgegqr_gpu.cpp
+testing/testing_dgehrd
+testing/testing_dgehrd.cpp
+testing/testing_dgelqf
+testing/testing_dgelqf.cpp
+testing/testing_dgelqf_gpu
+testing/testing_dgelqf_gpu.cpp
+testing/testing_dgels
+testing/testing_dgels.cpp
+testing/testing_dgels3_gpu
+testing/testing_dgels3_gpu.cpp
+testing/testing_dgels_gpu
+testing/testing_dgels_gpu.cpp
+testing/testing_dgemm
+testing/testing_dgemm.cpp
+testing/testing_dgemm_batched
+testing/testing_dgemm_batched.cpp
+testing/testing_dgemm_vbatched
+testing/testing_dgemm_vbatched.cpp
+testing/testing_dgemv
+testing/testing_dgemv.cpp
+testing/testing_dgemv_batched
+testing/testing_dgemv_batched.cpp
+testing/testing_dgemv_vbatched
+testing/testing_dgemv_vbatched.cpp
+testing/testing_dgenerate
+testing/testing_dgenerate.cpp
+testing/testing_dgeqlf
+testing/testing_dgeqlf.cpp
+testing/testing_dgeqp3
+testing/testing_dgeqp3.cpp
+testing/testing_dgeqp3_gpu
+testing/testing_dgeqp3_gpu.cpp
+testing/testing_dgeqr2_gpu
+testing/testing_dgeqr2_gpu.cpp
+testing/testing_dgeqr2x_gpu
+testing/testing_dgeqr2x_gpu.cpp
+testing/testing_dgeqrf
+testing/testing_dgeqrf.cpp
+testing/testing_dgeqrf_batched
+testing/testing_dgeqrf_batched.cpp
+testing/testing_dgeqrf_gpu
+testing/testing_dgeqrf_gpu.cpp
+testing/testing_dgeqrf_mgpu
+testing/testing_dgeqrf_mgpu.cpp
+testing/testing_dgesdd
+testing/testing_dgesdd.cpp
+testing/testing_dgesv
+testing/testing_dgesv.cpp
+testing/testing_dgesv_batched
+testing/testing_dgesv_batched.cpp
+testing/testing_dgesv_gpu
+testing/testing_dgesv_gpu.cpp
+testing/testing_dgesv_nopiv_batched
+testing/testing_dgesv_nopiv_batched.cpp
+testing/testing_dgesv_rbt
+testing/testing_dgesv_rbt.cpp
+testing/testing_dgesvd
+testing/testing_dgesvd.cpp
+testing/testing_dgetf2_gpu
+testing/testing_dgetf2_gpu.cpp
+testing/testing_dgetrf
+testing/testing_dgetrf.cpp
+testing/testing_dgetrf_batched
+testing/testing_dgetrf_batched.cpp
+testing/testing_dgetrf_gpu
+testing/testing_dgetrf_gpu.cpp
+testing/testing_dgetrf_mgpu
+testing/testing_dgetrf_mgpu.cpp
+testing/testing_dgetrf_nopiv_batched
+testing/testing_dgetrf_nopiv_batched.cpp
+testing/testing_dgetri_batched
+testing/testing_dgetri_batched.cpp
+testing/testing_dgetri_gpu
+testing/testing_dgetri_gpu.cpp
+testing/testing_dgglse
+testing/testing_dgglse.cpp
+testing/testing_dlacpy
+testing/testing_dlacpy.cpp
+testing/testing_dlacpy_batched
+testing/testing_dlacpy_batched.cpp
+testing/testing_dlag2s
+testing/testing_dlag2s.cpp
+testing/testing_dlange
+testing/testing_dlange.cpp
+testing/testing_dlansy
+testing/testing_dlansy.cpp
+testing/testing_dlarfb_gpu
+testing/testing_dlarfb_gpu.cpp
+testing/testing_dlarfg
+testing/testing_dlarfg.cpp
+testing/testing_dlascl
+testing/testing_dlascl.cpp
+testing/testing_dlaset
+testing/testing_dlaset.cpp
+testing/testing_dlaset_band
+testing/testing_dlaset_band.cpp
+testing/testing_dlat2s
+testing/testing_dlat2s.cpp
+testing/testing_dnan_inf
+testing/testing_dnan_inf.cpp
+testing/testing_dorgbr
+testing/testing_dorgbr.cpp
+testing/testing_dorglq
+testing/testing_dorglq.cpp
+testing/testing_dorgqr
+testing/testing_dorgqr.cpp
+testing/testing_dorgqr_gpu
+testing/testing_dorgqr_gpu.cpp
+testing/testing_dormbr
+testing/testing_dormbr.cpp
+testing/testing_dormlq
+testing/testing_dormlq.cpp
+testing/testing_dormql
+testing/testing_dormql.cpp
+testing/testing_dormql_gpu
+testing/testing_dormql_gpu.cpp
+testing/testing_dormqr
+testing/testing_dormqr.cpp
+testing/testing_dormqr_gpu
+testing/testing_dormqr_gpu.cpp
+testing/testing_dposv
+testing/testing_dposv.cpp
+testing/testing_dposv_batched
+testing/testing_dposv_batched.cpp
+testing/testing_dposv_gpu
+testing/testing_dposv_gpu.cpp
+testing/testing_dpotf2_gpu
+testing/testing_dpotf2_gpu.cpp
+testing/testing_dpotrf
+testing/testing_dpotrf.cpp
+testing/testing_dpotrf_batched
+testing/testing_dpotrf_batched.cpp
+testing/testing_dpotrf_gpu
+testing/testing_dpotrf_gpu.cpp
+testing/testing_dpotrf_mgpu
+testing/testing_dpotrf_mgpu.cpp
+testing/testing_dpotrf_vbatched
+testing/testing_dpotrf_vbatched.cpp
+testing/testing_dpotri
+testing/testing_dpotri.cpp
+testing/testing_dpotri_gpu
+testing/testing_dpotri_gpu.cpp
+testing/testing_dprint
+testing/testing_dprint.cpp
+testing/testing_dsgeqrsv_gpu
+testing/testing_dsgeqrsv_gpu.cpp
+testing/testing_dsgesv_gpu
+testing/testing_dsgesv_gpu.cpp
+testing/testing_dsposv_gpu
+testing/testing_dsposv_gpu.cpp
+testing/testing_dswap
+testing/testing_dswap.cpp
+testing/testing_dsyevd
+testing/testing_dsyevd.cpp
+testing/testing_dsyevd_gpu
+testing/testing_dsyevd_gpu.cpp
+testing/testing_dsyevdx_2stage
+testing/testing_dsyevdx_2stage.cpp
+testing/testing_dsygst
+testing/testing_dsygst.cpp
+testing/testing_dsygst_gpu
+testing/testing_dsygst_gpu.cpp
+testing/testing_dsygvd
+testing/testing_dsygvd.cpp
+testing/testing_dsygvdx
+testing/testing_dsygvdx.cpp
+testing/testing_dsygvdx_2stage
+testing/testing_dsygvdx_2stage.cpp
+testing/testing_dsymm
+testing/testing_dsymm.cpp
+testing/testing_dsymm_batched
+testing/testing_dsymm_batched.cpp
+testing/testing_dsymm_mgpu
+testing/testing_dsymm_mgpu.cpp
+testing/testing_dsymm_vbatched
+testing/testing_dsymm_vbatched.cpp
+testing/testing_dsymmetrize
+testing/testing_dsymmetrize.cpp
+testing/testing_dsymmetrize_tiles
+testing/testing_dsymmetrize_tiles.cpp
+testing/testing_dsymv
+testing/testing_dsymv.cpp
+testing/testing_dsymv_batched
+testing/testing_dsymv_batched.cpp
+testing/testing_dsymv_mgpu
+testing/testing_dsymv_mgpu.cpp
+testing/testing_dsymv_vbatched
+testing/testing_dsymv_vbatched.cpp
+testing/testing_dsyr2k
+testing/testing_dsyr2k.cpp
+testing/testing_dsyr2k_batched
+testing/testing_dsyr2k_batched.cpp
+testing/testing_dsyr2k_mgpu
+testing/testing_dsyr2k_mgpu.cpp
+testing/testing_dsyr2k_vbatched
+testing/testing_dsyr2k_vbatched.cpp
+testing/testing_dsyrk
+testing/testing_dsyrk.cpp
+testing/testing_dsyrk_batched
+testing/testing_dsyrk_batched.cpp
+testing/testing_dsyrk_vbatched
+testing/testing_dsyrk_vbatched.cpp
+testing/testing_dsysv
+testing/testing_dsysv.cpp
+testing/testing_dsysv_nopiv_gpu
+testing/testing_dsysv_nopiv_gpu.cpp
+testing/testing_dsytrd
+testing/testing_dsytrd.cpp
+testing/testing_dsytrd_gpu
+testing/testing_dsytrd_gpu.cpp
+testing/testing_dsytrd_mgpu
+testing/testing_dsytrd_mgpu.cpp
+testing/testing_dsytrf
+testing/testing_dsytrf.cpp
+testing/testing_dtranspose
+testing/testing_dtranspose.cpp
+testing/testing_dtrmm
+testing/testing_dtrmm.cpp
+testing/testing_dtrmm_batched
+testing/testing_dtrmm_batched.cpp
+testing/testing_dtrmm_vbatched
+testing/testing_dtrmm_vbatched.cpp
+testing/testing_dtrmv
+testing/testing_dtrmv.cpp
+testing/testing_dtrsm
+testing/testing_dtrsm.cpp
+testing/testing_dtrsm_batched
+testing/testing_dtrsm_batched.cpp
+testing/testing_dtrsm_vbatched
+testing/testing_dtrsm_vbatched.cpp
+testing/testing_dtrsv
+testing/testing_dtrsv.cpp
+testing/testing_dtrsv_batched
+testing/testing_dtrsv_batched.cpp
+testing/testing_dtrtri
+testing/testing_dtrtri.cpp
+testing/testing_dtrtri_diag
+testing/testing_dtrtri_diag.cpp
+testing/testing_dtrtri_gpu
+testing/testing_dtrtri_gpu.cpp
+testing/testing_dxgesv_gpu
+testing/testing_hgemm
+testing/testing_hgemm_batched
+testing/testing_operators
+testing/testing_parse_opts
+testing/testing_s.h
+testing/testing_saxpy
+testing/testing_saxpy.cpp
+testing/testing_sgeadd
+testing/testing_sgeadd.cpp
+testing/testing_sgeadd_batched
+testing/testing_sgeadd_batched.cpp
+testing/testing_sgeam
+testing/testing_sgeam.cpp
+testing/testing_sgebrd
+testing/testing_sgebrd.cpp
+testing/testing_sgeev
+testing/testing_sgeev.cpp
+testing/testing_sgegqr_gpu
+testing/testing_sgegqr_gpu.cpp
+testing/testing_sgehrd
+testing/testing_sgehrd.cpp
+testing/testing_sgelqf
+testing/testing_sgelqf.cpp
+testing/testing_sgelqf_gpu
+testing/testing_sgelqf_gpu.cpp
+testing/testing_sgels
+testing/testing_sgels.cpp
+testing/testing_sgels3_gpu
+testing/testing_sgels3_gpu.cpp
+testing/testing_sgels_gpu
+testing/testing_sgels_gpu.cpp
+testing/testing_sgemm
+testing/testing_sgemm.cpp
+testing/testing_sgemm_batched
+testing/testing_sgemm_batched.cpp
+testing/testing_sgemm_vbatched
+testing/testing_sgemm_vbatched.cpp
+testing/testing_sgemv
+testing/testing_sgemv.cpp
+testing/testing_sgemv_batched
+testing/testing_sgemv_batched.cpp
+testing/testing_sgemv_vbatched
+testing/testing_sgemv_vbatched.cpp
+testing/testing_sgenerate
+testing/testing_sgenerate.cpp
+testing/testing_sgeqlf
+testing/testing_sgeqlf.cpp
+testing/testing_sgeqp3
+testing/testing_sgeqp3.cpp
+testing/testing_sgeqp3_gpu
+testing/testing_sgeqp3_gpu.cpp
+testing/testing_sgeqr2_gpu
+testing/testing_sgeqr2_gpu.cpp
+testing/testing_sgeqr2x_gpu
+testing/testing_sgeqr2x_gpu.cpp
+testing/testing_sgeqrf
+testing/testing_sgeqrf.cpp
+testing/testing_sgeqrf_batched
+testing/testing_sgeqrf_batched.cpp
+testing/testing_sgeqrf_gpu
+testing/testing_sgeqrf_gpu.cpp
+testing/testing_sgeqrf_mgpu
+testing/testing_sgeqrf_mgpu.cpp
+testing/testing_sgesdd
+testing/testing_sgesdd.cpp
+testing/testing_sgesv
+testing/testing_sgesv.cpp
+testing/testing_sgesv_batched
+testing/testing_sgesv_batched.cpp
+testing/testing_sgesv_gpu
+testing/testing_sgesv_gpu.cpp
+testing/testing_sgesv_nopiv_batched
+testing/testing_sgesv_nopiv_batched.cpp
+testing/testing_sgesv_rbt
+testing/testing_sgesv_rbt.cpp
+testing/testing_sgesvd
+testing/testing_sgesvd.cpp
+testing/testing_sgetf2_gpu
+testing/testing_sgetf2_gpu.cpp
+testing/testing_sgetrf
+testing/testing_sgetrf.cpp
+testing/testing_sgetrf_batched
+testing/testing_sgetrf_batched.cpp
+testing/testing_sgetrf_gpu
+testing/testing_sgetrf_gpu.cpp
+testing/testing_sgetrf_mgpu
+testing/testing_sgetrf_mgpu.cpp
+testing/testing_sgetrf_nopiv_batched
+testing/testing_sgetrf_nopiv_batched.cpp
+testing/testing_sgetri_batched
+testing/testing_sgetri_batched.cpp
+testing/testing_sgetri_gpu
+testing/testing_sgetri_gpu.cpp
+testing/testing_sgglse
+testing/testing_sgglse.cpp
+testing/testing_slacpy
+testing/testing_slacpy.cpp
+testing/testing_slacpy_batched
+testing/testing_slacpy_batched.cpp
+testing/testing_slange
+testing/testing_slange.cpp
+testing/testing_slansy
+testing/testing_slansy.cpp
+testing/testing_slarfb_gpu
+testing/testing_slarfb_gpu.cpp
+testing/testing_slarfg
+testing/testing_slarfg.cpp
+testing/testing_slascl
+testing/testing_slascl.cpp
+testing/testing_slaset
+testing/testing_slaset.cpp
+testing/testing_slaset_band
+testing/testing_slaset_band.cpp
+testing/testing_snan_inf
+testing/testing_snan_inf.cpp
+testing/testing_sorgbr
+testing/testing_sorgbr.cpp
+testing/testing_sorglq
+testing/testing_sorglq.cpp
+testing/testing_sorgqr
+testing/testing_sorgqr.cpp
+testing/testing_sorgqr_gpu
+testing/testing_sorgqr_gpu.cpp
+testing/testing_sormbr
+testing/testing_sormbr.cpp
+testing/testing_sormlq
+testing/testing_sormlq.cpp
+testing/testing_sormql
+testing/testing_sormql.cpp
+testing/testing_sormql_gpu
+testing/testing_sormql_gpu.cpp
+testing/testing_sormqr
+testing/testing_sormqr.cpp
+testing/testing_sormqr_gpu
+testing/testing_sormqr_gpu.cpp
+testing/testing_sposv
+testing/testing_sposv.cpp
+testing/testing_sposv_batched
+testing/testing_sposv_batched.cpp
+testing/testing_sposv_gpu
+testing/testing_sposv_gpu.cpp
+testing/testing_spotf2_gpu
+testing/testing_spotf2_gpu.cpp
+testing/testing_spotrf
+testing/testing_spotrf.cpp
+testing/testing_spotrf_batched
+testing/testing_spotrf_batched.cpp
+testing/testing_spotrf_gpu
+testing/testing_spotrf_gpu.cpp
+testing/testing_spotrf_mgpu
+testing/testing_spotrf_mgpu.cpp
+testing/testing_spotrf_vbatched
+testing/testing_spotrf_vbatched.cpp
+testing/testing_spotri
+testing/testing_spotri.cpp
+testing/testing_spotri_gpu
+testing/testing_spotri_gpu.cpp
+testing/testing_sprint
+testing/testing_sprint.cpp
+testing/testing_sswap
+testing/testing_sswap.cpp
+testing/testing_ssyevd
+testing/testing_ssyevd.cpp
+testing/testing_ssyevd_gpu
+testing/testing_ssyevd_gpu.cpp
+testing/testing_ssyevdx_2stage
+testing/testing_ssyevdx_2stage.cpp
+testing/testing_ssygst
+testing/testing_ssygst.cpp
+testing/testing_ssygst_gpu
+testing/testing_ssygst_gpu.cpp
+testing/testing_ssygvd
+testing/testing_ssygvd.cpp
+testing/testing_ssygvdx
+testing/testing_ssygvdx.cpp
+testing/testing_ssygvdx_2stage
+testing/testing_ssygvdx_2stage.cpp
+testing/testing_ssymm
+testing/testing_ssymm.cpp
+testing/testing_ssymm_batched
+testing/testing_ssymm_batched.cpp
+testing/testing_ssymm_mgpu
+testing/testing_ssymm_mgpu.cpp
+testing/testing_ssymm_vbatched
+testing/testing_ssymm_vbatched.cpp
+testing/testing_ssymmetrize
+testing/testing_ssymmetrize.cpp
+testing/testing_ssymmetrize_tiles
+testing/testing_ssymmetrize_tiles.cpp
+testing/testing_ssymv
+testing/testing_ssymv.cpp
+testing/testing_ssymv_batched
+testing/testing_ssymv_batched.cpp
+testing/testing_ssymv_mgpu
+testing/testing_ssymv_mgpu.cpp
+testing/testing_ssymv_vbatched
+testing/testing_ssymv_vbatched.cpp
+testing/testing_ssyr2k
+testing/testing_ssyr2k.cpp
+testing/testing_ssyr2k_batched
+testing/testing_ssyr2k_batched.cpp
+testing/testing_ssyr2k_mgpu
+testing/testing_ssyr2k_mgpu.cpp
+testing/testing_ssyr2k_vbatched
+testing/testing_ssyr2k_vbatched.cpp
+testing/testing_ssyrk
+testing/testing_ssyrk.cpp
+testing/testing_ssyrk_batched
+testing/testing_ssyrk_batched.cpp
+testing/testing_ssyrk_vbatched
+testing/testing_ssyrk_vbatched.cpp
+testing/testing_ssysv
+testing/testing_ssysv.cpp
+testing/testing_ssysv_nopiv_gpu
+testing/testing_ssysv_nopiv_gpu.cpp
+testing/testing_ssytrd
+testing/testing_ssytrd.cpp
+testing/testing_ssytrd_gpu
+testing/testing_ssytrd_gpu.cpp
+testing/testing_ssytrd_mgpu
+testing/testing_ssytrd_mgpu.cpp
+testing/testing_ssytrf
+testing/testing_ssytrf.cpp
+testing/testing_stranspose
+testing/testing_stranspose.cpp
+testing/testing_strmm
+testing/testing_strmm.cpp
+testing/testing_strmm_batched
+testing/testing_strmm_batched.cpp
+testing/testing_strmm_vbatched
+testing/testing_strmm_vbatched.cpp
+testing/testing_strmv
+testing/testing_strmv.cpp
+testing/testing_strsm
+testing/testing_strsm.cpp
+testing/testing_strsm_batched
+testing/testing_strsm_batched.cpp
+testing/testing_strsm_vbatched
+testing/testing_strsm_vbatched.cpp
+testing/testing_strsv
+testing/testing_strsv.cpp
+testing/testing_strsv_batched
+testing/testing_strsv_batched.cpp
+testing/testing_strtri
+testing/testing_strtri.cpp
+testing/testing_strtri_diag
+testing/testing_strtri_diag.cpp
+testing/testing_strtri_gpu
+testing/testing_strtri_gpu.cpp
+testing/testing_zaxpy
+testing/testing_zcgeqrsv_gpu
+testing/testing_zcgesv_gpu
+testing/testing_zcposv_gpu
+testing/testing_zgeadd
+testing/testing_zgeadd_batched
+testing/testing_zgeam
+testing/testing_zgebrd
+testing/testing_zgeev
+testing/testing_zgegqr_gpu
+testing/testing_zgehrd
+testing/testing_zgelqf
+testing/testing_zgelqf_gpu
+testing/testing_zgels
+testing/testing_zgels3_gpu
+testing/testing_zgels_gpu
+testing/testing_zgemm
+testing/testing_zgemm_batched
+testing/testing_zgemm_vbatched
+testing/testing_zgemv
+testing/testing_zgemv_batched
+testing/testing_zgemv_vbatched
+testing/testing_zgenerate
+testing/testing_zgeqlf
+testing/testing_zgeqp3
+testing/testing_zgeqp3_gpu
+testing/testing_zgeqr2_gpu
+testing/testing_zgeqr2x_gpu
+testing/testing_zgeqrf
+testing/testing_zgeqrf_batched
+testing/testing_zgeqrf_gpu
+testing/testing_zgeqrf_mgpu
+testing/testing_zgesdd
+testing/testing_zgesv
+testing/testing_zgesv_batched
+testing/testing_zgesv_gpu
+testing/testing_zgesv_nopiv_batched
+testing/testing_zgesv_rbt
+testing/testing_zgesvd
+testing/testing_zgetf2_gpu
+testing/testing_zgetrf
+testing/testing_zgetrf_batched
+testing/testing_zgetrf_gpu
+testing/testing_zgetrf_mgpu
+testing/testing_zgetrf_nopiv_batched
+testing/testing_zgetri_batched
+testing/testing_zgetri_gpu
+testing/testing_zgglse
+testing/testing_zheevd
+testing/testing_zheevd_gpu
+testing/testing_zheevdx_2stage
+testing/testing_zhegst
+testing/testing_zhegst_gpu
+testing/testing_zhegvd
+testing/testing_zhegvdx
+testing/testing_zhegvdx_2stage
+testing/testing_zhemm
+testing/testing_zhemm_batched
+testing/testing_zhemm_mgpu
+testing/testing_zhemm_vbatched
+testing/testing_zhemv
+testing/testing_zhemv_batched
+testing/testing_zhemv_mgpu
+testing/testing_zhemv_vbatched
+testing/testing_zher2k
+testing/testing_zher2k_batched
+testing/testing_zher2k_mgpu
+testing/testing_zher2k_vbatched
+testing/testing_zherk
+testing/testing_zherk_batched
+testing/testing_zherk_vbatched
+testing/testing_zhesv
+testing/testing_zhesv_nopiv_gpu
+testing/testing_zhetrd
+testing/testing_zhetrd_gpu
+testing/testing_zhetrd_mgpu
+testing/testing_zhetrf
+testing/testing_zlacpy
+testing/testing_zlacpy_batched
+testing/testing_zlag2c
+testing/testing_zlange
+testing/testing_zlanhe
+testing/testing_zlarfb_gpu
+testing/testing_zlarfg
+testing/testing_zlascl
+testing/testing_zlaset
+testing/testing_zlaset_band
+testing/testing_zlat2c
+testing/testing_znan_inf
+testing/testing_zposv
+testing/testing_zposv_batched
+testing/testing_zposv_gpu
+testing/testing_zpotf2_gpu
+testing/testing_zpotrf
+testing/testing_zpotrf_batched
+testing/testing_zpotrf_gpu
+testing/testing_zpotrf_mgpu
+testing/testing_zpotrf_vbatched
+testing/testing_zpotri
+testing/testing_zpotri_gpu
+testing/testing_zprint
+testing/testing_zswap
+testing/testing_zsymmetrize
+testing/testing_zsymmetrize_tiles
+testing/testing_zsymv
+testing/testing_zsyr2k_batched
+testing/testing_zsyr2k_vbatched
+testing/testing_zsyrk_vbatched
+testing/testing_zsysv_nopiv_gpu
+testing/testing_ztranspose
+testing/testing_ztrmm
+testing/testing_ztrmm_batched
+testing/testing_ztrmm_vbatched
+testing/testing_ztrmv
+testing/testing_ztrsm
+testing/testing_ztrsm_batched
+testing/testing_ztrsm_vbatched
+testing/testing_ztrsv
+testing/testing_ztrsv_batched
+testing/testing_ztrtri
+testing/testing_ztrtri_diag
+testing/testing_ztrtri_gpu
+testing/testing_zungbr
+testing/testing_zunglq
+testing/testing_zungqr
+testing/testing_zungqr_gpu
+testing/testing_zunmbr
+testing/testing_zunmlq
+testing/testing_zunmql
+testing/testing_zunmql_gpu
+testing/testing_zunmqr
+testing/testing_zunmqr_gpu
